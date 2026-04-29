@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大家的日语 - 假名默写练习</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  :root {
+    --bg: #faf7f2;
+    --card: #ffffff;
+    --primary: #e74c3c;
+    --primary-light: #fdeaea;
+    --secondary: #2c3e50;
+    --accent: #e67e22;
+    --success: #27ae60;
+    --success-light: #eafaf1;
+    --danger: #c0392b;
+    --danger-light: #fdedec;
+    --text: #2c3e50;
+    --text-light: #7f8c8d;
+    --border: #e8e4de;
+    --shadow: 0 2px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+    --radius: 16px;
+  }
+  
+  body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ===== Top Bar ===== */
+  .topbar {
+    width: 100%;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .topbar-logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .topbar-logo .jp { font-size: 13px; color: var(--text-light); font-weight: 400; }
+  .topbar-stats {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--text-light);
+  }
+  .topbar-stats span { display: flex; align-items: center; gap: 4px; }
+  .topbar-stats .num { font-weight: 700; color: var(--text); }
+
+  /* ===== Container ===== */
+  .container {
+    width: 100%;
+    max-width: 640px;
+    padding: 32px 20px;
+    flex: 1;
+  }
+
+  /* ===== Home Screen ===== */
+  .home { display: flex; flex-direction: column; gap: 24px; }
+  .home-hero {
+    text-align: center;
+    padding: 48px 20px;
+  }
+  .home-hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--secondary);
+  }
+  .home-hero h1 .emoji { font-size: 40px; }
+  .home-hero p {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .home-stats {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .home-stat {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 20px;
+    text-align: center;
+    min-width: 100px;
+  }
+  .home-stat .val { font-size: 22px; font-weight: 700; color: var(--primary); }
+  .home-stat .label { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+
+  /* Mode cards */
+  .mode-cards { display: flex; flex-direction: column; gap: 12px; }
+  .mode-card {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .mode-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
+  }
+  .mode-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+  .mode-icon.red { background: var(--primary-light); }
+  .mode-icon.orange { background: #fef3e2; }
+  .mode-icon.blue { background: #eaf2fd; }
+  .mode-info { flex: 1; }
+  .mode-info h3 { font-size: 16px; font-weight: 600; margin-bottom: 2px; }
+  .mode-info p { font-size: 13px; color: var(--text-light); }
+  .mode-arrow { color: var(--text-light); font-size: 18px; }
+
+  /* Lesson picker */
+  .lesson-picker {
+    background: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .lesson-picker h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .lesson-picker .sub { font-size: 13px; color: var(--text-light); margin-bottom: 16px; }
+  .lesson-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+  .lesson-btn {
+    padding: 10px 0;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.15s;
+    font-family: inherit;
+    color: var(--text);
+  }
+  .lesson-btn:hover { border-color: var(--primary); background: var(--primary-light); }
+  .lesson-btn .count { font-size: 10px; color: var(--text-light); display: block; margin-top: 2px; font-weight: 400; }
+
+  /* ===== Quiz Screen ===== */
+  .quiz { display: flex; flex-direction: column; gap: 20px; }
+  
+  .quiz-progress {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .quiz-progress-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .quiz-progress-fill {
+    height: 100%;
+    background: var(--primary);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+  .quiz-progress-text { font-size: 13px; color: var(--text-light); white-space: nowrap; }
+  .quiz-score {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--success);
+    white-space: nowrap;
+  }
+
+  .quiz-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+  }
+  .quiz-card-header {
+    padding: 12px 24px;
+    font-size: 12px;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+  }
+  .quiz-card-body { padding: 32px 24px; text-align: center; }
+  
+  .quiz-meaning {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .quiz-hint {
+    font-size: 15px;
+    color: var(--text-light);
+    margin-bottom: 4px;
+  }
+  .quiz-hint-kanji {
+    font-size: 22px;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background: #fef9f3;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  .quiz-input-wrap {
+    position: relative;
+    margin-top: 20px;
+  }
+  .quiz-input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 24px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    text-align: center;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+    color: var(--text);
+    background: var(--bg);
+    letter-spacing: 2px;
+  }
+  .quiz-input:focus { border-color: var(--primary); }
+  .quiz-input.correct { border-color: var(--success); background: var(--success-light); }
+  .quiz-input.wrong { border-color: var(--danger); background: var(--danger-light); }
+
+  .quiz-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 0 24px 24px;
+  }
+  .btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: inherit;
+  }
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+  }
+  .btn-primary:hover { background: #d63031; transform: translateY(-1px); }
+  .btn-primary:disabled { background: #ccc; cursor: not-allowed; transform: none; }
+  .btn-secondary {
+    background: var(--bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { background: var(--border); }
+
+  /* Feedback */
+  .quiz-feedback {
+    padding: 12px 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-top: 1px solid var(--border);
+  }
+  .quiz-feedback.correct { background: var(--success-light); color: var(--success); }
+  .quiz-feedback.wrong { background: var(--danger-light); color: var(--danger); }
+  .quiz-feedback .answer { font-weight: 700; font-size: 18px; letter-spacing: 2px; }
+  .quiz-feedback .speak-btn {
+    background: none;
+    border: 1.5px solid currentColor;
+    border-radius: 8px;
+    padding: 2px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 6px;
+    opacity: 0.7;
+    transition: opacity 0.15s;
+  }
+  .quiz-feedback .speak-btn:hover { opacity: 1; }
+
+  /* ===== Results Screen ===== */
+  .results { display: flex; flex-direction: column; gap: 20px; }
+  .results-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    padding: 40px 24px;
+  }
+  .results-emoji { font-size: 56px; margin-bottom: 8px; }
+  .results-grade { font-size: 24px; font-weight: 700; color: var(--secondary); }
+  .results-score {
+    font-size: 56px;
+    font-weight: 700;
+    margin: 16px 0 4px;
+  }
+  .results-score.green { color: var(--success); }
+  .results-score.orange { color: var(--accent); }
+  .results-score.red { color: var(--danger); }
+  .results-detail { font-size: 14px; color: var(--text-light); }
+
+  .results-meta {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .results-meta-item {
+    text-align: center;
+  }
+  .results-meta-item .val { font-size: 20px; font-weight: 700; }
+  .results-meta-item .label { font-size: 11px; color: var(--text-light); }
+
+  /* Wrong answers */
+  .wrong-list {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .wrong-list-header {
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .wrong-item {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .wrong-item:last-child { border-bottom: none; }
+  .wrong-item-meaning { font-size: 15px; font-weight: 500; min-width: 80px; }
+  .wrong-item-yours {
+    font-size: 14px;
+    color: var(--danger);
+    text-decoration: line-through;
+    background: var(--danger-light);
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+  .wrong-item-arrow { color: var(--text-light); font-size: 12px; }
+  .wrong-item-correct {
+    font-size: 14px;
+    color: var(--success);
+    font-weight: 600;
+    background: var(--success-light);
+    padding: 3px 10px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+  }
+
+  .results-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  /* ===== Screen transitions ===== */
+  .screen { display: none; }
+  .screen.active { display: block; animation: fadeIn 0.3s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 480px) {
+    .home-hero h1 { font-size: 26px; }
+    .home-hero { padding: 32px 12px; }
+    .quiz-meaning { font-size: 28px; }
+    .quiz-input { font-size: 20px; }
+    .lesson-grid { grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .lesson-btn { padding: 8px 0; font-size: 13px; }
+  }
+
+  /* History */
+  .history { background: var(--card); border-radius: var(--radius); padding: 20px; border: 1px solid var(--border); }
+  .history h3 { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--text-light); }
+  .history-empty { font-size: 13px; color: var(--text-light); }
+  .history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .history-item:last-child { border-bottom: none; }
+  .history-item .score { font-weight: 700; }
+  .history-item .score.high { color: var(--success); }
+  .history-item .score.mid { color: var(--accent); }
+  .history-item .score.low { color: var(--danger); }
+
+  /* Back button */
+  .back-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 0;
+  }
+  .back-btn:hover { color: var(--text); }
+
+  /* Kana keyboard hint */
+  .input-hint {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-light);
+  }
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="topbar" id="topbar">
+  <div class="topbar-logo">
+    <span>🎌</span>
+    <span>大家的日语</span>
+    <span class="jp">假名默写</span>
+  </div>
+  <div class="topbar-stats">
+    <span>词库 <span class="num" id="totalWords">0</span> 词</span>
+    <span>练习 <span class="num" id="totalSessions">0</span> 次</span>
+  </div>
+</div>
+
+<!-- Container -->
+<div class="container">
+  
+  <!-- ===== HOME SCREEN ===== -->
+  <div class="screen active" id="homeScreen">
+    <div class="home">
+      <div class="home-hero">
+        <h1><span class="emoji">🖌️</span><br>假名默写练习</h1>
+        <p>看中文含义，写出对应假名<br>初级1+2 全册 50 课 · 2026 个词条</p>
+        <div class="home-stats">
+          <div class="home-stat">
+            <div class="val" id="bestScore">--</div>
+            <div class="label">最高分</div>
+          </div>
+          <div class="home-stat">
+            <div class="val" id="totalQuizCount">0</div>
+            <div class="label">答题数</div>
+          </div>
+          <div class="home-stat">
+            <div class="val" id="avgAccuracy">--%</div>
+            <div class="label">平均正确率</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mode-cards">
+        <div class="mode-card" onclick="startQuiz('random')">
+          <div class="mode-icon red">🎲</div>
+          <div class="mode-info">
+            <h3>随机 20 题</h3>
+            <p>全册 50 课随机出题</p>
+          </div>
+          <div class="mode-arrow">›</div>
+        </div>
+        <div class="mode-card" onclick="showLessonPicker()">
+          <div class="mode-icon orange">📚</div>
+          <div class="mode-info">
+            <h3>指定课程</h3>
+            <p>选择第 1~50 课，复习特定课程单词</p>
+          </div>
+          <div class="mode-arrow">›</div>
+        </div>
+        <div class="mode-card" onclick="startQuiz('easy')">
+          <div class="mode-icon blue">💡</div>
+          <div class="mode-info">
+            <h3>简单模式</h3>
+            <p>显示汉字提示，看汉字写假名</p>
+          </div>
+          <div class="mode-arrow">›</div>
+        </div>
+      </div>
+
+      <div id="lessonPickerWrap" style="display:none">
+        <div class="lesson-picker">
+          <h3>选择课程</h3>
+          <div class="sub">点击课程编号开始练习（每课随机 20 题）</div>
+          <div class="lesson-grid" id="lessonGrid"></div>
+        </div>
+      </div>
+
+      <div class="history" id="historySection">
+        <h3>📅 练习记录</h3>
+        <div id="historyList"><div class="history-empty">还没有练习记录</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== QUIZ SCREEN ===== -->
+  <div class="screen" id="quizScreen">
+    <div class="quiz">
+      <button class="back-btn" onclick="confirmQuit()">← 退出练习</button>
+      
+      <div class="quiz-progress">
+        <div class="quiz-progress-text" id="progressText">1 / 20</div>
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="progressFill" style="width:5%"></div>
+        </div>
+        <div class="quiz-score" id="quizScore">✓ 0</div>
+      </div>
+
+      <div class="quiz-card" id="quizCard">
+        <div class="quiz-card-header">
+          <span id="quizLesson">第 1 课</span>
+          <span id="quizMode">普通模式</span>
+        </div>
+        <div class="quiz-card-body">
+          <div class="quiz-meaning" id="quizMeaning">吃</div>
+          <div id="quizHintArea"></div>
+          <div class="quiz-input-wrap">
+            <input type="text" class="quiz-input" id="quizInput" placeholder="输入假名..." autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false">
+          </div>
+          <div class="input-hint">Enter 提交答案 · 空格键 下一题</div>
+        </div>
+        <div class="quiz-actions" id="quizActions">
+          <button class="btn btn-secondary" id="skipBtn" onclick="skipQuestion()">跳过</button>
+          <button class="btn btn-primary" id="submitBtn" onclick="submitAnswer()">确认</button>
+        </div>
+        <div class="quiz-feedback" id="quizFeedback" style="display:none"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== RESULTS SCREEN ===== -->
+  <div class="screen" id="resultsScreen">
+    <div class="results">
+      <div class="results-card">
+        <div class="results-emoji" id="resultsEmoji">🌟</div>
+        <div class="results-grade" id="resultsGrade">优秀！</div>
+        <div class="results-score" id="resultsScoreNum">18/20</div>
+        <div class="results-detail" id="resultsAccuracy">正确率 90%</div>
+        <div class="results-meta">
+          <div class="results-meta-item">
+            <div class="val" style="color:var(--success)" id="resultsCorrect">18</div>
+            <div class="label">正确</div>
+          </div>
+          <div class="results-meta-item">
+            <div class="val" style="color:var(--danger)" id="resultsWrong">2</div>
+            <div class="label">错误</div>
+          </div>
+          <div class="results-meta-item">
+            <div class="val" id="resultsSkipped">0</div>
+            <div class="label">跳过</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrong-list" id="wrongList" style="display:none">
+        <div class="wrong-list-header">❌ 错题回顾</div>
+        <div id="wrongItems"></div>
+      </div>
+
+      <div class="results-actions">
+        <button class="btn btn-secondary" onclick="showScreen('homeScreen')">返回首页</button>
+        <button class="btn btn-primary" id="retryBtn" onclick="retryQuiz()">再来一次</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// ========== Vocabulary Data ==========
+const VOCAB=[{"k":"わたし","h":"私","m":"我","l":1},{"k":"あなた","h":"貴方","m":"你、您","l":1},{"k":"あのひと (あのかた)","h":"あの人 (あの方)","m":"他、那个人（「あのかた」是礼貌用法）","l":1},{"k":"さん","h":"","m":"先生、女士（称呼人时使用）","l":1},{"k":"ちゃん","h":"","m":"小～（亲昵地接在小孩名字后面）","l":1},{"k":"じん","h":"人","m":"～人（表示国籍的后缀，如アメリカじん）","l":1},{"k":"せんせい","h":"先生","m":"老师（不用于自己的职业）","l":1},{"k":"きょうし","h":"教師","m":"教师","l":1},{"k":"がくせい","h":"学生","m":"学生","l":1},{"k":"かいしゃいん","h":"会社員","m":"公司职员","l":1},{"k":"しゃいん","h":"社員","m":"公司职员（和公司名一起用）","l":1},{"k":"ぎんこういん","h":"銀行員","m":"银行职员","l":1},{"k":"いしゃ","h":"医者","m":"医生","l":1},{"k":"けんきゅうしゃ","h":"研究者","m":"研究人员","l":1},{"k":"エンジニア","h":"","m":"工程师","l":1},{"k":"だいがく","h":"大学","m":"大学","l":1},{"k":"びょういん","h":"病院","m":"医院","l":1},{"k":"だれ","h":"誰","m":"谁","l":1},{"k":"どなた","h":"","m":"哪位（礼貌用法）","l":1},{"k":"さい","h":"歳","m":"岁","l":1},{"k":"なんさい","h":"何歳","m":"几岁","l":1},{"k":"おいくつ","h":"","m":"多大岁数（礼貌用法）","l":1},{"k":"はい","h":"","m":"是、对","l":1},{"k":"いいえ","h":"","m":"不、不是","l":1},{"k":"はじめまして","h":"","m":"初次见面（自我介绍时最先说的话）","l":1},{"k":"どうぞよろしく","h":"","m":"请多关照（自我介绍时最后说的话）","l":1},{"k":"しつれいですが","h":"失礼ですが","m":"对不起、请问","l":1},{"k":"アメリカ","h":"","m":"美国","l":1},{"k":"イギリス","h":"","m":"英国","l":1},{"k":"インド","h":"","m":"印度","l":1},{"k":"インドネシア","h":"","m":"印度尼西亚","l":1},{"k":"タイ","h":"","m":"泰国","l":1},{"k":"かんこく","h":"韓国","m":"韩国","l":1},{"k":"ちゅうごく","h":"中国","m":"中国","l":1},{"k":"ドイツ","h":"","m":"德国","l":1},{"k":"フランス","h":"","m":"法国","l":1},{"k":"ブラジル","h":"","m":"巴西","l":1},{"k":"これ","h":"","m":"这（离说话人近的东西）","l":2},{"k":"それ","h":"","m":"那（离听话人近的东西）","l":2},{"k":"あれ","h":"","m":"那（离双方都远的东西）","l":2},{"k":"どれ","h":"","m":"哪个","l":2},{"k":"この","h":"","m":"这个","l":2},{"k":"その","h":"","m":"那个","l":2},{"k":"あの","h":"","m":"那个（远）","l":2},{"k":"ほん","h":"本","m":"书","l":2},{"k":"じしょ","h":"辞書","m":"字典","l":2},{"k":"しんぶん","h":"新聞","m":"报纸","l":2},{"k":"ノート","h":"","m":"笔记本","l":2},{"k":"てちょう","h":"手帳","m":"记事本","l":2},{"k":"めいし","h":"名刺","m":"名片","l":2},{"k":"カード","h":"","m":"卡片","l":2},{"k":"えんぴつ","h":"鉛筆","m":"铅笔","l":2},{"k":"ボールペン","h":"","m":"圆珠笔","l":2},{"k":"シャープペンシル","h":"","m":"自动铅笔","l":2},{"k":"かぎ","h":"","m":"钥匙","l":2},{"k":"とけい","h":"時計","m":"钟表","l":2},{"k":"かさ","h":"傘","m":"伞","l":2},{"k":"かばん","h":"","m":"皮包、提包","l":2},{"k":"テレビ","h":"","m":"电视","l":2},{"k":"ラジオ","h":"","m":"收音机","l":2},{"k":"カメラ","h":"","m":"照相机","l":2},{"k":"コンピューター","h":"","m":"电脑、计算机","l":2},{"k":"くるま","h":"車","m":"汽车","l":2},{"k":"つくえ","h":"机","m":"桌子","l":2},{"k":"いす","h":"","m":"椅子","l":2},{"k":"チョコレート","h":"","m":"巧克力","l":2},{"k":"コーヒー","h":"","m":"咖啡","l":2},{"k":"おみやげ","h":"お土産","m":"土产、礼物","l":2},{"k":"えいご","h":"英語","m":"英语","l":2},{"k":"にほんご","h":"日本語","m":"日语","l":2},{"k":"てご","h":"て語","m":"～语","l":2},{"k":"なん","h":"何","m":"什么","l":2},{"k":"そう","h":"","m":"是的","l":2},{"k":"あのう","h":"","m":"那个……（以客气、踌躇的心情跟对方搭话时）","l":2},{"k":"えっ","h":"","m":"咦……（听到意外消息时发出的惊叹）","l":2},{"k":"どうぞ","h":"","m":"请（劝别人做某事时使用）","l":2},{"k":"ここ","h":"","m":"这里 (离说话人近的场所)","l":3},{"k":"あぁあそこ","h":"","m":"那里 (离说话人、听话人都远的场所)","l":3},{"k":"どこ","h":"","m":"哪里","l":3},{"k":"こちら","h":"","m":"这边 〈「z 二」 的礼貌用语)","l":3},{"k":"そちら","h":"","m":"那边（「そこ」的礼貌用语）","l":3},{"k":"あちら","h":"","m":"那边（「あそこ」的礼貌用语）","l":3},{"k":"どちら","h":"","m":"哪边 (「过二1 的礼瑶用语)","l":3},{"k":"きょうしつ","h":"","m":"教室 教室","l":3},{"k":"しょくどう","h":"","m":"食堂 食堂","l":3},{"k":"じむしょ","h":"事務所","m":"办事处、事务所","l":3},{"k":"かいぎしつ","h":"","m":"会議室 会议室","l":3},{"k":"うけつけ","h":"","m":"受付 接待处","l":3},{"k":"へや","h":"部屋","m":"房间","l":3},{"k":"トイレ (おてあらい)","h":"(お手洗い)","m":"厕所（洗手间）","l":3},{"k":"かいだん","h":"階段","m":"楼梯","l":3},{"k":"エレベーター","h":"","m":"电梯","l":3},{"k":"エスカレーター","h":"","m":"自动扶梯","l":3},{"k":"じどうはんばいき","h":"","m":"自動販売機 自动贩卖机","l":3},{"k":"でんわ","h":"","m":"電話 电话","l":3},{"k":"[お]くに","h":"[お]国","m":"国家、故乡","l":3},{"k":"かいしゃ","h":"","m":"会社 公司","l":3},{"k":"うち","h":"","m":"家","l":3},{"k":"くつ","h":"靴","m":"鞋","l":3},{"k":"ネクタイ","h":"","m":"领带","l":3},{"k":"ワイン","h":"","m":"葡萄酒","l":3},{"k":"うりば","h":"売り場","m":"销售柜台","l":3},{"k":"ちか","h":"","m":"地下 地下","l":3},{"k":"ーかい (一がい)","h":"","m":"一了 一层","l":3},{"k":"なんがい","h":"","m":"何階 几层","l":3},{"k":"ーえん","h":"ー円","m":"一日元","l":3},{"k":"いくら","h":"","m":"多少钱","l":3},{"k":"ひゃく","h":"","m":"百 百","l":3},{"k":"せん","h":"","m":"千 千","l":3},{"k":"まん","h":"","m":"万 万","l":3},{"k":"れんしゅう","h":"","m":"(練習O","l":3},{"k":"かい わ","h":"","m":"《会话>","l":3},{"k":"じゃ","h":"","m":"那么","l":3},{"k":"スイス","h":"","m":"瑞士","l":3},{"k":"フランス","h":"","m":"法国","l":3},{"k":"ジャカルタ","h":"","m":"雅加达","l":3},{"k":"バンコク","h":"","m":"曼谷","l":3},{"k":"ベルリン","h":"","m":"柏林","l":3},{"k":"おきます","h":"起きます","m":"起床","l":4},{"k":"ねます","h":"寝ます","m":"睡觉","l":4},{"k":"はたらきます","h":"働きます","m":"工作、劳动","l":4},{"k":"べんきょうします","h":"勉強します","m":"学习","l":4},{"k":"おわります","h":"終わります","m":"结束","l":4},{"k":"デパート","h":"","m":"百货商店","l":4},{"k":"ぎんこう","h":"銀行","m":"银行","l":4},{"k":"ゆうびんきょく","h":"郵便局","m":"邮局","l":4},{"k":"としょかん","h":"","m":"図書館 图书馆","l":4},{"k":"びじゅつかん","h":"","m":"美術館 美术馆","l":4},{"k":"いま","h":"","m":"今 現在","l":4},{"k":"ーふん (一ぶん)","h":"","m":"一分 一分","l":4},{"k":"はん","h":"","m":"半 半","l":4},{"k":"なんじ","h":"何時","m":"几点","l":4},{"k":"なんぷん","h":"何分","m":"几分","l":4},{"k":"ごぜん","h":"","m":"午前 上午","l":4},{"k":"ごご","h":"午後","m":"下午","l":4},{"k":"あさ","h":"","m":"朝 早晨","l":4},{"k":"ひる","h":"","m":"昼 白天","l":4},{"k":"ばん (よる)","h":"","m":"晚 (夜) 晚上","l":4},{"k":"おととい","h":"","m":"前天","l":4},{"k":"きのう","h":"","m":"昨天","l":4},{"k":"きょう","h":"今日","m":"今天","l":4},{"k":"あした","h":"","m":"明天","l":4},{"k":"あさって","h":"","m":"后天","l":4},{"k":"けさ","h":"","m":"今天早上","l":4},{"k":"こんばん","h":"","m":"今晩 今晚、今天晚上","l":4},{"k":"やすみ","h":"休み","m":"休息、休假","l":4},{"k":"ひるやすみ","h":"昼体み","m":"午休","l":4},{"k":"しけん","h":"","m":"試験 考试","l":4},{"k":"かいぎ","h":"会議","m":"会议","l":4},{"k":"えいが","h":"","m":"映画 电影","l":4},{"k":"まいあさ","h":"毎朝","m":"每天早晨","l":4},{"k":"まいばん","h":"","m":"每晚 每天晚上","l":4},{"k":"まいにち","h":"","m":"每日 每天","l":4},{"k":"げつようび","h":"","m":"月曜日 星期一","l":4},{"k":"かようび","h":"火曜日","m":"星期二","l":4},{"k":"すいようび","h":"","m":"水曜日 星期三","l":4},{"k":"もくようび","h":"木曜日","m":"星期四","l":4},{"k":"きんようび","h":"","m":"金曜日 星期五","l":4},{"k":"どようび","h":"土曜日","m":"星期六","l":4},{"k":"にちようび","h":"","m":"日曜日 星期天","l":4},{"k":"なんようび","h":"","m":"何曜日 星期几","l":4},{"k":"てから","h":"","m":"从~","l":4},{"k":"ーまで","h":"","m":"到~","l":4},{"k":"てとて","h":"","m":"一和一","l":4},{"k":"そちら","h":"","m":"那边、你那边","l":4},{"k":"ニューヨーク","h":"","m":"纽约","l":4},{"k":"ペキン","h":"","m":"北京","l":4},{"k":"ロサンゼルス","h":"","m":"洛杉矶","l":4},{"k":"ロンドン","h":"","m":"伦敦","l":4},{"k":"あぁすか","h":"","m":"明日香 (虚构的日本餐馆)","l":4},{"k":"アップル銀行","h":"","m":"苹果银行（虚构的银行）","l":4},{"k":"みどり図書館","h":"","m":"绿色图书馆（虚构的图书馆）","l":4},{"k":"やまと美術科","h":"","m":"大和美术馆（虚构的美术馆）","l":4},{"k":"いきます","h":"行きます","m":"去","l":5},{"k":"きます","h":"来ます","m":"来","l":5},{"k":"かえります","h":"帰ります","m":"回","l":5},{"k":"がっこう","h":"","m":"学校 学校","l":5},{"k":"えき","h":"","m":"駅 车站","l":5},{"k":"ひこうき","h":"","m":"飛行機 飞机","l":5},{"k":"ふね","h":"","m":"船 船","l":5},{"k":"でんしゃ","h":"","m":"電車 电车","l":5},{"k":"ちかてつ","h":"","m":"地下鉄 地铁","l":5},{"k":"しんかんせん","h":"","m":"新幹線 新干线","l":5},{"k":"バス","h":"","m":"公共汽车","l":5},{"k":"タクシー","h":"","m":"出租车","l":5},{"k":"じてんしゃ","h":"","m":"自転車 自行车","l":5},{"k":"あるいて","h":"歩いて","m":"走路","l":5},{"k":"ひと","h":"","m":"人 人","l":5},{"k":"ともだち","h":"","m":"友達 朋友","l":5},{"k":"かれ","h":"","m":"彼 他、男朋友","l":5},{"k":"かのじょ","h":"","m":"彼女 她、女朋友","l":5},{"k":"かぞく","h":"","m":"家族 家族、家里人","l":5},{"k":"ひとりで","h":"一人で","m":"一个人、自己","l":5},{"k":"せんしゅう","h":"","m":"先週 上周","l":5},{"k":"こんしゅう","h":"","m":"今週 这周","l":5},{"k":"らいしゅう","h":"","m":"来週 下周","l":5},{"k":"せんげつ","h":"先月","m":"上个月","l":5},{"k":"こんげつ","h":"今月","m":"这个月","l":5},{"k":"らいげつ","h":"来月","m":"下个月","l":5},{"k":"きょねん","h":"","m":"去年 去年","l":5},{"k":"ことし","h":"","m":"今年","l":5},{"k":"らいねん","h":"","m":"来年 明年","l":5},{"k":"ーねん","h":"ー年","m":"一年","l":5},{"k":"なんねん","h":"","m":"何年 几年","l":5},{"k":"ーがつ","h":"ー月","m":"ー月","l":5},{"k":"なんがつ\\","h":"","m":"何月 几月","l":5},{"k":"ついたち","h":"","m":"1日 1 号","l":5},{"k":"ふつか","h":"","m":"2日 2号、2天","l":5},{"k":"みっか","h":"","m":"3日 3号、3天","l":5},{"k":"よっか","h":"","m":"4日 4号、4天","l":5},{"k":"いつか","h":"","m":"5日 5号、5天","l":5},{"k":"むいか","h":"","m":"6日 6号、6天","l":5},{"k":"なのか","h":"","m":"7日 7号、7天","l":5},{"k":"ようか","h":"","m":"8日 8号、8天 IS","l":5},{"k":"ここのか","h":"","m":"9日、9号","l":5},{"k":"とおか","h":"","m":"10 日 10 号、10天","l":5},{"k":"じゅうよっか","h":"","m":"14 日 14 号、14天","l":5},{"k":"はつか","h":"","m":"20 日 20 号、20 天","l":5},{"k":"にじゅうよっか","h":"","m":"24 日 24 号、24 天","l":5},{"k":"ーにち","h":"ー日","m":"一号、一天","l":5},{"k":"なんにち","h":"","m":"何日 几号、几天","l":5},{"k":"いっ","h":"","m":"什么时候","l":5},{"k":"たんじょうび","h":"誕生日","m":"生日","l":5},{"k":"ー番線","h":"","m":"第一站台","l":5},{"k":"の","h":"","m":"下一个、下面","l":5},{"k":"たべます","h":"食べます","m":"吃","l":6},{"k":"のみます","h":"飲みます","m":"喝","l":6},{"k":"すいます","h":"","m":"吸、抽 [烟]","l":6},{"k":"みます","h":"見ます","m":"看","l":6},{"k":"ききます","h":"聞きます","m":"听","l":6},{"k":"よみます","h":"読みます","m":"读","l":6},{"k":"かきます","h":"書きます","m":"写 (「かきます」也有 \"画\" 的意思。","l":6},{"k":"恩出現時, 使用平優名「かきます」","h":"","m":"表示。)","l":6},{"k":"かいます","h":"買います","m":"买","l":6},{"k":"とります","h":"撮ります","m":"拍摄、照 [相]","l":6},{"k":"します","h":"","m":"做、干","l":6},{"k":"あいます","h":"会います","m":"[友達にて] 。 [跟朋友] 见面","l":6},{"k":"ごはん","h":"ご飯","m":"米饭、饭","l":6},{"k":"あさごはん","h":"朝ご飯","m":"早饭","l":6},{"k":"ひるごはん","h":"昼ご飯","m":"午饭","l":6},{"k":"ばんごはん","h":"晩ご飯","m":"晚饭","l":6},{"k":"パン","h":"","m":"面包","l":6},{"k":"たまご","h":"","m":"卵 鸡蛋","l":6},{"k":"にく","h":"","m":"肉 肉","l":6},{"k":"さかな","h":"","m":"魚 鱼","l":6},{"k":"やさい","h":"","m":"野菜 蔬菜","l":6},{"k":"くだもの","h":"","m":"果物 水果","l":6},{"k":"みず","h":"","m":"水 水","l":6},{"k":"おちゃ","h":"お茶","m":"茶、日本茶","l":6},{"k":"こうちゃ","h":"","m":"紅茶 红茶","l":6},{"k":"ぎゅうにゅう (ミルク) 牛乳","h":"","m":"牛奶","l":6},{"k":"ビール","h":"","m":"啤酒","l":6},{"k":"おさけ","h":"お酒","m":"酒、日本酒","l":6},{"k":"たばこ","h":"","m":"香烟","l":6},{"k":"てがみ","h":"","m":"手紙 信","l":6},{"k":"レポート","h":"","m":"报告、小论文","l":6},{"k":"しゃしん","h":"","m":"写真 照片","l":6},{"k":"ビデオ","h":"","m":"录像带、录像机","l":6},{"k":"みせ","h":"","m":"店 店","l":6},{"k":"にわ","h":"","m":"放 庭院、院子","l":6},{"k":"しゅくだい","h":"宿題","m":"作业","l":6},{"k":"テニス","h":"","m":"网球","l":6},{"k":"サッカー","h":"","m":"足球","l":6},{"k":"おはなみ","h":"お花見","m":"看花、赏花","l":6},{"k":"なに","h":"","m":"何 什么","l":6},{"k":"いっしょに","h":"","m":"一起","l":6},{"k":"ちょっと","h":"","m":"一会儿、一点儿","l":6},{"k":"いつも","h":"","m":"经常、总是","l":6},{"k":"ときどき","h":"","m":"時々 有时","l":6},{"k":"それから","h":"","m":"然后","l":6},{"k":"かい わ","h":"","m":"(会语)","l":6},{"k":"メキンコ","h":"","m":"墨西哥","l":6},{"k":"大阪デパート","h":"","m":"大阪百货商店 (虚构的百货商店)","l":6},{"k":"つるや","h":"","m":"稔屋 (虚构的餐厅)","l":6},{"k":"フランス昼","h":"","m":"法国屋 (虚构的超市)","l":6},{"k":"きります","h":"切ります","m":"切、剪","l":7},{"k":"おくります","h":"送ります","m":"寄、送","l":7},{"k":"あげます","h":"","m":"给 (你)","l":7},{"k":"もらいます","h":"","m":"得到","l":7},{"k":"かします","h":"貸します","m":"借给、借出","l":7},{"k":"かります","h":"借ります","m":"借入","l":7},{"k":"おしえます","h":"教えます","m":"教、告诉","l":7},{"k":"ならいます","h":"習います","m":"学习","l":7},{"k":"て","h":"","m":"手 手","l":7},{"k":"はし","h":"","m":"筷子","l":7},{"k":"スプーン","h":"","m":"勺子","l":7},{"k":"ナイフ","h":"","m":"刀子","l":7},{"k":"フォーク","h":"","m":"叉子","l":7},{"k":"はさみ","h":"","m":"剪子","l":7},{"k":"ケータイ","h":"","m":"手机","l":7},{"k":"メール","h":"","m":"电子邮件","l":7},{"k":"ねんがじょう","h":"","m":"年賀状 贺年卡","l":7},{"k":"パンチ","h":"","m":"打孔机","l":7},{"k":"ホッチキス","h":"","m":"订书机","l":7},{"k":"けしゴム","h":"消しゴム","m":"橡皮","l":7},{"k":"かみ","h":"","m":"紙 纸","l":7},{"k":"はな","h":"","m":"花 花","l":7},{"k":"シャツ","h":"","m":"衬衫","l":7},{"k":"プレゼント","h":"","m":"礼物","l":7},{"k":"にもつ","h":"荷物","m":"行李、包裹","l":7},{"k":"おかね","h":"お金","m":"钱","l":7},{"k":"きっぷ","h":"","m":"切符 车票","l":7},{"k":"クリスマス","h":"","m":"圣诞节","l":7},{"k":"ちち","h":"","m":"父 (自己的) 和爸爸","l":7},{"k":"はは","h":"","m":"母 (自己的) 妈妈","l":7},{"k":"おとうさん","h":"お父さん","m":"(別人的) 父亲 (叫自己的父亲时也可使用)","l":7},{"k":"おかあさん","h":"お母さん","m":"(別人的) 母亲 (叫自己的母亲时也可使用)","l":7},{"k":"もう","h":"","m":"已经","l":7},{"k":"まだ","h":"","m":"还、尚未","l":7},{"k":"これから","h":"","m":"現在 (马上去做某事)","l":7},{"k":"かい わ","h":"","m":"(会話〉","l":7},{"k":"スペイン","h":"","m":"西班牙","l":7},{"k":"ハンサム[な]","h":"","m":"英俊、美男子","l":8},{"k":"きれい[な]","h":"","m":"漂亮","l":8},{"k":"しずか[な]","h":"静か[な]","m":"安静","l":8},{"k":"にぎやか[な]","h":"","m":"热闹","l":8},{"k":"ゆうめい[な]","h":"有名[な]","m":"有名","l":8},{"k":"しんせつ[な]","h":"親切[な]","m":"亲切 (不用于自己的亲属)","l":8},{"k":"げんき[な]","h":"元気[な]","m":"健康","l":8},{"k":"ひま[な]","h":"暇[な]","m":"有时间、有空儿","l":8},{"k":"べんり[な]","h":"便利[な]","m":"方便","l":8},{"k":"すてき[な]","h":"","m":"特别好","l":8},{"k":"おおきい","h":"大きい","m":"大","l":8},{"k":"ちいさい","h":"小さい","m":"小","l":8},{"k":"あたらしい","h":"新しい","m":"新、新鲜","l":8},{"k":"ふるい","h":"古い","m":"旧","l":8},{"k":"いい (よい)","h":"","m":"好","l":8},{"k":"わるい","h":"悪い","m":"坏","l":8},{"k":"あつい","h":"暑い","m":"热","l":8},{"k":"さむい","h":"寒い","m":"冷","l":8},{"k":"つめたい","h":"冷たい","m":"凉","l":8},{"k":"むずかしい","h":"難しい","m":"难","l":8},{"k":"やさしい","h":"易しい","m":"容易","l":8},{"k":"たかい","h":"高い","m":"貴、高","l":8},{"k":"やすい","h":"安い","m":"便宜","l":8},{"k":"ひくい\\","h":"低い","m":"低、矮","l":8},{"k":"おもしろい","h":"","m":"有意思","l":8},{"k":"おいしい","h":"","m":"好吃","l":8},{"k":"いそがしい","h":"忙しい","m":"忙","l":8},{"k":"たのしい","h":"楽しい","m":"愉快、高兴","l":8},{"k":"しろい","h":"白い","m":"白色","l":8},{"k":"くろい","h":"黒い","m":"黑色","l":8},{"k":"あかい","h":"赤い","m":"红色","l":8},{"k":"あおい","h":"青い","m":"蓝色","l":8},{"k":"さくら","h":"","m":"桜 櫻花","l":8},{"k":"やま","h":"","m":"山 山","l":8},{"k":"まち","h":"","m":"町 市镇、街道","l":8},{"k":"たべもの","h":"食べ物","m":"食物","l":8},{"k":"ところ","h":"","m":"所 地方","l":8},{"k":"りょう","h":"寮","m":"宿舍","l":8},{"k":"レストラン","h":"","m":"餐厅","l":8},{"k":"せいかつ","h":"","m":"生活 生活","l":8},{"k":"[おぉ]しごと","h":"[お]仕事","m":"工作 (を します :工作)","l":8},{"k":"どう","h":"","m":"怎么样","l":8},{"k":"どんな 一","h":"","m":"什么样的~","l":8},{"k":"とても","h":"","m":"非常","l":8},{"k":"あまり","h":"","m":"太~ 与否定式一起使用)","l":8},{"k":"そして","h":"","m":"于是连接句子时使用)","l":8},{"k":"れんしゅう","h":"","m":"(練習","l":8},{"k":"かい わ","h":"","m":"从蕉 。","l":8},{"k":"シャンハイ","h":"","m":"上海","l":8},{"k":"[モモ入の 侍 」","h":"","m":"《七武士》 (黑泽明导演的电影)","l":8},{"k":"わかります","h":"","m":"懂、明白","l":9},{"k":"あります","h":"","m":"有","l":9},{"k":"すき[な]","h":"好き[な]","m":"喜欢","l":9},{"k":"きらい[な]","h":"嫌い[な]","m":"不喜欢","l":9},{"k":"じょうず[な]","h":"上手[な]","m":"好、擅长","l":9},{"k":"へた[な]","h":"下手[な]","m":"不好、不擅长","l":9},{"k":"のみもの","h":"飲み物","m":"饮料","l":9},{"k":"りょうり","h":"","m":"料理 菜肴 (てを L译才 : 做菜)","l":9},{"k":"スポーツ","h":"","m":"体育、运动","l":9},{"k":"やきゅう","h":"","m":"野球 棒球 (てを します :打棒球)","l":9},{"k":"りょこう","h":"","m":"旅行 旅行 (て[を] します : 旅行)","l":9},{"k":"おんがく","h":"","m":"音楽 音乐","l":9},{"k":"うた","h":"","m":"歌 歌","l":9},{"k":"クラシック","h":"","m":"古典音乐","l":9},{"k":"ジャズ","h":"","m":"爵士乐","l":9},{"k":"コンサート","h":"","m":"音乐会、演唱会","l":9},{"k":"カラオケ","h":"","m":"卡拉 OK","l":9},{"k":"かぶき","h":"","m":"歌舞伎 歌舞伎 〈日本传统剧种之一)","l":9},{"k":"し","h":"","m":"字 字","l":9},{"k":"かんじ","h":"","m":"漢字 汉字","l":9},{"k":"ひらがな","h":"","m":"平假名","l":9},{"k":"かたかな","h":"","m":"片假名","l":9},{"k":"ローマじ","h":"ローマ字","m":"罗马字","l":9},{"k":"こまかい おかね","h":"細かい","m":"お金 零钱","l":9},{"k":"チケット","h":"","m":"票","l":9},{"k":"じかん","h":"","m":"時間 时间","l":9},{"k":"ようじ","h":"","m":"用事 事情","l":9},{"k":"やくそく","h":"約束","m":"约定","l":9},{"k":"アルバイト","h":"","m":"临时工 (てを します : 打工)","l":9},{"k":"ごしゅじん","h":"ご主人","m":"(別人的) 丈夫","l":9},{"k":"おっと","h":"","m":"夫 (自己的) 丈夫","l":9},{"k":"おくさん","h":"奥さん","m":"(別人的) 妻子","l":9},{"k":"つま (かない)","h":"妻 (家内)","m":"(自己的) 妻子","l":9},{"k":"こども","h":"子ども","m":"孩子","l":9},{"k":"よく","h":"","m":"很","l":9},{"k":"だいたい","h":"","m":"大致、大略","l":9},{"k":"たくさん","h":"","m":"很多","l":9},{"k":"すこし","h":"少し","m":"一些、一点儿","l":9},{"k":"ぜんぜん","h":"","m":"全然 完全ー (司接否定式)","l":9},{"k":"はやく","h":"早く、速","m":"早、快","l":9},{"k":"てから","h":"","m":"因为~","l":9},{"k":"どうして","h":"","m":"怎么、为什么","l":9},{"k":"れんしゅう","h":"","m":"(練習O","l":9},{"k":"残念です【が]、","h":"","m":"非常遗居，不过~ ーー","l":9},{"k":"かい 和","h":"","m":"(会話〉","l":9},{"k":"ああ","h":"","m":"啊","l":9},{"k":"あります","h":"","m":"在、有 (不会活动的东西)","l":10},{"k":"います","h":"","m":"在、有 (会活动的人、动物)","l":10},{"k":"いろいろ[な]","h":"","m":"各种各样","l":10},{"k":"おとこの ひと","h":"","m":"男D 人 男人","l":10},{"k":"おんなの ひと","h":"","m":"女D 人 女人","l":10},{"k":"おとこの こ","h":"男の子","m":"男孩儿","l":10},{"k":"おんなの こ","h":"女の子","m":"女孩儿","l":10},{"k":"いぬ","h":"","m":"大 狗","l":10},{"k":"ねこ","h":"","m":"猫 獲","l":10},{"k":"パンダ","h":"","m":"熊猫","l":10},{"k":"ぞう","h":"","m":"象 大象","l":10},{"k":"もの","h":"","m":"物 东西","l":10},{"k":"でんち","h":"","m":"電池 电池","l":10},{"k":"はこ","h":"","m":"箱 箱子","l":10},{"k":"スイッチ","h":"","m":"开关","l":10},{"k":"れいぞうこ","h":"","m":"冷蔵庫 冰箱","l":10},{"k":"テーブル","h":"","m":"桌子","l":10},{"k":"ベッド","h":"","m":"床","l":10},{"k":"たな","h":"","m":"棚 架子","l":10},{"k":"ドア","h":"","m":"门","l":10},{"k":"まど","h":"窓","m":"窗","l":10},{"k":"ポスト","h":"","m":"信箱","l":10},{"k":"ビル","h":"","m":"高楼","l":10},{"k":"コンビニ","h":"","m":"便利店","l":10},{"k":"こうえん","h":"","m":"公園 公园","l":10},{"k":"きっさてん","h":"喫茶店","m":"咖啡馆","l":10},{"k":"てや","h":"て屋","m":"て店","l":10},{"k":"のりば","h":"乗り場","m":"一站 (指出租车站、电车站等)","l":10},{"k":"けん","h":"","m":"県 县","l":10},{"k":"うえ","h":"","m":"上 上","l":10},{"k":"した","h":"","m":"下 下","l":10},{"k":"まえ","h":"","m":"前 前","l":10},{"k":"うしろ","h":"","m":"后","l":10},{"k":"みぎ","h":"","m":"右 右","l":10},{"k":"ひだり","h":"","m":"左 左","l":10},{"k":"なか","h":"","m":"中 中同、里面","l":10},{"k":"そと","h":"","m":"外 外边","l":10},{"k":"となり","h":"","m":"隣 邦辺、隔壁","l":10},{"k":"ちかく","h":"近く","m":"附近","l":10},{"k":"あいだ","h":"","m":"間 一之间","l":10},{"k":"てや [など]","h":"","m":"一什么的、等、和","l":10},{"k":"かいわ","h":"","m":"(会話〉","l":10},{"k":"ナンプラー","h":"","m":"鱼酱","l":10},{"k":"コーナー","h":"","m":"柜台","l":10},{"k":"いちばん 下","h":"","m":"最下边","l":10},{"k":"東 京 デイズニーランド","h":"","m":"东京迪士尼乐园","l":10},{"k":"アジアストア","h":"","m":"亚洲超市 (虚构的超市)","l":10},{"k":"います [こどもが] [子どもが^]","h":"","m":"有 [和孩子]","l":11},{"k":"います [にほんにて] [日本区一]","h":"","m":"在 [日本]","l":11},{"k":"かかります","h":"","m":"花费 (时间、金钱等)","l":11},{"k":"やすみます","h":"休みます","m":"[跟公司] 请假","l":11},{"k":"ひとつっ","h":"1 つ","m":"1、1 人 (数灰西時使用)","l":11},{"k":"ふたつ","h":"2 っ","m":"2、2條","l":11},{"k":"みっつ","h":"3 つ","m":"34 3个","l":11},{"k":"よっつ","h":"4 つ","m":"4、4个","l":11},{"k":"いつつ","h":"5 つ","m":"5、5 个","l":11},{"k":"むっつ","h":"6 つ","m":"6、6个","l":11},{"k":"ななつ","h":"7 つ","m":"7、7个","l":11},{"k":"やっつ","h":"8 っ","m":"8、8 个","l":11},{"k":"ここのつ","h":"9つっ","m":"9、9个","l":11},{"k":"とお","h":"10","m":"10、10 介","l":11},{"k":"いくつ","h":"","m":"多少","l":11},{"k":"ひとり","h":"","m":"1人 一个人","l":11},{"k":"ふたり","h":"","m":"2 人 两个人","l":11},{"k":"ーだい","h":"","m":"一台 ー台 (数机械、车辆等的量词)","l":11},{"k":"ーまい","h":"ー枚","m":"一枚、一张 (数纸张、邮票等的量词)","l":11},{"k":"ーかい","h":"","m":"一回 一次","l":11},{"k":"りんご","h":"","m":"苹果","l":11},{"k":"みかん","h":"","m":"橘子","l":11},{"k":"サンドイッチ","h":"","m":"三明治","l":11},{"k":"カレー[ライス]","h":"","m":"咖哩 [饭]","l":11},{"k":"アイスクリーム","h":"","m":"冰激凌","l":11},{"k":"きって","h":"","m":"切手 邮票","l":11},{"k":"はがき","h":"","m":"明信片","l":11},{"k":"ふうとう","h":"封筒","m":"信封","l":11},{"k":"りょうしん","h":"","m":"両親 父母","l":11},{"k":"きょうだい","h":"","m":"兄弟 兄弟姐妹","l":11},{"k":"あに","h":"兄","m":"（自己的）哥哥","l":11},{"k":"おにいさん","h":"お兄さん","m":"（别人的）哥哥","l":11},{"k":"あね","h":"姉","m":"（自己的）姐姐","l":11},{"k":"おねえさん","h":"お姉さん","m":"（别人的）姐姐","l":11},{"k":"おとうと","h":"弟","m":"(自己的) 弟弟","l":11},{"k":"おとうとさん","h":"弟さん","m":"(别人的) 弟弟","l":11},{"k":"いもうと","h":"","m":"妹 (自己的) 妹妹","l":11},{"k":"いもうとさん","h":"妹さん","m":"(别人的) 妹妹","l":11},{"k":"がいこく","h":"","m":"外国 外国","l":11},{"k":"りゅうがくせい","h":"","m":"留学生 留学生","l":11},{"k":"クラス","h":"","m":"班级","l":11},{"k":"ーじかん","h":"","m":"一时间 一小时","l":11},{"k":"ーしゅうかん","h":"ー週間","m":"ー周","l":11},{"k":"ーかげつ","h":"ーか月","m":"一个月","l":11},{"k":"ーねん","h":"","m":"一年 一年","l":11},{"k":"てでらい","h":"","m":"一左右、大约一","l":11},{"k":"どのてらい","h":"","m":"多长时间","l":11},{"k":"ぜんぶで","h":"全部で","m":"一共、合计 加","l":11},{"k":"みんな","h":"","m":"全部、大家 ーー","l":11},{"k":"てだけ","h":"","m":"只~","l":11},{"k":"れんしゅう","h":"","m":"(練習O","l":11},{"k":"かい わ","h":"","m":"含蘭)","l":11},{"k":"航空便 (エアメール)","h":"","m":"航邮、航运","l":11},{"k":"オーストラリア","h":"","m":"澳大利亚","l":11},{"k":"かんたん[な]","h":"簡単[な]","m":"简单","l":12},{"k":"ちかい","h":"近い","m":"近","l":12},{"k":"とおい","h":"遠い","m":"远","l":12},{"k":"はやい","h":"速い、早い","m":"快、早","l":12},{"k":"おそい","h":"遅い","m":"慢","l":12},{"k":"おおい [ひとが^]","h":"多い[人が~-]","m":"[人] 多","l":12},{"k":"すくない『","h":"少ない","m":"[人] 少","l":12},{"k":"あたたかい","h":"暖かい、温かい","m":"暖和、温","l":12},{"k":"すずしい","h":"涼しい","m":"凉快","l":12},{"k":"あまい","h":"甘い","m":"甜","l":12},{"k":"からい","h":"","m":"辛改 辣","l":12},{"k":"おもい","h":"重い","m":"重","l":12},{"k":"かるい","h":"軽い","m":"轻","l":12},{"k":"いい[コーヒーが^]","h":"","m":"[咖啡] 好 (从两种物品中选择时)","l":12},{"k":"きせつ","h":"","m":"季节 季节","l":12},{"k":"はる","h":"春","m":"春天","l":12},{"k":"なつ","h":"","m":"夏 夏天","l":12},{"k":"あき","h":"","m":"秋 秋天","l":12},{"k":"ふゆ","h":"","m":"冬 冬天","l":12},{"k":"あめ","h":"雨","m":"雨","l":12},{"k":"ゆき","h":"雪","m":"雪","l":12},{"k":"くもり","h":"曇り","m":"阴","l":12},{"k":"ホテル","h":"","m":"饭店","l":12},{"k":"くうこう","h":"","m":"空港 机场","l":12},{"k":"うみ","h":"","m":"海 海","l":12},{"k":"せかい","h":"","m":"世界 世界","l":12},{"k":"パーティー","h":"","m":"晚会、派对","l":12},{"k":"おまつり","h":"お祭り","m":"庙会、庆典、节庆","l":12},{"k":"すきやき","h":"すき焼き","m":"寿喜烧（日本菜）","l":12},{"k":"さしみ","h":"刺身","m":"生鱼片（日本菜）","l":12},{"k":"おすし","h":"お寿司","m":"寿司（日本菜）","l":12},{"k":"てんぷら","h":"天ぷら","m":"天妇罗（日本菜）","l":12},{"k":"ぶたにく","h":"豚肉","m":"猪肉","l":12},{"k":"とりにく","h":"とり肉","m":"鸡肉","l":12},{"k":"ぎゅうにく","h":"","m":"牛肉 牛肉","l":12},{"k":"レモン","h":"","m":"柠檬","l":12},{"k":"いけばな","h":"生け花","m":"插花 (てを します : 播花)","l":12},{"k":"もみじ","h":"紅葉","m":"红叶","l":12},{"k":"どちら","h":"","m":"哪一个 〈从两个中间选择一个时使用)","l":12},{"k":"どちらも","h":"","m":"两个都一","l":12},{"k":"いちばん","h":"","m":"最","l":12},{"k":"ずっと","h":"","m":"一得多","l":12},{"k":"はじめて","h":"初めて","m":"初次","l":12},{"k":"かい","h":"","m":"(会語)","l":12},{"k":"ホンコン","h":"","m":"香港","l":12},{"k":"シンガポボール","h":"","m":"新加城","l":12},{"k":"ストア","h":"","m":"ABC超市 (虚构的超市)","l":12},{"k":"ジャパン","h":"","m":"日本超市 (虚构的超市)","l":12},{"k":"あそびます","h":"遊びます","m":"玩、玩耍","l":13},{"k":"およぎます","h":"泳ぎます","m":"游泳","l":13},{"k":"むかえます","h":"迎えます","m":"迎接","l":13},{"k":"つかれます","h":"疲れます","m":"累","l":13},{"k":"けっこんします","h":"結婚します","m":"结婚","l":13},{"k":"かいものします","h":"買い物します","m":"买东西、购物","l":13},{"k":"しょくじします","h":"食事します","m":"吃饭、用餐","l":13},{"k":"さんぽします","h":"散歩します","m":"散步","l":13},{"k":"たいへん[な]","h":"大変[な]","m":"很 (累人)、相当 (辛苦) (表示相当","l":13},{"k":"ほしい","h":"欲しい","m":"想要","l":13},{"k":"ひろい","h":"広い","m":"宽","l":13},{"k":"さびしい","h":"寂しい","m":"寂寞","l":13},{"k":"プール","h":"","m":"游泳池","l":13},{"k":"かわ","h":"川","m":"河流","l":13},{"k":"びじゅつ","h":"美術","m":"美术","l":13},{"k":"スキー","h":"","m":"滑雪","l":13},{"k":"しゅうまつ","h":"週末","m":"周末","l":13},{"k":"おしょうがつ","h":"お正月","m":"新年","l":13},{"k":"てごろ","h":"","m":"一左右 (表示時同)","l":13},{"k":"なにか","h":"何か","m":"什么 (表示不特定的某件事情或某一","l":13},{"k":"どこか","h":"","m":"哪里 (表示不特定的基條地方)","l":13},{"k":"のどが かわきます","h":"","m":"口渴 (表示\"渴了\"这一状态时用 「O","l":13},{"k":"おなかが すきます","h":"","m":"肚子俄 (表示 \"儀了\" 返一状灰時用","l":13},{"k":"かい わ","h":"","m":"《会话>","l":13},{"k":"ご注文は?","h":"","m":"您点什么?","l":13},{"k":"中 どん","h":"","m":"牛肉盖饭","l":13},{"k":"別々に","h":"","m":"分别","l":13},{"k":"アキックス","h":"","m":"阿基克斯 (虚构的公司)","l":13},{"k":"おはようテレビ","h":"","m":"早安申視台 (虚构的电视台)","l":13},{"k":"つけます","h":"","m":"开 (空调、电灯等)","l":14},{"k":"けします","h":"消します","m":"关 (空调、电灯等)","l":14},{"k":"あけます","h":"開けます","m":"开 (〈门、窗等)","l":14},{"k":"しめます","h":"閉めます","m":"关 (门、窗等)","l":14},{"k":"いそぎます","h":"急ぎます","m":"急、急忙","l":14},{"k":"まちます","h":"待ちます","m":"等","l":14},{"k":"もちます","h":"持ちます","m":"拿","l":14},{"k":"とります","h":"取ります","m":"取","l":14},{"k":"てつだいます","h":"手伝います","m":"帮忙","l":14},{"k":"よびます","h":"呼びます","m":"叫","l":14},{"k":"はなします","h":"話します","m":"说话","l":14},{"k":"つかいます","h":"使います","m":"使用","l":14},{"k":"とめます牙","h":"止めます","m":"停、止","l":14},{"k":"みせます","h":"見せます","m":"显示、给～看","l":14},{"k":"おしえます","h":"教えます","m":"告诉（地址等）","l":14},{"k":"すわります","h":"座ります","m":"坐","l":14},{"k":"たちます","h":"立ちます","m":"站","l":14},{"k":"はいります","h":"入ります「[史茶店にて]","m":"进 [咖啡馆]","l":14},{"k":"でます","h":"出ます[史茶店を-]","m":"\"出 [咖啡馆","l":14},{"k":"ふります","h":"降ります【[雨が-]","m":"下 [雨]","l":14},{"k":"コピーします","h":"","m":"复印","l":14},{"k":"でんき","h":"","m":"電気 电灯、电气","l":14},{"k":"エアコン","h":"","m":"空调","l":14},{"k":"パスポート","h":"","m":"护照","l":14},{"k":"なまえ","h":"","m":"名前 姓名、名字","l":14},{"k":"じゅうしょ","h":"","m":"住所 地址","l":14},{"k":"ちず","h":"","m":"地図 地图","l":14},{"k":"しお","h":"塩","m":"盐","l":14},{"k":"さとう","h":"砂糖","m":"糖","l":14},{"k":"もんだい","h":"","m":"问题 练习题、问是","l":14},{"k":"こたえ","h":"","m":"答元 回答","l":14},{"k":"よみかた","h":"読みか","m":"读法、念法","l":14},{"k":"てかた","h":"て方","m":"一法","l":14},{"k":"まっすぐ","h":"","m":"笔直、直走","l":14},{"k":"ゆっくり","h":"","m":"慢慢地、充分地","l":14},{"k":"すぐ","h":"","m":"马上","l":14},{"k":"また","h":"","m":"再","l":14},{"k":"あとで","h":"","m":"回头、一会儿","l":14},{"k":"もう すこし","h":"もう","m":"少し 再~一点儿、还一一点儿","l":14},{"k":"もう ~","h":"","m":"再~、还~","l":14},{"k":"れんしゅう","h":"","m":"(練習O","l":14},{"k":"さぁ","h":"","m":"喂 (提议、催促做某事时使用)","l":14},{"k":"あれ?","h":"","m":"哎呀! 別? (感到吃惊、不可思议时发","l":14},{"k":"かい わ","h":"","m":"《从高)","l":14},{"k":"お釣り","h":"","m":"(找) 零钱","l":14},{"k":"みとり町","h":"","m":"绿叮 (虚构的城市)","l":14},{"k":"おきます","h":"置きます","m":"放","l":15},{"k":"つくります","h":"作ります、造ります","m":"制作、制造","l":15},{"k":"うります","h":"売ります","m":"卖","l":15},{"k":"しります","h":"知ります","m":"知道","l":15},{"k":"すみます","h":"住みます","m":"住、居住","l":15},{"k":"けんきゅうします臣","h":"研究します","m":"研究","l":15},{"k":"しりょう","h":"","m":"資料 資料","l":15},{"k":"カタログ","h":"","m":"目录","l":15},{"k":"じこくひょう","h":"時刻表","m":"时刻表","l":15},{"k":"ふく","h":"","m":"服 衣服","l":15},{"k":"せいひん","h":"","m":"製品 产品","l":15},{"k":"ソフト","h":"","m":"软件","l":15},{"k":"でんしじしょ","h":"","m":"電子辞書 电子辞典","l":15},{"k":"けいざい","h":"","m":"経済 经济","l":15},{"k":"しやくしょ","h":"","m":"市役所 市政府","l":15},{"k":"こうこう","h":"","m":"高校 高中","l":15},{"k":"はいしゃ","h":"歯医者","m":"牙医","l":15},{"k":"どくしん","h":"","m":"独身 単身","l":15},{"k":"すみません","h":"","m":"対不起","l":15},{"k":"机","h":"ゆう","m":"(车窜C)","l":15},{"k":"かい わ","h":"","m":"《会话》","l":15},{"k":"思い出します","h":"","m":"想起","l":15},{"k":"いらっしやゃいます","h":"","m":"有、在 〈[改去才」 的敬语)","l":15},{"k":"みんなの インタビュー","h":"","m":"大家的采访 (虚构的电视节目)","l":15},{"k":"のります+","h":"乗ります","m":"坐、乘 [电车","l":16},{"k":"おります芽","h":"降ります","m":"下 [电车","l":16},{"k":"のりかえます","h":"乗り換えます","m":"换乘","l":16},{"k":"あぁあびます","h":"浴びます","m":"浇、淋 [浴","l":16},{"k":"いれます牙","h":"入れます","m":"放入、插入","l":16},{"k":"だしますエ","h":"出します","m":"拿出、取出、提交、寄","l":16},{"k":"おろします","h":"下ろします","m":"取 [款","l":16},{"k":"はいります","h":"入ります","m":"上（大学）","l":16},{"k":"でます","h":"出ます","m":"（大学）毕业","l":16},{"k":"おします","h":"押します","m":"按、押、推","l":16},{"k":"のみます","h":"飲みます","m":"喝 (特指喝酒)","l":16},{"k":"けんがくします想","h":"見学します","m":"参观","l":16},{"k":"でんわします想","h":"電話します","m":"打电话","l":16},{"k":"わかい","h":"若い","m":"年轻","l":16},{"k":"ながい","h":"長い","m":"长","l":16},{"k":"みじかい","h":"短い","m":"短","l":16},{"k":"あかるい","h":"明るい","m":"明亮","l":16},{"k":"くらい","h":"暗い","m":"昏暗","l":16},{"k":"からだ\\","h":"","m":"体 身体","l":16},{"k":"あたま","h":"","m":"頭 头、脑子","l":16},{"k":"かお","h":"","m":"颜 脸","l":16},{"k":"め","h":"","m":"目 眼睛","l":16},{"k":"みみ","h":"耳","m":"耳朵","l":16},{"k":"はな","h":"","m":"鼻 鼻子","l":16},{"k":"くち","h":"ロ","m":"嘴巴","l":16},{"k":"は","h":"","m":"歯 牙齿","l":16},{"k":"おなか","h":"","m":"肚子","l":16},{"k":"あし","h":"足","m":"脚、腿","l":16},{"k":"せ","h":"背","m":"个子","l":16},{"k":"サービス","h":"","m":"服务","l":16},{"k":"ジョギング","h":"","m":"慢跑 (てを します ,慢踊)","l":16},{"k":"シャワー","h":"","m":"淋浴","l":16},{"k":"みどり","h":"緑","m":"绿色、绿树绿草","l":16},{"k":"おてら","h":"お寺","m":"寺庙","l":16},{"k":"じんじゃ","h":"神社","m":"神社","l":16},{"k":"ーばん","h":"ー番","m":"ー号","l":16},{"k":"どうやって","h":"","m":"怎么~ (询问怎么做时使用)","l":16},{"k":"どの ~","h":"","m":"哪个~ 〈有三个以上的东西时)","l":16},{"k":"どれ","h":"","m":"哪个(有三个以上的东西时)","l":16},{"k":"かいわ","h":"","m":"(会話〉","l":16},{"k":"まず","h":"","m":"首先 加","l":16},{"k":"次に","h":"","m":"其次 ーー","l":16},{"k":"キャッシュカード","h":"","m":"提款卡、借记卡","l":16},{"k":"あんしょうばんごう","h":"暗証番号","m":"密码","l":16},{"k":"かくにん","h":"確認","m":"确认","l":16},{"k":"ボタン","h":"","m":"按键、开关","l":16},{"k":"告祭り","h":"","m":"冰雪节","l":16},{"k":"バンドン","h":"","m":"万隆 (印度尼西亚地名)","l":16},{"k":"フランケン","h":"","m":"弗兰肯 (德国地名)","l":16},{"k":"ベラクルス","h":"","m":"韦拉克鲁斯 《墨西哥地名)","l":16},{"k":"おぼえます","h":"覚えます","m":"记住","l":17},{"k":"わすれます","h":"忘れます","m":"忘记","l":17},{"k":"なくします","h":"","m":"丢失","l":17},{"k":"はらいます","h":"払います","m":"付钱","l":17},{"k":"かえします","h":"返します","m":"归还、返回","l":17},{"k":"でかけます葉","h":"出かけます","m":"出门、外出","l":17},{"k":"ぬぎます","h":"脱ぎます","m":"脱 (衣服等)","l":17},{"k":"もっていきます","h":"持って行きます","m":"带去、拿去","l":17},{"k":"もってきます","h":"持って来ます","m":"带来、拿来","l":17},{"k":"しんぱいします","h":"心配します","m":"担心","l":17},{"k":"ざんぎょうします","h":"残業します","m":"加班","l":17},{"k":"しゅっちょうします","h":"出張します","m":"出差","l":17},{"k":"のみます","h":"飲みます","m":"吃 [药","l":17},{"k":"[く〈すりを<]","h":"","m":"[菜志一]","l":17},{"k":"はいります","h":"入ります","m":"洗 [澡]","l":17},{"k":"たいせつ[な]","h":"大切[な]","m":"重要","l":17},{"k":"だいじょうぶ[な]","h":"大丈夫[な]","m":"没问题、不要紧","l":17},{"k":"あぶない","h":"危ない","m":"危险","l":17},{"k":"きんえん","h":"禁煙","m":"禁烟","l":17},{"k":"[けんこう]","h":"","m":"[健康]保険証 [健康] 保险证","l":17},{"k":"ねつ","h":"","m":"熱 发烧","l":17},{"k":"びょうき","h":"","m":"病気 疾病","l":17},{"k":"くすり","h":"","m":"薬 药","l":17},{"k":"[お]ふろ","h":"","m":"洗澡、澡盆","l":17},{"k":"うわぎ","h":"","m":"上着 外套","l":17},{"k":"したぎ","h":"","m":"下着 内衣","l":17},{"k":"、 にち","h":"","m":"2、3 日 两三天","l":17},{"k":"までに","h":"","m":"到~为止 (指时间期限)","l":17},{"k":"ですから","h":"","m":"因此","l":17},{"k":"かい わ","h":"","m":"《会话》","l":17},{"k":"かぜ","h":"","m":"感冒","l":17},{"k":"それから","h":"","m":"还有","l":17},{"k":"できます","h":"","m":"能、会、可以","l":18},{"k":"あらいます","h":"洗います","m":"洗","l":18},{"k":"ひきます","h":"弾きます","m":"弾 (钢琴等)","l":18},{"k":"うたいます","h":"歌います","m":"唱","l":18},{"k":"あつめます","h":"集めます","m":"收集、收藏","l":18},{"k":"すてます","h":"捨てます","m":"丢弃","l":18},{"k":"かえます","h":"換えます","m":"换","l":18},{"k":"うんてんします想","h":"運転します","m":"驾驶","l":18},{"k":"よやくします邊","h":"予約します","m":"预订","l":18},{"k":"ピアノ","h":"","m":"钢琴","l":18},{"k":"ーメートル","h":"","m":"一米","l":18},{"k":"げんきん","h":"","m":"現金 現金","l":18},{"k":"しゅみ","h":"","m":"趣味 愛好","l":18},{"k":"おいのり","h":"お祈り","m":"祈愿、祈祷 (てを します : : 祝愿)","l":18},{"k":"かちょう","h":"","m":"課長 科长","l":18},{"k":"ぶちょう","h":"","m":"部長 部长","l":18},{"k":"しゃちょう『","h":"","m":"社長 社长、总经理","l":18},{"k":"どうぶつっ","h":"","m":"动物 动物","l":18},{"k":"うま","h":"","m":"马 马","l":18},{"k":"インターネット","h":"","m":"因特网、互联网","l":18},{"k":"かい わ","h":"","m":"《会话》","l":18},{"k":"特に","h":"","m":"特别","l":18},{"k":"へぇ","h":"","m":"嘿〈用于表示钦佩、惊讶时)","l":18},{"k":"なかなか","h":"","m":"后接否定式，表示 (不)轻易、(不)容","l":18},{"k":"ぜひ","h":"","m":"一定","l":18},{"k":"ビートルズ","h":"","m":"披头士乐队(英国著名的乐队)","l":18},{"k":"のぼります","h":"登ります、上ります","m":"登、上","l":19},{"k":"とまります","h":"泊まります","m":"住 [酒店]","l":19},{"k":"そうじします相","h":"掃除します","m":"打扫","l":19},{"k":"せんたくします想","h":"洗濯します","m":"洗衣服","l":19},{"k":"なります","h":"","m":"变成、成为","l":19},{"k":"ねむい","h":"眠い","m":"困","l":19},{"k":"つよい","h":"強い","m":"強","l":19},{"k":"よわい『","h":"5","m":"弱","l":19},{"k":"れんしゅう","h":"","m":"練習 练习 (て[を] L去才 : 做练习)","l":19},{"k":"ゴルフ","h":"","m":"高尔夫 (てを します : : 打高尔夫)","l":19},{"k":"すもう","h":"","m":"相撲 相扑 (てを します : : 相扑)","l":19},{"k":"ちょうし","h":"","m":"調子 情況、状恋","l":19},{"k":"いちど","h":"","m":"一度 一次","l":19},{"k":"いちども","h":"一度も","m":"后接否定式, 表示一次也 (没有) 一","l":19},{"k":"だんだん","h":"","m":"渐渐","l":19},{"k":"もうすぐ","h":"","m":"马上、就","l":19},{"k":"おかげさまで","h":"","m":"托您的福 (在得到帮助或热情对待后","l":19},{"k":"でも","h":"","m":"不过","l":19},{"k":"かいわ","h":"","m":"(人","l":19},{"k":"ダイエット","h":"","m":"减肥 (てを します : : 进行减肥)","l":19},{"k":"無理[な]","h":"","m":"勉强","l":19},{"k":"体 に いい","h":"","m":"対身体好","l":19},{"k":"東 京 スカイツリー","h":"","m":"东京晴空塔 (位隆灰京的有有眺望台的","l":19},{"k":"いります","h":"要ります","m":"要 [签证]","l":20},{"k":"しらべます","h":"調べます","m":"查、调查","l":20},{"k":"しゅうりします","h":"修理します","m":"修理","l":20},{"k":"ぼく","h":"僕","m":"我（男性用，比「わたし」随意）","l":20},{"k":"きみ","h":"君","m":"你（用于同辈、部下、晚辈）","l":20},{"k":"くん","h":"","m":"～君（称谓）","l":20},{"k":"うん","h":"","m":"嗯（比「はい」随意）","l":20},{"k":"ううん","h":"","m":"不（比「いいえ」随意）","l":20},{"k":"ことば","h":"","m":"词汇、单词","l":20},{"k":"きもの","h":"着物","m":"和服（日本的传统服装）","l":20},{"k":"ビザ","h":"","m":"签证","l":20},{"k":"はじめ","h":"初め","m":"开始","l":20},{"k":"おわり","h":"終わり","m":"结束","l":20},{"k":"こっち","h":"","m":"这边（比「こちら」随意）","l":20},{"k":"そっち","h":"","m":"那边（指离听话人近的场所，比「そちら」随意）","l":20},{"k":"あっち","h":"","m":"那边（指离说话人、听话人都远的场所，比「あちら」随意）","l":20},{"k":"どっち","h":"","m":"哪一个（用于从两个中间选择一个，比「どちら」随意）","l":20},{"k":"みんなで","h":"","m":"大家一起","l":20},{"k":"〜けど","h":"","m":"……，但是（比「が」随意）","l":20},{"k":"よかったら","h":"","m":"如果 (你觉得) 可以的话~","l":20},{"k":"いろいろ","h":"","m":"各种各样","l":20},{"k":"おもいます","h":"思います","m":"想、觉得","l":21},{"k":"いいます","h":"言います","m":"说、讲","l":21},{"k":"かちます","h":"勝ちます","m":"赢","l":21},{"k":"まけます","h":"負けます","m":"输","l":21},{"k":"あります","h":"","m":"举办、有 [节庆活动]","l":21},{"k":"やくに たちます","h":"役に","m":"立ちます 有用、起作用","l":21},{"k":"うごきます","h":"動きます","m":"转动、动","l":21},{"k":"きを つけます","h":"気を","m":"つけます 小心、注意","l":21},{"k":"りゅうがくします 留学します","h":"","m":"留学","l":21},{"k":"むだ","h":"無駄","m":"浪费","l":21},{"k":"ふべん","h":"不便","m":"不方便","l":21},{"k":"すごい","h":"","m":"厉害（表示惊讶和感叹）","l":21},{"k":"ほんとう","h":"","m":"真的","l":21},{"k":"うそ","h":"","m":"假话","l":21},{"k":"じどうしゃ","h":"自動車","m":"汽车","l":21},{"k":"こうつう","h":"","m":"交通 交通","l":21},{"k":"ぶっか","h":"","m":"物価 物价","l":21},{"k":"ほうそう","h":"","m":"放送 广播","l":21},{"k":"ニュース","h":"","m":"新闻","l":21},{"k":"アニメ","h":"","m":"动画","l":21},{"k":"マンガ","h":"","m":"漫画","l":21},{"k":"デザイン","h":"","m":"设计","l":21},{"k":"ゆめ","h":"","m":"夢 梦、理想","l":21},{"k":"てんさい","h":"天才","m":"天才","l":21},{"k":"しあい","h":"","m":"試合 比赛 (てを します : : 比赛)","l":21},{"k":"いけん","h":"","m":"意見 意见","l":21},{"k":"はなし","h":"","m":"話 话、谈话 (てを L 支才 : 说话)","l":21},{"k":"ちきゅう","h":"","m":"地球 地球","l":21},{"k":"つき","h":"","m":"月 月亮","l":21},{"k":"さいきん","h":"","m":"最近 最近","l":21},{"k":"たぶん","h":"","m":"大概、也许","l":21},{"k":"きっと","h":"","m":"一定、 必定","l":21},{"k":"ほんとうに","h":"","m":"真的","l":21},{"k":"そんなに","h":"","m":"没那么 〈后接否定式)","l":21},{"k":"てに ついて","h":"","m":"关于~","l":21},{"k":"かい わ","h":"","m":"(会話〉","l":21},{"k":"ンでも","h":"飲み","m":"ませんか。 喝点儿一什么吗?","l":21},{"k":"もちろん","h":"","m":"当然","l":21},{"k":"アインシュタイン","h":"","m":"愛因新坦 (1879-193$)","l":21},{"k":"ガガーリン","h":"","m":"加加林 (1934-1968)","l":21},{"k":"ガリレオ","h":"","m":"伽利略 (1564-1642)","l":21},{"k":"キング苑師","h":"","m":"马丁,路德. 金 (1929-1968)","l":21},{"k":"フランクリン","h":"","m":"本杰明,富兰克林 (1706-1790)","l":21},{"k":"カンガルー","h":"","m":"袋鼠","l":21},{"k":"キャプテン・クック","h":"","m":"库克船长 (1728-1779)","l":21},{"k":"ョヨーネン","h":"","m":"有耐 (虚构的公司)","l":21},{"k":"きます","h":"着ます","m":"穿 (衬衫等上衣、外衣)","l":22},{"k":"はきます","h":"","m":"穿 (鞋子、裤子等)","l":22},{"k":"かぶります","h":"","m":"戴 (帽子等)","l":22},{"k":"かけます","h":"","m":"戴（眼镜）","l":22},{"k":"します","h":"","m":"系（领带）","l":22},{"k":"うまれます","h":"生まれます","m":"出生","l":22},{"k":"わたしたち","h":"","m":"我们","l":22},{"k":"コート","h":"","m":"大衣","l":22},{"k":"セーター","h":"","m":"毛衣","l":22},{"k":"スーツ","h":"","m":"套装","l":22},{"k":"ぼうし","h":"","m":"帽子 帽子","l":22},{"k":"めがね","h":"","m":"眼镜 眼镜","l":22},{"k":"ケーキ","h":"","m":"蛋糕","l":22},{"k":"おべんとう","h":"お弁当","m":"盒饭","l":22},{"k":"ロボット","h":"","m":"机器人","l":22},{"k":"ユーモア","h":"","m":"幽默","l":22},{"k":"つごう","h":"","m":"都合 方便、凑巧","l":22},{"k":"よく","h":"","m":"经常","l":22},{"k":"れんしゅう","h":"","m":"(練習O","l":22},{"k":"えーと","h":"","m":"那个…:。(用于思考时)","l":22},{"k":"かいわ","h":"","m":"《会话》","l":22},{"k":"では","h":"","m":"那么","l":22},{"k":"こちらち","h":"","m":"这 (「これ」 的礼角用迄)","l":22},{"k":"ダイニングキッチン","h":"","m":"带餐厅的厨房","l":22},{"k":"押し入れ","h":"","m":"日式壁机","l":22},{"k":"パリ","h":"","m":"巴黎","l":22},{"k":"みんなの アンケート","h":"","m":"大家的调查 (虚构的问卷调查题目) _95_","l":22},{"k":"ききます","h":"聞きます","m":"问 [老师]","l":23},{"k":"まわします","h":"回します","m":"传递、转","l":23},{"k":"ひきます","h":"引きます","m":"拉、搜","l":23},{"k":"かえます","h":"変えます","m":"改变","l":23},{"k":"さわります","h":"触ります","m":"摸、碰 [到门]","l":23},{"k":"あるきます","h":"歩きます","m":"走","l":23},{"k":"わたります","h":"渡ります","m":"渡过、过 [桥]","l":23},{"k":"まがります","h":"曲がります","m":"[往右] 拐、转弯","l":23},{"k":"さびしい","h":"寂しい","m":"寂寞","l":23},{"k":"おゆ","h":"お湯","m":"热水、开水","l":23},{"k":"おと","h":"音","m":"（物体发出的）声音","l":23},{"k":"サイズ","h":"","m":"号码、尺寸","l":23},{"k":"こしょう","h":"故障","m":"故障","l":23},{"k":"みち","h":"","m":"道 道路","l":23},{"k":"こうさてん","h":"","m":"交差点 十字路口","l":23},{"k":"しんごう","h":"信号","m":"红绿灯","l":23},{"k":"かど","h":"","m":"角 拐角、路口","l":23},{"k":"はし","h":"","m":"橋 桥","l":23},{"k":"ちゅうしゃじょう","h":"駐車場","m":"停车场","l":23},{"k":"たてもの","h":"","m":"建物 建筑物","l":23},{"k":"なんかいも","h":"何回も","m":"多次、好几次","l":23},{"k":"め","h":"目","m":"第 (指順序)","l":23},{"k":"くれます","h":"","m":"给 (我、我方)","l":24},{"k":"なおします","h":"直します","m":"修理、修改","l":24},{"k":"つれていきます","h":"連れて行きます","m":"带着去","l":24},{"k":"つれてきます","h":"連れて来ます","m":"带着来","l":24},{"k":"おくります","h":"送ります","m":"送（人）","l":24},{"k":"しょうかいします","h":"紹介します","m":"介绍","l":24},{"k":"あんないします","h":"案内します","m":"带路、引导","l":24},{"k":"せつめいします","h":"説明します","m":"说明、讲解","l":24},{"k":"いれます","h":"入れます","m":"冲（咖啡）、放入","l":24},{"k":"おじいさん","h":"","m":"爷爷、姥爷","l":24},{"k":"おじいちゃん","h":"","m":"爷爷（亲昵称呼）","l":24},{"k":"おばあさん","h":"","m":"奶奶、姥姥","l":24},{"k":"おばあちゃん","h":"","m":"奶奶（亲昵称呼）","l":24},{"k":"じゅんび","h":"準備","m":"准备","l":24},{"k":"ひっこし","h":"引っ越し","m":"搬家","l":24},{"k":"おかし","h":"お菓子","m":"点心","l":24},{"k":"ホームステイ","h":"","m":"寄宿在当地人家里（homestay）","l":24},{"k":"ぜんぶ","h":"全部","m":"全部","l":24},{"k":"じぶんで","h":"自分で","m":"自己","l":24},{"k":"いみ","h":"意味","m":"意思、含义","l":24},{"k":"ほかに","h":"","m":"其他、另外","l":24},{"k":"ははのひ","h":"母の日","m":"母亲节","l":24},{"k":"かんがえます","h":"考えます","m":"考虑、想","l":25},{"k":"つきます","h":"着きます","m":"到、到达","l":25},{"k":"とります（年を〜）","h":"取ります","m":"上〔年纪〕","l":25},{"k":"たります","h":"足ります","m":"够","l":25},{"k":"いなか","h":"田舎","m":"乡下、老家","l":25},{"k":"チャンス","h":"","m":"机会","l":25},{"k":"おく","h":"億","m":"亿","l":25},{"k":"もし〜たら","h":"","m":"如果、要是","l":25},{"k":"いみ","h":"意味","m":"意思","l":25},{"k":"れんしゅう","h":"練習","m":"练习","l":25},{"k":"もしもし","h":"","m":"喂（打电话时的用语）","l":25},{"k":"こと","h":"事","m":"事情（〜のこと：～事）","l":25},{"k":"ひま","h":"暇","m":"空闲、有空","l":25},{"k":"てんきん","h":"転勤","m":"转任","l":25},{"k":"たいしかん","h":"大使館","m":"大使馆","l":25},{"k":"おせわになりました","h":"お世話になりました","m":"承蒙（多方）关照","l":25},{"k":"がんばります","h":"頑張ります","m":"加油、努力","l":25},{"k":"どうぞおげんきで","h":"どうぞお元気で","m":"请多保重。祝你健康。","l":25},{"k":"ベトナム","h":"","m":"越南","l":25},{"k":"てベん","h":"て備","m":"一方言","l":26},{"k":"おおさかべん","h":"大阪弁","m":"大阪笑、大阪方圭","l":26},{"k":"エドヤストア","h":"","m":"江戸屋 (虚构的商店)","l":26},{"k":"遅れます","h":"遅れる","m":"晚了、没赶上","l":26},{"k":"見ます/診ます","h":"見る","m":"看、诊断","l":26},{"k":"こっかいぎじどう","h":"国会議事堂","m":"国会议事党","l":26},{"k":"ちょくせつ","h":"直接","m":"直接","l":26},{"k":"へいじつ","h":"平日","m":"平日","l":26},{"k":"いつでも","h":"","m":"随时","l":26},{"k":"どこでも","h":"","m":"在任何地方都~","l":26},{"k":"だれでも","h":"","m":"任何人都~","l":26},{"k":"なんでも","h":"何でも","m":"什么都~","l":26},{"k":"ごみ","h":"","m":"垃圾","l":26},{"k":"出します","h":"出す","m":"扎","l":26},{"k":"燃えるごみ","h":"","m":"可燃垃圾","l":26},{"k":"おきば","h":"置き場","m":"放置场所","l":26},{"k":"ゴミ富さ場","h":"","m":"垃圾声","l":26},{"k":"よこ","h":"横","m":"”旁边","l":26},{"k":"びん","h":"瓶","m":"措","l":26},{"k":"かん","h":"向","m":"” 包","l":26},{"k":"ガス","h":"","m":"煤气","l":26},{"k":"ガスがいしゃや","h":"gas会社","m":"煤气公司","l":26},{"k":"連絡します","h":"で連絡する","m":"联系","l":26},{"k":"うんどうかい","h":"運動会","m":"运动会","l":26},{"k":"都合が悪い","h":"","m":"时机不好、不方便","l":26},{"k":"フリーマーケット","h":"","m":"跳阵市场","l":26},{"k":"ずいぶん","h":"随分","m":"极其、相当","l":26},{"k":"やります","h":"","m":"做、干、搞","l":26},{"k":"ぼんおどり","h":"多政り","m":"<名2 重当倫会男","l":26},{"k":"さいふ、","h":"財布","m":"钱包","l":26},{"k":"気人がいい","h":"","m":"语》 舒服","l":26},{"k":"気分が悪い","h":"","m":"语》 不舒服","l":26},{"k":"間に合います","h":"て問に合う","m":"{> 直上","l":26},{"k":"こんど","h":"今度","m":"这次、下次","l":26},{"k":"拾います","h":"拾う","m":"[> 拾、投","l":26},{"k":"ばしょ","h":"场所","m":"场所、地点","l":26},{"k":"そんな","h":"","m":"体》 那样的〈离听话人较近)","l":26},{"k":"こんがーキ","h":"","m":"体》 这样的~","l":26},{"k":"あんなへ","h":"","m":"体> 那样的~ (离说话人和听话人都较","l":26},{"k":"ボランティア","h":"","m":"寻找","l":26},{"k":"うちゅう","h":"宇宙","m":"义工、志愿者","l":26},{"k":"ほしであきひこ","h":"星出彰彦","m":"宇宙","l":26},{"k":"てさま","h":"て様","m":"星出彰彦 (1968-, 日本宇航只)","l":26},{"k":"うちゅうせん","h":"宇宙船","m":"を辞> て先生、て女士 (「てさん」的尊","l":26},{"k":"こわい","h":"柿い","m":"敬语)","l":26},{"k":"うちゅうステーション","h":"宇宙station","m":"宇宙で船","l":26},{"k":"邊います","h":"<違う","m":"形> 害怕、可怕","l":26},{"k":"うちゅうひこうし","h":"宇宙飛行士","m":"航天站","l":26},{"k":"ーー はっきり","h":"","m":"看见","l":27},{"k":"見えます","h":"見える","m":"建好、交上 (朋友) 、做好 〈饭)","l":27},{"k":"出来ます","h":"出来る","m":"岛","l":27},{"k":"とり","h":"鳥","m":"”听见","l":27},{"k":"こえ","h":"声","m":"只〈后接否定形)","l":27},{"k":"聞こえます","h":"聞こえる","m":"公寓","l":27},{"k":"てしか","h":"","m":"饲养","l":27},{"k":"マンション","h":"","m":"养狗","l":27},{"k":"ペット","h":"","m":"家具","l":27},{"k":"師います","h":"飼う","m":"书架","l":27},{"k":"天を師います","h":"","m":"什么时候","l":27},{"k":"かぐで","h":"家具","m":"家、住宅","l":27},{"k":"ほんだな","h":"本棚","m":"” 建、盖","l":27},{"k":"ーー","h":"家","m":"烟花","l":27},{"k":"建てます","h":"建てる","m":"跑、奔驰","l":27},{"k":"すばらしい","h":"素晴らしい","m":"”担心","l":27},{"k":"はなび","h":"花火","m":"波浪","l":27},{"k":"直ります","h":"","m":"洗、洗衣","l":27},{"k":"しんばい","h":"心配","m":"一教室","l":27},{"k":"なみ","h":"波","m":"“”开、举办 (奥运会)","l":27},{"k":"クリーニング","h":"","m":"厨房","l":27},{"k":"ほかの","h":"","m":"工具","l":27},{"k":"きょうしつ","h":"~教室","m":"宴会厅","l":27},{"k":"開きます","h":"開く","m":"ー后 (指時同上)","l":27},{"k":"キッチン","h":"","m":"哆啦A梦 (动漫人物的名字)","l":27},{"k":"どうぐ","h":"道具","m":"表示复数","l":27},{"k":"パーティールーム","h":"","m":"孩子们","l":27},{"k":"かた","h":"方","m":"非常喜欢","l":27},{"k":"てご 〇て後","h":"","m":"主人公","l":27},{"k":"じぶん","h":"自分","m":"不可思议","l":27},{"k":"全ーたち","h":"","m":"例如","l":27},{"k":"子ども 大为","h":"","m":"竹晴星","l":27},{"k":"だいすき","h":"大好き","m":"时间电视","l":27},{"k":"しゅじんこう","h":"主人公","m":"戴上","l":27},{"k":"かたち","h":"形","m":"自由地、随意地","l":27},{"k":"ふしぎ 「","h":"不思識","m":"天空","l":27},{"k":"ポケット","h":"","m":"飞、飞翔","l":27},{"k":"たとえば","h":"例えば","m":"将来","l":27},{"k":"タケコプター","h":"竹copter","m":"任意门","l":27},{"k":"ガム","h":"","m":"口香糖","l":28},{"k":"噛みます","h":"噛む","m":"嚼、咬","l":28},{"k":"しばらく〈","h":"","m":"一会儿、不久","l":28},{"k":"えらい","h":"伟改","m":"伟大、了不起","l":28},{"k":"たいてい","h":"大抵","m":"大部分、大体、普通","l":28},{"k":"ねっしん","h":"热心","m":"热心","l":28},{"k":"それに","h":"","m":"而且","l":28},{"k":"けいけん","h":"経験","m":"经验 (一汞四中去才: 有经验; 一をしま","l":28},{"k":"選びます","h":"選ぶ","m":"す。 经验)","l":28},{"k":"じつは","h":"実は","m":"有件事想麻烦一下","l":28},{"k":"かいわ","h":"会話","m":"其实、实际上","l":28},{"k":"むすこ","h":"息子","m":"ルル子","l":28},{"k":"むすめさん","h":"娠さん","m":"女儿","l":28},{"k":"まじめ","h":"真面目","m":"认真","l":28},{"k":"ちから","h":"カカ","m":"力量:力气","l":28},{"k":"全カが強い","h":"","m":"力气大、有力气、有力量","l":28},{"k":"ねだん","h":"値段","m":"价钱","l":28},{"k":"あじ","h":"味","m":"味道(指味覚)","l":28},{"k":"メモします","h":"","m":"记笔记","l":28},{"k":"ゲーム","h":"","m":"游戏、电子游戏","l":28},{"k":"ばんでぐみ","h":"番組","m":"节目","l":28},{"k":"ド ラマ","h":"","m":"电视剧","l":28},{"k":"AAテレビドラマ","h":"","m":"电视剧","l":28},{"k":"ラジオドラマ","h":"","m":"广播剧","l":28},{"k":"通います","h":"<通う","m":"上 (学) 、定期往返","l":28},{"k":"とき","h":"^機","m":"一机 (接尾词，表示某种机械)","l":28},{"k":"びよういん","h":"美容院","m":"美容院","l":28},{"k":"だいどころ","h":"台所","m":"色","l":28},{"k":"かたち","h":"形","m":"品、商品","l":28},{"k":"いろ","h":"色","m":"好","l":28},{"k":"しなもの","h":"品物","m":"色","l":28},{"k":"ちょうどいい","h":"","m":"得好、畅销","l":28},{"k":"けしき","h":"量色","m":"手","l":28},{"k":"かしゅ","h":"歌手","m":"金","l":28},{"k":"にんき","h":"人気","m":"次","l":28},{"k":"ボーナス","h":"","m":"来","l":28},{"k":"きゅうりょう","h":"给料","m":"家 (接尾词，表示专门研究某一学问或","l":28},{"k":"しょうらい","h":"将来","m":"从事某种艺术行业的人)","l":28},{"k":"とか","h":"て家","m":"\\说家","l":28},{"k":"しょうせつ","h":"小説","m":"己","l":28},{"k":"じぶん","h":"自分","m":"此","l":28},{"k":"それで","h":"","m":"知","l":28},{"k":"おしらせ","h":"お知らせ","m":"加","l":28},{"k":"参加します","h":"参加する","m":"期","l":28},{"k":"ひにち","h":"日にち","m":"期六","l":28},{"k":"たいいく","h":"体育館","m":"费","l":28},{"k":"むりょよう","h":"無料","m":")诱、邀请","l":28},{"k":"誘います","h":"読う","m":"动","l":28},{"k":"閉まります","h":"閉まる","m":"关着","l":29},{"k":"掛かります","h":"掛かる","m":"上着 (锁)","l":29},{"k":"間違えます","h":"間違える","m":"弄穫","l":29},{"k":"わすれもの","h":"忘れ物","m":"遗失物品","l":29},{"k":"いま","h":"今","m":"刚才 (指离现在很近的时间)","l":29},{"k":"今の電車","h":"","m":"刚发车的那趟电车","l":29},{"k":"このくらい","h":"","m":"这样大小的","l":29},{"k":"そとがわ","h":"外側","m":"外側","l":29},{"k":"ポケット","h":"","m":"口袋","l":29},{"k":"付きます","h":"付く","m":"带有","l":29},{"k":"ーへん","h":"过","m":"~边","l":29},{"k":"あみだな","h":"網棚","m":"行李各","l":29},{"k":"たしか","h":"確か","m":"似乎是、大概是","l":29},{"k":"しんじゅく","h":"新宿","m":"新宿 (东京的地名、车站名)","l":29},{"k":"開きます","h":"開く","m":"开着","l":29},{"k":"下まります","h":"上正まる","m":"停了、停着","l":29},{"k":"ガラス","h":"","m":"玻璃","l":29},{"k":"割れます","h":"制れる","m":"碎了","l":29},{"k":"ふくろ","h":"筑","m":"袋子","l":29},{"k":"折れます","h":"折れる","m":"折断","l":29},{"k":"げんじものがたけり","h":"源氏物語","m":"《源氏物语》 (平安时代紫式部写的小说)","l":29},{"k":"落とします","h":"落とす","m":"子、矶子","l":29},{"k":"壊れます","h":"壊れる","m":"枝","l":29},{"k":"[お] ちゃわん","h":"","m":"换","l":29},{"k":"ぇだ","h":"枝","m":"子","l":29},{"k":"っつきまず","h":"","m":"讲 (てをします: 进行瘦讲)","l":29},{"k":"汚れます","h":"汚れる","m":"信 (てをします: 回话)","l":29},{"k":"拭きます","h":"<拭く","m":"出所","l":29},{"k":"取り替えます","h":"取り替える","m":"件、材料","l":29},{"k":"コップ","h":"荷kop","m":"务员","l":29},{"k":"スビピーチ","h":"","m":"震","l":29},{"k":"片付けます","h":"月付ける","m":"性","l":29},{"k":"べんし","h":"返事","m":"便士","l":29},{"k":"外れます","h":"ご外れる","m":"倒下来、倒場","l":29},{"k":"こうばん","h":"交番","m":"面、^方","l":29},{"k":"しょるい","h":"書類","m":"烧","l":29},{"k":"上 貼ります","h":"中る","m":"中","l":30},{"k":"ひきだし","h":"引き出し","m":"抽层","l":30},{"k":"もと","h":"元","m":"以前、过去、原来","l":30},{"k":"もとのところ","h":"元の所","m":"原处","l":30},{"k":"戻します","h":"戻す","m":"原来的状态","l":30},{"k":"そのまま","h":"共の億","m":"开》 保持原状","l":30},{"k":"そのままにします","h":"","m":"还","l":30},{"k":"まだ","h":"未だ","m":"帆布背包 (「リュックサック」的略称)","l":30},{"k":"ひじょうぶくろ","h":"非常袋","m":"亚》 生活","l":30},{"k":"リュック","h":"","m":"手电","l":30},{"k":"ひじょうじ","h":"非常时","m":"全啦，一啦 (表示列挙)","l":30},{"k":"生活します","h":"生活する","m":"月历  -","l":30},{"k":"かいちゅうでんとう","h":"懐中電灯","m":"预定、计划","l":30},{"k":"とか、てとか","h":"","m":"挂","l":30},{"k":"よてい","h":"予定","m":"- 排列","l":30},{"k":"掛けます","h":"掛ける","m":"垃圾箱","l":30},{"k":"かべ","h":"壁","m":"角落","l":30},{"k":"並べます","h":"並べる","m":"决定","l":30},{"k":"ごみばこ","h":"Z箱","m":"偶人","l":30},{"k":"すみ","h":"隅","m":"装饰","l":30},{"k":"よていひょ2","h":"予定表","m":"镜子","l":30},{"k":"決めます","h":"決める","m":"花瓶","l":30},{"k":"にんぎょう","h":"人形","m":"开》 种植","l":30},{"k":"飾ります","h":"飾る","m":"植树","l":30},{"k":"かがみ","h":"鏡","m":"池境、水池","l":30},{"k":"かびん","h":"花闫","m":"周围","l":30},{"k":"まんなか","h":"真ん中","m":"课、课程","l":30},{"k":"植えます","h":"植える","m":"预习","l":30},{"k":"木を植えます","h":"","m":"复习","l":30},{"k":"いけ","h":"池","m":"指南、人入门书","l":30},{"k":"まわり","h":"周り","m":"讲义、上课","l":30},{"k":"じゅぎょう","h":"授业","m":"收拾 (行李) 、完成 (报告)","l":30},{"k":"予習 します","h":"予習する","m":"海报、招贴画","l":30},{"k":"復習 します","h":"復習する","m":"通知","l":30},{"k":"ガイドブック","h":"","m":"走廊","l":30},{"k":"こうぎ","h":"講義","m":"门口、入口","l":30},{"k":"まとめます","h":"","m":"会议","l":30},{"k":"ポスター","h":"","m":"圆的","l":30},{"k":"おしらせ","h":"お知らせ","m":"某、某條ンー","l":30},{"k":"ろうか","h":"廊下","m":"某天","l":30},{"k":"げんかん","h":"玄関","m":"做梦","l":30},{"k":"ミーティング","h":"","m":"高兴","l":30},{"k":"まるい","h":"丸い","m":"讨厌、不喜欢","l":30},{"k":"ある","h":"","m":"于是","l":30},{"k":"ある日","h":"","m":"醒来、恢复到意识清醒的状态","l":30},{"k":"間を見ます","h":"夢を見る","m":"醒来、睁眼","l":30},{"k":"だいがくいん","h":"大学院","m":"研究生院","l":31},{"k":"受けます","h":"受ける","m":"参加 (考试等)","l":31},{"k":"ほんしゃ","h":"本社","m":"总公司、本公司","l":31},{"k":"残ります","h":"残る","m":"留下、剰下","l":31},{"k":"にゅうがくしけん","h":"入学試験","m":"入学考试","l":31},{"k":"月に","h":"","m":"每个月、每月","l":31},{"k":"体趙します","h":"休憩する","m":"亚》 休息","l":31},{"k":"見つけます","h":"見つける","m":"找到、找出","l":31},{"k":"ずっと","h":"","m":"一直","l":31},{"k":"ての ほう","h":"ての 方","m":"~面、~-方","l":31},{"k":"きょうかい","h":"教会","m":"教会","l":31},{"k":"れんきゅう","h":"連休","m":"连续休假、长假","l":31},{"k":"申し込みます","h":"申し込む","m":"一申请","l":31},{"k":"さくぶん","h":"作文","m":"作文、号作","l":31},{"k":"ピカソ","h":"","m":"毕加索 (1881-1973，西班牙画家)","l":31},{"k":"てんらんかい","h":"展览会","m":"展览会","l":31},{"k":"おこさん","h":"お子さん","m":"孩子","l":31},{"k":"しき","h":"式","m":"婚礼","l":31},{"k":"けっこんしき","h":"結婚式","m":"葬礼","l":31},{"k":"[お] そうしき","h":"お葬式","m":"巴厘岛 (印度尼西亚的岛屿)","l":31},{"k":"バリ","h":"","m":"取得","l":31},{"k":"取ります","h":"取る","m":"取得假期","l":31},{"k":"休みを取ります","h":"","m":"语》 一号 (电车车辆的编号、台风的编号)","l":31},{"k":"のぞみ","h":"","m":"号)","l":31},{"k":"しんこうべ","h":"新神戸","m":"新神戸 〈兵库县的车站名)","l":31},{"k":"はっぴょう","h":"発表","m":"发表、公布 (てします: 受表、受布)","l":31},{"k":"うえのこうえん","h":"上野公園","m":"上野公园","l":31},{"k":"むら","h":"村","m":"村庄","l":31},{"k":"卒業 します","h":"卒業する","m":"毕业","l":31},{"k":"えいがかん","h":"映画館","m":"电影院","l":31},{"k":"いや","h":"嫌","m":"讨厌、不喜欢","l":31},{"k":"そら","h":"年","m":"天空","l":31},{"k":"閉じます","h":"閉じる","m":"闭上、关上","l":31},{"k":"とかい","h":"都会","m":"都会、城市","l":31},{"k":"こ どもたち","h":"子どもたち","m":"孩子们","l":31},{"k":"じゆうに","h":"自由に","m":"自由地、随意地","l":31},{"k":"= まめします","h":"運動する","m":"ヵ罰> 运动","l":32},{"k":"ヨーロッパ","h":"","m":"欧洲","l":32},{"k":"ーー じゅうぶん","h":"二分","m":"-形> 充分","l":32},{"k":"せんせい","h":"先生","m":"大夫、医生","l":32},{"k":"インフルエンザ","h":"","m":"”流感","l":32},{"k":"続きます","h":"続く","m":"持续","l":32},{"k":"エンジン","h":"","m":"发动机、马达","l":32},{"k":"おかしい","h":"可笑しい","m":"「形> 奇怪、可疑","l":32},{"k":"げんき","h":"元気","m":"322 精神、健康","l":32},{"k":"ストレス","h":"","m":"5 》 (精神上的) 紧张、疲劳","l":32},{"k":"無理をします","h":"無理をする","m":"力亚》 勉强","l":32},{"k":"ほし","h":"星","m":"星星","l":32},{"k":"せき","h":"咳","m":"咳只(てをします/ーがでます: 咳践)","l":32},{"k":"引きます","h":"<引く","m":"カT> 患、得 (感冒)","l":32},{"k":"- ゆうがた","h":"夕方","m":"黄臣、傍晩","l":32},{"k":"止みます","h":"二止鼠@","m":"力I > 停了","l":32},{"k":"たいよう","h":"太陽","m":"太阳","l":32},{"k":"晴れます","h":"晴れる","m":"力开》 晴","l":32},{"k":"愛ります","h":"太る","m":"隊","l":32},{"k":"空きます","h":"空く","m":"のIT〉 空、通畅","l":32},{"k":"そら","h":"空","m":"多 >","l":32},{"k":"出ます","h":"二出殖OD","m":"参加","l":32},{"k":"きた","h":"北","m":"北","l":32},{"k":"うるさい","h":"類い","m":"吵闪、烦人","l":32},{"k":"込みます","h":"込む","m":"拥挤","l":32},{"k":"すいどう","h":"水道","m":"自来水、自来水管","l":32},{"k":"合格します","h":"合格する","m":"合格、及格","l":32},{"k":"チーム","h":"","m":"队、团队","l":32},{"k":"あんなに","h":"","m":"那么（指与说话人、听话人都无关的事）","l":32},{"k":"そんなに","h":"","m":"形容程度之甚)","l":32},{"k":"こくさいて","h":"国际~","m":"那么〈指与听话人有关的事，形容程度之","l":32},{"k":"成功します","h":"成功する","m":"甚)","l":32},{"k":"失敗します","h":"失敗する","m":"国际~","l":32},{"k":"試験に失敗します","h":"","m":"成功","l":32},{"k":"まえ","h":"前","m":"失败","l":32},{"k":"ずいぶん前から","h":"","m":"考试失败","l":32},{"k":"こんなに","h":"","m":"以前、之前","l":32},{"k":"ほしうらない","h":"星占い","m":"从很早以前","l":32},{"k":"はたらきすぎ","h":"働きすぎ","m":"占星木、星相","l":32},{"k":"困ります","h":"て困る","m":"金牛座","l":32},{"k":"当たります","h":"当たる","m":"为难、困惑","l":32},{"k":"けんこう","h":"健康","m":"中(彩票)","l":32},{"k":"ひがし","h":"東","m":"健康","l":32},{"k":"こいびと","h":"恋人人","m":"恋爱","l":32},{"k":"ラッキーアイテム","h":"","m":"恋人","l":32},{"k":"いし","h":"","m":"吉祥物","l":32},{"k":"うらない","h":"占改","m":"石头","l":32},{"k":"ぁとこ","h":"","m":"已经. 不再 (与否定形一起使用)","l":33},{"k":"あきらめます","h":"諦める","m":"放弃","l":33},{"k":"マーク","h":"","m":"放弃、死心","l":33},{"k":"どういうて","h":"","m":"标记、标志","l":33},{"k":"どうい2意味","h":"","m":"怎样的一、什么样的~","l":33},{"k":"伝えます","h":"伝える","m":"什么意思","l":33},{"k":"ちゅうしゃいはん","h":"駐車違反","m":"传达、转告","l":33},{"k":"ばっきん","h":"廊金","m":"违章停车","l":33},{"k":"逃げます","h":"逃げる","m":"罚款","l":33},{"k":"きそ〈","h":"規則","m":"逃走","l":33},{"k":"守ります","h":"守る","m":"交通规则","l":33},{"k":"駿ぎます","h":"騒ぐ","m":"遵守","l":33},{"k":"リサイクルします","h":"","m":"入口","l":33},{"k":"ほど","h":"程","m":"再利用、資源回由","l":33},{"k":"しめきけり","h":"締め切り","m":"大体一、大约~","l":33},{"k":"戻ります","h":"戻る","m":"截止、蕉止日期","l":33},{"k":"ボール","h":"","m":"回来","l":33},{"k":"投げます","h":"投げる","m":"球","l":33},{"k":"ででぐち","h":"出口","m":"” 扔、投","l":33},{"k":"よや","h":"予約席","m":"出口","l":33},{"k":"ひじょうでぐち","h":"非常口","m":"预订的座位","l":33},{"k":"注意します","h":"注意する","m":"紧急出口","l":33},{"k":"じょこう","h":"徐行","m":"慢行","l":33},{"k":"しようきんし","h":"使用禁止","m":"禁止使用","l":33},{"k":"むりょう","h":"無料","m":"免费","l":33},{"k":"てちゅう","h":"中","m":"正在~","l":33},{"k":"出席します","h":"出席する","m":"危险","l":33},{"k":"けいさつ","h":"告察","m":"警察、警察局","l":33},{"k":"始まります","h":"始まる","m":"折扣","l":33},{"k":"わりびき","h":"割引","m":"饮料自助","l":33},{"k":"のみほう だい","h":"飲み放題","m":"一样、同样","l":33},{"k":"いくら [てても]","h":"","m":"招聘","l":33},{"k":"おなじ","h":"同じ","m":"”有","l":33},{"k":"ぼしゅう","h":"募集","m":"座位","l":33},{"k":"あります","h":"","m":"”离开","l":33},{"k":"せき","h":"席","m":"地震","l":33},{"k":"外します","h":"<一外才","m":"发生","l":33},{"k":"じしん","h":"地坪","m":"原本、原来","l":33},{"k":"起きます","h":"起きる","m":"悲伤","l":33},{"k":"助け合います","h":"助け合う","m":"更加","l":33},{"k":"もともと","h":"元々","m":"本来、原来","l":33},{"k":"かなしい","h":"悲しい","m":"寒暗、问候、致辞)","l":33},{"k":"もっと","h":"","m":"对方","l":33},{"k":"あいさつ","h":"挨拶","m":"心情、情绪","l":33},{"k":"座きます","h":"","m":"而","l":34},{"k":"組み立てます","h":"組み立てる","m":"组装","l":34},{"k":"せつめいしょ","h":"説明書","m":"说明书","l":34},{"k":"スポボーツクラブ","h":"","m":"体育俱乐部","l":34},{"k":"くろ","h":"上黒","m":"黑色 (名词)","l":34},{"k":"しろ","h":"折","m":"自色 (名品)","l":34},{"k":"あか","h":"赤","m":"红色 (名词)","l":34},{"k":"あお","h":"青","m":"蓝色 (名词)","l":34},{"k":"が 或者 が","h":"","m":"~或~","l":34},{"k":"こん","h":"紺","m":"”深蓝色 (名词)","l":34},{"k":"きいろ","h":"黄色","m":"”黄色(名词)","l":34},{"k":"ちゃいろ","h":"茶色","m":"棕色(名词)","l":34},{"k":"ソース","h":"","m":"沙司辣椒痪","l":34},{"k":"つけます","h":"","m":"商","l":34},{"k":"、 お条を立てます","h":"お茶を立てる","m":"動T〉 (茶道的) 泡茶、淹茶","l":34},{"k":"さきに","h":"先に","m":"先、首先","l":34},{"k":"載せます","h":"載せる","m":"载、放","l":34},{"k":"にがい","h":"苦い","m":"昔","l":34},{"k":"さっき","h":"","m":"刚才","l":34},{"k":"折ります","h":"<折る","m":"折弯、折断","l":34},{"k":"せん","h":"線","m":"线","l":34},{"k":"やじるし","h":"矢印","m":"箭头、箭头符号","l":34},{"k":"[お] しろ","h":"お城","m":"城","l":34},{"k":"質問します","h":"質問する","m":"提问","l":34},{"k":"見つか ります","h":"見つかる","m":"”找到","l":34},{"k":"気がつきます","h":"気がつく","m":"发现、发沉","l":34},{"k":"さします","h":"","m":"打 (入)","l":34},{"k":"ゆうべ","h":"タベべ","m":"昨晩","l":34},{"k":"おきゃく [さん]","h":"お客さん","m":"顾客、客户","l":34},{"k":"おやこどんぶり","h":"親子井","m":"鸡肉鸡蛋盖浇饭","l":34},{"k":"ざいりょう","h":"材料","m":"材料","l":34},{"k":"ンぶん","h":"分","m":"一份 (表示量)","l":34},{"k":"ーグラム","h":"","m":"一克","l":34},{"k":"ーこ","h":"个","m":"一个〈数小件物品时使用的量词)","l":34},{"k":"たまれねぎ","h":"玉ねぎ","m":"洋葱","l":34},{"k":"よんぶんのいち","h":"4分の1","m":"四分之一","l":34},{"k":"ちょうみりよう","h":"調味料","m":"调料","l":34},{"k":"しょうゆ","h":"醤油","m":"效油","l":34},{"k":"てきとう","h":"送当","m":"适当","l":34},{"k":"適当な大きさに","h":"","m":"适当的大小","l":34},{"k":"なべ","h":"鍋","m":"锅","l":34},{"k":"火にかけます","h":"火にかける","m":"放在火上","l":34},{"k":"者ます","h":"煮る","m":"煮、炖","l":34},{"k":"者えます","h":"煮える","m":"者熟","l":34},{"k":"経ちます","h":"経つ","m":"流逝、过去","l":34},{"k":"どんぶり","h":"井","m":"大碗","l":34},{"k":"締きます","h":"咲く","m":"开 (花)","l":35},{"k":"むこう","h":"向こう","m":"对面、那边","l":35},{"k":"しま","h":"島","m":"岛","l":35},{"k":"はこね","h":"箱根","m":"箱根 (位于神奈川县的疗养地、旅","l":35},{"k":"にっこう","h":"日光","m":"游景点)","l":35},{"k":"それなら","h":"","m":"日光 (位于柏木县的旅游景点)","l":35},{"k":"しがこうげん","h":"志賀高原","m":"草津 (位于群马县的疗养地)","l":35},{"k":"やこうバス","h":"夜行bus","m":"志向高原 (位于长野县一个国立公","l":35},{"k":"さぁ","h":"","m":"园内的高原)","l":35},{"k":"りょよこうしゃ","h":"旅行社","m":"夜行巴士","l":35},{"k":"もっと","h":"","m":"中 (表示对一些情况不太清楚)","l":35},{"k":"ーー スキーじょう","h":"ski場","m":"更、更加","l":35},{"k":"やまのぼり","h":"山登り","m":"详细","l":35},{"k":"みんなの学校","h":"","m":"消雪協","l":35},{"k":"むかし","h":"昔","m":"登山","l":35},{"k":"変わります","h":"論わる","m":"”过去、以前","l":35},{"k":"色が変わります","h":"","m":"”时子","l":35},{"k":"きかい","h":"機会","m":"变","l":35},{"k":"アフリカ","h":"","m":"变色","l":35},{"k":"カーテン","h":"","m":"机会","l":35},{"k":"ひも","h":"","m":"非洲","l":35},{"k":"レバー","h":"","m":"窗帘","l":35},{"k":"治ります/赴ります","h":"","m":"绳子","l":35},{"k":"かいがい","h":"海外","m":"海外","l":35},{"k":"困ります","h":"困る","m":"为难、困惑","l":35},{"k":"ただしい","h":"正しい","m":"正确","l":35},{"k":"まる","h":"丸","m":"圆圈","l":35},{"k":"付けます","h":"付ける","m":"夯","l":35},{"k":"きょか","h":"許可","m":"屋頂上","l":35},{"k":"おくにじょう","h":"屋上","m":"港口","l":35},{"k":"みなと","h":"港","m":"邻居、附近","l":35},{"k":"きんじょ","h":"近所","m":"大黑寿司 (虚构的寿司店)","l":35},{"k":"だいこくずし","h":"大黑寿司","m":"电饭钢","l":35},{"k":"すいばんき","h":"炊飯器","m":"IMC电脑教室 (虚构的电脑教室)","l":35},{"k":"TIMCパソコン 教室","h":"","m":"妈妈的味道 (虚构的书名)","l":35},{"k":"ははのあじ","h":"母の味","m":"[> 输入","l":35},{"k":"入力 します","h":"入力する","m":"[》 ”点击","l":35},{"k":"クリックします","h":"","m":"按键","l":35},{"k":"キー","h":"","m":"表示汉字读法的注音假名","l":35},{"k":"ふりがな","h":"振り仮名","m":"京都国际漫画博物馆","l":35},{"k":"マンガミュージアム","h":"","m":"历史","l":35},{"k":"れきし","h":"歴史","m":"HARU (虚构的美容院)","l":35},{"k":"はる","h":"","m":"佐藤牙科 (虚构的牙科医院)","l":35},{"k":"さとうしか","h":"佐藤歯科","m":"设备","l":35},{"k":"せつび","h":"設備","m":"每日豪饪课堂 (虚构的厨艺教室)","l":35},{"k":"まいにちクッキング","h":"毎日cooking","m":"朋廊","l":35},{"k":"へアサロン","h":"","m":"朱红色、红色","l":35},{"k":"しゅ","h":"朱","m":"交际","l":35},{"k":"交わります","h":"交わる","m":"谚语","l":35},{"k":"ことわざ","h":"访","m":"关系","l":35},{"k":"かんけい","h":"関係","m":"搞好关系、友好交往","l":35},{"k":"仲良くします","h":"仲良くする","m":"必要、需要","l":35},{"k":"やっと","h":"","m":"终于、总算","l":36},{"k":"慣れます","h":"慣れる","m":"习惯","l":36},{"k":"はにじめ","h":"初め","m":"开始、起初","l":36},{"k":"きょく","h":"曲","m":"曲子","l":36},{"k":"できるだけ","h":"","m":"尽可能、尽量","l":36},{"k":"ぜったいに","h":"絶対に","m":"绝对地","l":36},{"k":"おきゃくさま","h":"お客様","m":"顾客 ( 「扫兰六《立公上 的尊敬语)","l":36},{"k":"とくべつ","h":"特別","m":"特別","l":36},{"k":"していらっしゃいます","h":"","m":"正在做~ (-TLTX必去才」 的尊敬语)","l":36},{"k":"すいえい","h":"水泳","m":"不同、不一样、不对","l":36},{"k":"遅います","h":"<違う","m":"用着一啊。 (「つかっているんです","l":36},{"k":"チャレンジします","h":"","m":"挑战","l":36},{"k":"きもち","h":"気持ち","m":"上下班高峰期","l":36},{"k":"ラッシュ","h":"","m":"遇到","l":36},{"k":"道います","h":"~痢う","m":"相当","l":36},{"k":"かなり","h":"","m":"存钱","l":36},{"k":"かならず","h":"必ず","m":"腐烂","l":36},{"k":"ほとんど","h":"殆ど","m":"过 (时间)","l":36},{"k":"このごろ","h":"","m":"7点多","l":36},{"k":"うちゅう","h":"宇宙","m":"好、熟练","l":36},{"k":"過ぎます","h":"過ぎる","m":"剑道 〈日本式击剑)","l":36},{"k":"時を過ぎます","h":"","m":"柔道","l":36},{"k":"じょうずに","h":"上手に","m":"每周","l":36},{"k":"けんどう","h":"剑道","m":"每月","l":36},{"k":"じゅうどう","h":"柔道","m":"每年","l":36},{"k":"まいしゅう","h":"毎週","m":"交通工具","l":36},{"k":"まいつき","h":"毎月","m":"一世纪","l":36},{"k":"まいとし/まいねん","h":"每年","m":"珍奇、罕见","l":36},{"k":"のりもの","h":"乗り物","m":"火车","l":36},{"k":"ーせいき","h":"世紀","m":"汽船","l":36},{"k":"とお〈","h":"速(","m":"很多的~ (人)","l":36},{"k":"めずらしい","h":"珍しい","m":"很多人","l":36},{"k":"きしゃ","h":"汽車","m":"运送","l":36},{"k":"きせん","h":"汽船","m":"利用","l":36},{"k":"おおぜいの~","h":"大勢のて","m":"自由地、随意地","l":36},{"k":"踏みます","h":"踏む","m":"踩","l":37},{"k":"注意します","h":"注意する","m":"提醒、警告","l":37},{"k":"発見します","h":"発見する","m":"发现","l":37},{"k":"むき","h":"雄","m":"麦子","l":37},{"k":"ごめ","h":"米","m":"大米","l":37},{"k":"げんりょう","h":"原料","m":"原料","l":37},{"k":"なにご","h":"何語","m":"哪种语言","l":37},{"k":"ポボポルトガル","h":"","m":"葡萄牙","l":37},{"k":"みなさま","h":"人様","m":"各位 ( 「みなさん」的尊敬舟)","l":37},{"k":"ーせいき","h":"世紀","m":"一世纪","l":37},{"k":"焼けます","h":"焼ける","m":"起火、燃烧","l":37},{"k":"そのご","h":"その後","m":"” 那之后、后来","l":37},{"k":"=の王ラ","h":"","m":"”一之一","l":37},{"k":"きんいろ","h":"金色","m":"金色","l":37},{"k":"ほんもの","h":"本物","m":"真货、真的","l":37},{"k":"きん","h":"金","m":"金子","l":37},{"k":"ーキロ","h":"","m":"一公斤、一公里 (「キログラム」「キ","l":37},{"k":"うつくしい","h":"美しい","m":"ロメートル]的略称)","l":37},{"k":"褒めます","h":"衰める","m":"”美丽、好看","l":37},{"k":"閑みます","h":"頼む","m":"”表扬","l":37},{"k":"行います","h":"行う","m":"请求、委托","l":37},{"k":"壊します","h":"壌す","m":"《动工","l":37},{"k":"输出 します","h":"輸出する","m":"出口","l":37},{"k":"てじゅう","h":"へ中","m":"”全一、整个~","l":37},{"k":"招待します","h":"招待する","m":"“招待","l":37},{"k":"けいかん","h":"警官","m":"警官","l":37},{"k":"どろばぼう","h":"泥棒","m":"小偷","l":37},{"k":"汚します","h":"汚す            《动工","m":"弄肝","l":37},{"k":"とうだいじ","h":"東大寺","m":"奈大寺","l":37},{"k":"だいぶつ","h":"大仏","m":"大佛","l":37},{"k":"発明します","h":"発明する","m":"发明","l":37},{"k":"インスタントラーメン","h":"","m":"方便面","l":37},{"k":"オリンピック","h":"","m":"人","l":37},{"k":"ワールドカップ","h":"","m":"世界杯","l":37},{"k":"えどじだい","h":"江戸時代","m":"江户时代 (1603-1868)","l":37},{"k":"ロンシア","h":"","m":"俄罗斯","l":37},{"k":"翻訳します","h":"翻訳する","m":"笔译","l":37},{"k":"サウジアラビア","h":"","m":"沙特阿拉个","l":37},{"k":"せきゆ","h":"石油","m":"石油","l":37},{"k":"輸 入 します","h":"<输入才五O","m":"进口","l":37},{"k":"謗います","h":"誘う","m":"_ 効削、導貴","l":37},{"k":"デート","h":"","m":"约会","l":37},{"k":"とうしょうでぐう","h":"东照宫","m":"奈照宮 (位于板木县日光市的祭黄-143","l":37},{"k":"ねむりねこ","h":"虐り猫","m":"_ 德川家康的神社)","l":37},{"k":"ごうか","h":"豪華","m":"睡猫 〈(导刻的名称)","l":37},{"k":"ちょうこく〈","h":"彫刻","m":"”豪华","l":37},{"k":"いいつたえを","h":"言い伝え","m":"雕刻","l":37},{"k":"ひだりじんごろう","h":"左甚五郎","m":"睡、睡眠","l":37},{"k":"彫ります","h":"彫る","m":"左甚五郎 (1594-1651，江户时代的","l":37},{"k":"なかま","h":"仲間","m":"著名雕刻家)","l":37},{"k":"しかし","h":"","m":"雕刻","l":37},{"k":"そのあと","h":"その後","m":"朋友、伙伴","l":37},{"k":"いっしょうけんめい","h":"生暑命","m":"但是","l":37},{"k":"ねずみ 〈","h":"鼠","m":"” 那之后、后来","l":37},{"k":"参加します","h":"参加する","m":"参加","l":38},{"k":"育てます","h":"て育てる","m":"培育、养","l":38},{"k":"運びます","h":"運ぶ","m":"搬、搬运","l":38},{"k":"あかちゃん","h":"赤ちゃん","m":"使用)","l":38},{"k":"しょうがっこう","h":"小学校","m":"婴儿","l":38},{"k":"ちゆゅうがっこう","h":"中学校","m":"小学","l":38},{"k":"かいらん","h":"回覧","m":"初中","l":38},{"k":"けんきゅうしつ","h":"研究室","m":"传阅 (文件等)","l":38},{"k":"きちんと","h":"","m":"研究室","l":38},{"k":"整理します","h":"整理する","m":"整齐、干净","l":38},{"k":"ーミっ","h":"-民","m":"叫一、名为~","l":38},{"k":"はんこ","h":"判子","m":"方法","l":38},{"k":"押します","h":"押す","m":"章、印章","l":38},{"k":"気持ちがいい","h":"","m":"舒服","l":38},{"k":"気持ちが悪い","h":"","m":"不舒服","l":38},{"k":"おおきなー","h":"大きなっ","m":"大的","l":38},{"k":"えきまえ","h":"駅前","m":"车站前","l":38},{"k":"むら","h":"村","m":"一制造","l":38},{"k":"ンーせい","h":"製","m":"健康","l":38},{"k":"けんこう","h":"健康","m":"习惯","l":38},{"k":"しゅうかん","h":"習慣","m":"海岸","l":38},{"k":"かいがん","h":"海岸","m":"说 (簡)","l":38},{"k":"入院します","h":"入院する","m":"戒指","l":38},{"k":"かな","h":"仮名","m":"出云大社 (位于岛根县出云市的神社)","l":38},{"k":"ゆびわ","h":"指輪","m":"清迈 (泰国)","l":38},{"k":"いずもたいしゃ","h":"出雲大社","m":"前年","l":38},{"k":"チェンマイ","h":"","m":"上锁","l":38},{"k":"掛けます","h":"掛ける","m":"电源","l":38},{"k":"でんげん","h":"電源","m":"打开","l":38},{"k":"切ります","h":"<切る","m":"打开电源","l":38},{"k":"入れます","h":"入れる","m":"投掷原子弹而设置的纪念馆)","l":38},{"k":"げんばくドーム","h":"原爆doom","m":"双胞胎","l":38},{"k":"こうじょう","h":"工場","m":"姐妹","l":38},{"k":"しまい","h":"姉妹","m":"相似、相像","l":38},{"k":"ごねんせい","h":"5年生","m":"性格","l":38},{"k":"似ます","h":"似る","m":"老实、温顺","l":38},{"k":"せいかくく","h":"性格","m":"温柔、亲切","l":38},{"k":"おとなしい","h":"大人しい","m":"照顾、照料","l":38},{"k":"やさしい","h":"優しい","m":"时间流逝","l":38},{"k":"時間がたちます","h":"時間がたつ","m":"一分 (指考试的分数)","l":38},{"k":"だいすき","h":"大好き","m":"好强、刚强","l":38},{"k":"ーてん","h":"","m":"吵架、打架","l":38},{"k":"気が強い","h":"","m":"不可思议","l":38},{"k":"ふしぎ","h":"不思議","m":"方法、办法","l":38},{"k":"びっくりします","h":"","m":"カ邊> ”吃惊","l":39},{"k":"じしん","h":"地震","m":"地震","l":39},{"k":"倒れます","h":"倒れる","m":"カII〉> 倒、倒下来、倒場","l":39},{"k":"がっかりします","h":"","m":"力亚》 ”失望","l":39},{"k":"ハイキング","h":"","m":"近足、徒歩旅行","l":39},{"k":"ふく ざつ","h":"複雑","m":"-形> 复杂","l":39},{"k":"じゃま","h":"夏魔","m":"-形》”碍事","l":39},{"k":"とちゅう","h":"途中","m":"中途、途中","l":39},{"k":"途中で","h":"","m":"途中、路上、中途","l":39},{"k":"トラック","h":"","m":"卡车","l":39},{"k":"ぶつかります","h":"","m":"力I > 撞、碰","l":39},{"k":"安やします","h":"安ぶする","m":"カ罰> 安心、放心","l":39},{"k":"つなみ","h":"津波","m":"海路","l":39},{"k":"うれしい","h":"嬉しい","m":"{ 形》 高兴","l":39},{"k":"かなしい","h":"悲しい","m":"f 形>- 悲伤","l":39},{"k":"はずかしい","h":"取ずかしい","m":"f形> 害羞、不好意思","l":39},{"k":"かたい","h":"硬い","m":"f形> 硬、坚硬","l":39},{"k":"- やわらかい","h":"軟らかい","m":"f形> 软、柔软","l":39},{"k":"答えます","h":"答える","m":"カカIL> 答、回答","l":39},{"k":"通ります","h":"通る","m":"名》","l":39},{"k":"かじ 〈","h":"火事","m":"胖、发胖","l":39},{"k":"ーや","h":"へ屋","m":"痩、変痩","l":39},{"k":"太ります","h":"太る","m":"久世> ” 吵架、打架","l":39},{"k":"やせます","h":"","m":"才芋》 て費","l":39},{"k":"喧嘩します","h":"喧嘩する","m":"电费","l":39},{"k":"だい","h":"て代","m":"及、肌肝","l":39},{"k":"きたない","h":"汚い","m":"台风","l":39},{"k":"そうさ","h":"操作","m":"雷","l":39},{"k":"たいふう","h":"台風","m":"会场","l":39},{"k":"かみなり","h":"雷","m":"首相","l":39},{"k":"かいじょう","h":"会場","m":"他","l":39},{"k":"しゅしょう","h":"首相","m":"前台","l":39},{"k":"フロント","h":"","m":"去拜访 ( 「\\\\立去才|」 的谦逊语)","l":39},{"k":"ーごうしつ","h":"号室","m":"毛巾","l":39},{"k":"伺います","h":"伺う","m":"肥皂","l":39},{"k":"タオル","h":"","m":"大人、成年人","l":39},{"k":"せっけん","h":"石鹸","m":"但是","l":39},{"k":"おとな","h":"大人","m":"还、更","l":39},{"k":"しかし","h":"","m":"西式服装","l":39},{"k":"また","h":"又","m":"西化","l":39},{"k":"ようふく〈","h":"洋服","m":"适合、合适","l":39},{"k":"西洋化します","h":"西洋化する","m":"现在","l":39},{"k":"合います","h":"“合う","m":"成人仪式","l":39},{"k":"いまでは","h":"今では","m":"传统的","l":39},{"k":"[一] びん","h":"便","m":"一航班","l":40},{"k":"到着 します","h":"て到着する","m":"到达","l":40},{"k":"出先します","h":"出発する","m":"出发","l":40},{"k":"酔います","h":"酔う","m":"醇","l":40},{"k":"たかさ","h":"高さき","m":"高度","l":40},{"k":"ながさ","h":"長さ","m":"长度","l":40},{"k":"測ります/量ります","h":"測る","m":"测量、量、称","l":40},{"k":"ぼうねんかい","h":"忘年会","m":"辞旧迎新会","l":40},{"k":"しんねんかい","h":"新年会","m":"新年联欢会","l":40},{"k":"まちがい","h":"間違い","m":"错、错误","l":40},{"k":"ながさき","h":"長崎","m":"长崎(长崎县县政府所在地)","l":40},{"k":"テスト","h":"","m":"用语)","l":40},{"k":"ーー ところで","h":"","m":"成绩","l":40},{"k":"いらっしやゃやいます","h":"","m":"可是 〈转换话题时使用)","l":40},{"k":"ようす","h":"様子","m":"来( [ss去才| 的尊敬用语)","l":40},{"k":"出ます","h":"","m":"样子、情况、情形","l":40},{"k":"問題が出ます","h":"","m":"“出","l":40},{"k":"確かめます","h":"確かめる","m":"出考题","l":40},{"k":"きず","h":"傷","m":"“确认","l":40},{"k":"おもて","h":"表","m":"伤、损伤","l":40},{"k":"うら","h":"裏","m":"表面、正面","l":40},{"k":"相談します","h":"相談する","m":"反面、里面","l":40},{"k":"数えます","h":"数える","m":"商量、商议","l":40},{"k":"ーはほん","h":"本","m":"数","l":40},{"k":"ーこ","h":"個","m":"一根、一条 (数细长物品时的量","l":40},{"k":"ーはい","h":"本","m":"词)","l":40},{"k":"ーセンチ","h":"法 centi","m":"”一个 〈数小物品时的量词)","l":40},{"k":"ーミリ","h":"法 milli","m":"一杯 (数装在玻璃杯中的饮料时的","l":40},{"k":"ーグラム","h":"","m":"量词)","l":40},{"k":"うまくいきます","h":"","m":"一厘米","l":40},{"k":"ひつよう","h":"必要","m":"一毫米","l":40},{"k":"てんきよはほう","h":"天気予報","m":"ー克","l":40},{"k":"おもさ","h":"重さ","m":"进展顺利","l":40},{"k":"おおきさ","h":"大きさ","m":"必要、需要","l":40},{"k":"ていが","h":"~以下","m":"天气预报","l":40},{"k":"ズポン","h":"法 jupon","m":"二以下、低于~","l":40},{"k":"合います","h":"合う","m":"~以上、超过~","l":40},{"k":"はっぴょうかい","h":"発表会","m":"合适","l":40},{"k":"[お] としより","h":"お年寄り","m":"发表会","l":40},{"k":"- コンテスト","h":"","m":"老人","l":40},{"k":"マラソン","h":"","m":"比赛、竞赛","l":40},{"k":"たいかい","h":"大会","m":"马拉松","l":40},{"k":"せんだい","h":"仙台","m":"大会","l":40},{"k":"たなばたまつり","h":"七夕祭り","m":"仙台 (宮城具具政府所在地)","l":40},{"k":"とうしょうでぐう","h":"東照宮","m":"上タ","l":40},{"k":"じけん","h":"事件","m":"东照宫 (位于柏木县日光市的祭黄","l":40},{"k":"オートバイ","h":"和 auto+bicycle","m":"德川家康的神社)","l":40},{"k":"ばくだん","h":"爆弾","m":"事件、案件","l":40},{"k":"積みます","h":"積む","m":"摩托车","l":40},{"k":"うんてんしゅ","h":"运未手","m":"炸弹","l":40},{"k":"はなれた","h":"離れた","m":"堆积、装载","l":40},{"k":"きゅうに","h":"急に","m":"司机","l":40},{"k":"動かします","h":"動かす","m":"离开一段距离的一","l":40},{"k":"はんにん","h":"犯人","m":"开动、发动","l":40},{"k":"おとこ","h":"男","m":"努力、拼命","l":40},{"k":"に入れます","h":"手代入机五四","m":"犯人","l":40},{"k":"いまでも","h":"今でも","m":"男人、男子","l":40},{"k":"いただきます","h":"","m":"得到、收到 ( 「もらいます」的業聞租)","l":41},{"k":"くださいます","h":"","m":"给我 ( 「くれます」的尊敬秋)","l":41},{"k":"かみひこうき","h":"紙飛行機","m":"纸飞机","l":41},{"k":"やります","h":"","m":"给(用于给比自己年纪小、职位低的人或动","l":41},{"k":"おいわい","h":"お和祝い","m":"植物等某物时)","l":41},{"k":"えさ","h":"餌","m":"猴子","l":41},{"k":"このあいだ","h":"この間","m":"饵料","l":41},{"k":"親切にします","h":"親切にする","m":"前些天、前几天","l":41},{"k":"ひとこと","h":"言","m":"和气、热情","l":41},{"k":"ンずっ","h":"","m":"一句","l":41},{"k":"ふたり","h":"二人","m":"每~ (表示固定的同数量的分配)","l":41},{"k":"おたく〈","h":"お宅","m":"两人《可指情侣、夫妻)","l":41},{"k":"ーー","h":"了L大 (鞭下","m":"袜子","l":41},{"k":"えはがき","h":"絵葉書","m":"明信片","l":41},{"k":"おばさん","h":"","m":"姑姑、姨、伯母、妒妒、田妈","l":41},{"k":"おじC","h":"","m":"叔叔、伯父、男男","l":41},{"k":"おじさん","h":"","m":"叔叔、伯父、\" 男男","l":41},{"k":"てぶくろ","h":"手袋","m":"手奏","l":41},{"k":"ハンカチ","h":"","m":"手绢 (「ハンカチーフ」的略称)","l":41},{"k":"そば","h":"祖母","m":"祖母、外祖母","l":41},{"k":"そふ","h":"祖父","m":"祖父、外祖父","l":41},{"k":"おとしだま","h":"お年玉","m":"压岁钱","l":41},{"k":"ぶんぽう","h":"文法","m":"语法","l":41},{"k":"はつおん","h":"発音","m":"发音","l":41},{"k":"おもちゃ","h":"玩具","m":"玩具","l":41},{"k":"えほん","h":"絵本","m":"图画书、小人书","l":41},{"k":"さかた","h":"着方","m":"穿法","l":41},{"k":"おまごさん","h":"书也<和","m":"孙子、外孙","l":41},{"k":"きょうみ","h":"興味","m":"和于、兴趣 ( [コンピューターに] てがあぁ","l":41},{"k":"だんばぼう","h":"暖房","m":"ります: 对 [电脑] 感兴趣)","l":41},{"k":"おんど","h":"温度","m":"政","l":41},{"k":"上げます「","h":"上げる","m":"語、提高、改善","l":41},{"k":"下げまず","h":"下げる","m":"氏、降低、放低","l":41},{"k":"かわいい","h":"可愛い","m":"受","l":41},{"k":"かんりにん","h":"管理人","m":"寅等的) 管理员","l":41},{"k":"とさん","h":"","m":"了表示礼貌、接鍼在了下名、恥色名称之","l":41},{"k":"ドライバー","h":"","m":"蕉","l":41},{"k":"[お] みまい","h":"お見舞い","m":"岗〈病人) 、慰阿品","l":41},{"k":"めずらしい","h":"珍しい","m":"千、军见","l":41},{"k":"うらしまたろう","h":"浦島太郎","m":"岛太郎〈传说故事中主人公的名字)","l":41},{"k":"むかしばなし","h":"昔話","m":"児、逆事","l":41},{"k":"あるて","h":"","m":"~、某个~","l":41},{"k":"おとこ","h":"男","m":"人、男子","l":41},{"k":"こどもたち","h":"子どもたち","m":"子们","l":41},{"k":"療めます","h":"着める","m":"中","l":41},{"k":"かめ","h":"亀","m":"外","l":41},{"k":"助けます","h":"助ける","m":"殷、救助","l":41},{"k":"やさしい","h":"優しい","m":"采、亲切","l":41},{"k":"おひめさま 〈忆姬样) 加","h":"","m":"主","l":41},{"k":"若らします","h":"莫已才]","m":"舌、度日","l":41},{"k":"り〈","h":"陸","m":"地","l":41},{"k":"すると","h":"","m":"是","l":41},{"k":"けむり","h":"煙","m":"白、纯白","l":41},{"k":"ベートーベン","h":"","m":"贝多芬 (1770-1827，德国作曲家 )","l":42},{"k":"あるて","h":"","m":"本〉> 革~ー、基條て","l":42},{"k":"出ます","h":"出る","m":"发 (钱)","l":42},{"k":"たのしみ","h":"楽しみ","m":"消遗、有盼望、兴趣","l":42},{"k":"ローン","h":"","m":"贷款","l":42},{"k":"べんごし","h":"弁護士","m":"律师","l":42},{"k":"ほうりつ","h":"法律","m":"法律","l":42},{"k":"きょういく<","h":"教育","m":"教育","l":42},{"k":"子どもたち","h":"","m":"孩子们","l":42},{"k":"いっしょうけんめい","h":"生野命","m":"形> 努力、排命","l":42},{"k":"並びます","h":"並ぶ","m":"排列","l":42},{"k":"なぜ","h":"何故","m":"为什么、怎么","l":42},{"k":"こくれん","h":"国連","m":"联合国","l":42},{"k":"おんがくか","h":"音楽家","m":"音乐家","l":42},{"k":"ざいりょう","h":"材料","m":"材料","l":42},{"k":"混ぜます","h":"混ぜる","m":"搅拌、混合","l":42},{"k":"包みます","h":"包む","m":"包、包上","l":42},{"k":"計算します","h":"計算する","m":"开》 计算","l":42},{"k":"のしぶくろ","h":"DLL袋","m":"赠款袋 〈装赠款的专用信封)","l":42},{"k":"ふろしき","h":"風呂敷","m":"包裕皮","l":42},{"k":"そろばん","h":"算盘","m":"算盘","l":42},{"k":"こどもニュース","h":"子どもNEWS","m":"儿童新闻 (虚拟的新闻)","l":42},{"k":"じょうぶ","h":"丈夫","m":"形> ”结实","l":42},{"k":"どのてくらい","h":"","m":"多少","l":42},{"k":"もく","h":"目的","m":"目的","l":42},{"k":"せいしじ","h":"政治","m":"政治","l":42},{"k":"ぶんか","h":"文化","m":"文化","l":42},{"k":"しゃかい","h":"社会","m":"社会","l":42},{"k":"ろんぶん","h":"論文","m":"论文","l":42},{"k":"かんづめ","h":"向誌","m":"饶头起子","l":42},{"k":"かんきけ","h":"千切り","m":"盖子","l":42},{"k":"ふた","h":"盖","m":"瓶起子","l":42},{"k":"せんぬき","h":"栓抜き","m":"烧开","l":42},{"k":"沸かします","h":"沸办才","m":"烧开水。","l":42},{"k":"やかん","h":"莱备","m":"公共住宅、公寓 (「アパートメント-","l":42},{"k":"アパート","h":"","m":"ハウス」的略称)","l":42},{"k":"カップめん","h":"","m":"杯面 (放在可以拐捧的杯装容器中的方","l":42},{"k":"チキンラーメン","h":"","m":"便面)","l":42},{"k":"せかいはつ","h":"世界初","m":"鸡肉拉面 (方便面的品牌)","l":42},{"k":"あんどうももふく〈","h":"安藤百福","m":"世界最初","l":42},{"k":"とによって","h":"","m":"安藤百福（1910-2007，日本实业家、方便面发明者）","l":42},{"k":"どんぶり","h":"丼","m":"发明家)","l":42},{"k":"めん","h":"麺","m":"由一、被一","l":42},{"k":"広めます","h":"広める","m":"大碗","l":42},{"k":"しじょうちょうさ","h":"市場調査","m":"面条","l":42},{"k":"割ります","h":"割る","m":"扩大、推广","l":42},{"k":"注ぎます","h":"注4@","m":"市场调查","l":42},{"k":"いまにも","h":"今にも","m":"由》 马上、现在就要 (用于描写变化即","l":43},{"k":"取れます","h":"取れる","m":"将发生之前的状况)","l":43},{"k":"わぁ","h":"","m":"%> 中","l":43},{"k":"らく","h":"楽","m":"け形> 。 轻松","l":43},{"k":"落ちます","h":"落ちる","m":"めT〉 。 掉下来","l":43},{"k":"減ります","h":"減る","m":"防 T >","l":43},{"k":"まずい","h":"","m":"{形》 。 不好吃","l":43},{"k":"うまい","h":"","m":"f形> ”好吃","l":43},{"k":"やさしい","h":"優しい","m":"1形》 温柔、亲切","l":43},{"k":"ひも","h":"紐","m":"g》 带子、强","l":43},{"k":"切れます","h":"切れる","m":"。 断了","l":43},{"k":"下がります","h":"下がる","m":"下隆","l":43},{"k":"増えます","h":"准える","m":"増加","l":43},{"k":"ガソリン","h":"","m":"汽油","l":43},{"k":"無くなります","h":"無くなる","m":"“用光了、丢了","l":43},{"k":"つまらない","h":"","m":"没意思、微不足道、无聊","l":43},{"k":"へん","h":"変","m":"奇怪、不尋常","l":43},{"k":"変な匂い","h":"","m":"奇怪的味道","l":43},{"k":"パンフレット","h":"","m":"小册子","l":43},{"k":"ばら","h":"療蔽","m":"薔薇、政現","l":43},{"k":"ドライブ","h":"","m":"兜风","l":43},{"k":"謝ります","h":"謝る","m":"道部","l":43},{"k":"短り合います","h":"知り合う","m":"认识","l":43},{"k":"しあわせ","h":"幸せ","m":"幸福","l":43},{"k":"泣きます","h":"","m":"天","l":44},{"k":"笑います","h":"笑う","m":"笑","l":44},{"k":"なみだ","h":"涙","m":"眼泪","l":44},{"k":"くうき","h":"空気","m":"空气","l":44},{"k":"あんぜん","h":"安全","m":"安全","l":44},{"k":"きけん","h":"危険","m":"危陰","l":44},{"k":"カット","h":"","m":"剪发","l":44},{"k":"シャンプブー","h":"","m":"洗发 (てをします: 洗受)","l":44},{"k":"ショート","h":"","m":"短发","l":44},{"k":"起きます","h":"起きる","m":"对顾客说的客气话)","l":44},{"k":"ーー","h":"厚い","m":"厚 .","l":44},{"k":"乾きます","h":"著〈","m":"干了","l":44},{"k":"ぬれます","h":"","m":"湿了","l":44},{"k":"りょう","h":"量","m":"量","l":44},{"k":"ーばい","h":"倍","m":"ー倍","l":44},{"k":"眠ります","h":"虐る","m":"睡","l":44},{"k":"こい","h":"濃い","m":"浓、 颜色) 深","l":44},{"k":"ディーブイディー","h":"","m":"DVD光盘","l":44},{"k":"消ります","h":"滑る","m":"滑","l":44},{"k":"せんたくもの","h":"洗濯物","m":"洗的衣物等","l":44},{"k":"うすい","h":"薄い","m":"淡、 (颜色) 浅、薄","l":44},{"k":"ホテルひろしま","h":"hotel広島","m":"广岛宾馆(虚构的饭点)","l":44},{"k":"ンングル","h":"","m":"单人间","l":44},{"k":"ツイン","h":"","m":"双人间","l":44},{"k":"わしょく","h":"和食","m":"日餐","l":44},{"k":"ようしょく","h":"洋食","m":"西餐","l":44},{"k":"おかず","h":"","m":"小菜","l":44},{"k":"調節します","h":"調節する","m":"调节","l":44},{"k":"ふとい","h":"太い","m":"粗","l":44},{"k":"ほそい","h":"細い","m":"细","l":44},{"k":"嫌がります","h":"嫌がる","m":"讨厌、不受欢迎","l":44},{"k":"また","h":"又","m":"还、更","l":44},{"k":"うぅうまく","h":"","m":"一得好","l":44},{"k":"じゅんじ 上","h":"顺序","m":"顺序","l":44},{"k":"あぁんしん","h":"安心","m":"安心、放心","l":44},{"k":"ひょうげん","h":"表現","m":"表达、表现","l":44},{"k":"たとえば","h":"例えば","m":"例如","l":44},{"k":"別れます","h":"別れる","m":"分别、分离","l":44},{"k":"これら","h":"","m":"这些","l":44},{"k":"縁起が思い","h":"","m":"不吉利","l":44},{"k":"ばあい","h":"場合","m":"僵情况、一场合","l":45},{"k":"むりに","h":"無理に","m":"勉強地","l":45},{"k":"ほしょうしょ","h":"保証書","m":"保证书","l":45},{"k":"りょうしゅうしょ","h":"領収書","m":"收据","l":45},{"k":"うめ","h":"梅","m":"梅花","l":45},{"k":"コース","h":"","m":"路线","l":45},{"k":"スタート","h":"","m":"出发、开始","l":45},{"k":"ーい","h":"位","m":"く接辞〉","l":45},{"k":"優勝 します","h":"優勝する","m":"获得冠军","l":45},{"k":"てん","h":"点","m":"分数","l":45},{"k":"ひゃくじゅうきゅうばん","h":"119番","m":"119 《消防局的电话号码，紧急呼","l":45},{"k":"ひゃくとおばん","h":"110番","m":"救用)","l":45},{"k":"知らせます","h":"知ちせる","m":"110 (警察局的电话号码，紧急呼","l":45},{"k":"キャンセルします","h":"","m":"救用)","l":45},{"k":"ちゅうし","h":"中止","m":"通知","l":45},{"k":"キャンプ","h":"","m":"取消","l":45},{"k":"きゅうに","h":"急に","m":"野营","l":45},{"k":"信じます","h":"信じる","m":"突然","l":45},{"k":"楽しみにしています","h":"","m":"相信","l":45},{"k":"なやみ","h":"悩み","m":"期待着、盼望着","l":45},{"k":"めざま","h":"し[どけい] (目覚まし時計","m":"同午","l":45},{"k":"目が党めます","h":"目が覚める","m":"醒来","l":45},{"k":"だいがくせい","h":"大学生","m":"大学生","l":45},{"k":"かいとう","h":"回答","m":"回答 (てします: 回答)","l":45},{"k":"唱 ります","h":"鳴る","m":"响","l":45},{"k":"セットします","h":"","m":"上(闹钟)","l":45},{"k":"それでもぐ","h":"","m":"尽管如此","l":45},{"k":"こちら","h":"","m":"这边 (说话人方)","l":46},{"k":"げんいん","h":"原因","m":"原因","l":46},{"k":"たったいま","h":"たった今","m":"刚才、刚刚 《和过去时一起使用，表示","l":46},{"k":"てのところ","h":"~0O所","m":"完了)","l":46},{"k":"ガスサービスセンター","h":"","m":"下> 一那儿","l":46},{"k":"ぐあい","h":"具合","m":"情况、状态","l":46},{"k":"向かいます","h":"向かう","m":"了  朝着一去","l":46},{"k":"ちょうど","h":"","m":"正好、刚好","l":46},{"k":"出ます","h":"<出玖〇","m":"出发","l":46},{"k":"- 帰ってきます","h":"帰ってくる","m":"开>  回来 _","l":46},{"k":"届きます","h":"届く","m":"{>  送达","l":46},{"k":"焼きます","h":"焼く","m":"烧、烤","l":46},{"k":"焼けます","h":"焼ける","m":"烤好了","l":46},{"k":"はんとし","h":"半年","m":"半年","l":46},{"k":"入学します","h":"入学する","m":"邊>  入学","l":46},{"k":"卒業 します","h":"卒業する","m":"亚》  毕业","l":46},{"k":"たくはいびん","h":"宅配便","m":"快递","l":46},{"k":"るす","h":"留守","m":"不在","l":46},{"k":"流します","h":"渡す","m":"1 >  交给、递交","l":46},{"k":"ついています","h":"","m":"运气好","l":46},{"k":"ゆか","h":"床","m":"地板","l":46},{"k":"ベル","h":"","m":"摔倒","l":46},{"k":"慌てます","h":"慌てる","m":"锥","l":46},{"k":"じゅんばん","h":"顺亚","m":"急忙、匆匆忙忙","l":46},{"k":"できごと","h":"出来事","m":"順序","l":46},{"k":"ーによると","h":"","m":"根据~ (表示信息的出处)","l":47},{"k":"新聞によると","h":"","m":"据报纸","l":47},{"k":"ーそうだ","h":"","m":"听说~ (表示传闻)","l":47},{"k":"ーようだ","h":"","m":"好像一 (表示推測)","l":47},{"k":"きびしい","h":"蔵しい","m":"严历、严格","l":47},{"k":"します","h":"","m":"有 (声音、味道等)","l":47},{"k":"集まります","h":"集まる","m":"聚集","l":47},{"k":"パトカー","h":"","m":"警车 (「パトロールカー」的略称)","l":47},{"k":"きゆゅうきゆゅうしゃ","h":"救急车","m":"急救车","l":47},{"k":"婚約します","h":"婚約する","m":"订婚","l":47},{"k":"どうぅも","h":"","m":"有点儿、总觉得 (在讲述自己的推测时","l":47},{"k":"ーー","h":"恋人","m":"总觉得好像~","l":47},{"k":"あいて","h":"相手","m":"对方","l":47},{"k":"知り合います","h":"知り合う","m":"认识","l":47},{"k":"ひどい","h":"","m":"严重、厉害","l":47},{"k":"ひどい事政","h":"","m":"严重的事故","l":47},{"k":"じんこう","h":"","m":"人口","l":47},{"k":"かが<","h":"科学","m":"科学","l":47},{"k":"いが〈","h":"医学","m":"医学","l":47},{"k":"じっけん","h":"実験","m":"实验","l":47},{"k":"データ","h":"","m":"数据","l":47},{"k":"だいとうりょう","h":"大統領","m":"总统","l":47},{"k":"こわい","h":"怖疏","m":"害怕、可怕","l":47},{"k":"さんせい","h":"徐成","m":"赞成","l":47},{"k":"はんたい","h":"反対","m":"反对","l":47},{"k":"ぶんがく〈","h":"文学","m":"文学","l":47},{"k":"別れます","h":"別れる","m":"分手、分别","l":47},{"k":"におい","h":"匂い","m":"気味","l":47},{"k":"燃えます","h":"燃える","m":"燃烧","l":47},{"k":"吹きます","h":"吹く","m":"去世 ( 「L民至才| 的婉转说法)","l":47},{"k":"亡くなります","h":"亡くなる","m":"照顾、照料","l":47},{"k":"けしょう「","h":"化粧","m":"女性","l":47},{"k":"世話をします","h":"世話をする","m":"中","l":47},{"k":"だんせい","h":"男性","m":"理由","l":47},{"k":"ながいき","h":"長生き","m":"关系","l":47},{"k":"せいと","h":"生徒","m":"学生 (中小学生)","l":48},{"k":"じゆうに","h":"自由に","m":"自由地、随意地","l":48},{"k":"てかん","h":"て間","m":"用)","l":48},{"k":"えいぎょう","h":"営業","m":"一期间","l":48},{"k":"それまでに","h":"","m":"营业","l":48},{"k":"じゅく","h":"垫","m":"私享、补习班","l":48},{"k":"ファイル","h":"","m":"文件来","l":48},{"k":"届けます","h":"届ける","m":"照顾、照料","l":48},{"k":"世話をします","h":"世話をする","m":"印下来","l":48},{"k":"降ろします/下ろします","h":"","m":"讨厌、不喜欢","l":48},{"k":"いや","h":"嫌","m":"小学生","l":48},{"k":"録音します","h":"録音する","m":"百分过三","l":48},{"k":"しょうがくせい","h":"小学生","m":"习字、书法","l":48},{"k":"ーパーセント","h":"","m":"普通的","l":48},{"k":"なさいます","h":"","m":"做 (「します」的尊敬造)","l":49},{"k":"ご覧にながります","h":"","m":"看 ( 「みます」的尊敬午)","l":49},{"k":"たまに","h":"","m":"说、叫 ( [WA支才| 的尊敬语)","l":49},{"k":"おっしゃいます","h":"","m":"工作","l":49},{"k":"勤めます","h":"勤める","m":"「きます」的尊敬造)","l":49},{"k":"いらっしゃいます","h":"","m":"一年级一班","l":49},{"k":"ひまわりしょうがっこう","h":"","m":"告辞了。 ( [L 二机必L 去才| 的谦逊语)","l":49},{"k":"ーねん一","h":"年一組","m":"吃、喝 (「たべます」 「のみます」的尊敬午)","l":49},{"k":"出します","h":"出す","m":"坐","l":49},{"k":"ご存知です","h":"","m":"公共汽车站","l":49},{"k":"妊し上がります","h":"","m":"旅馆","l":49},{"k":"掛けます","h":"掛ける","m":"候、致辞)","l":49},{"k":"おくさま","h":"上奥様","m":"过、度过","l":49},{"k":"さま","h":"て様","m":"任何一位都 〈 (「だれでも」的尊敬邊)","l":49},{"k":"バスてい","h":"バス停","m":"利用","l":49},{"k":"りょかん","h":"旅馆","m":"山中伸弥 (1962-, 日本医学家)","l":49},{"k":"あいさつ","h":"挨拶","m":"经历","l":49},{"k":"どなたでも","h":"","m":"胞 (诱导多功能干细胞)","l":49},{"k":"利用します","h":"利用する","m":"制|","l":49},{"k":"やまなかしんや","h":"中四伸弥","m":"奖","l":49},{"k":"スケジュール","h":"","m":"日程","l":50},{"k":"伺います","h":"伺う","m":"寻找、听、访问 ( 「立立去才| 「いきま","l":50},{"k":"わたくし","h":"私","m":"放」 的谦逊语)","l":50},{"k":"参ります","h":"参る","m":"我 ( [和大L」 的谦逊语)","l":50},{"k":"ガイド","h":"","m":"去、来 ( 「いきます」 「立兰去才| 的谦","l":50},{"k":"おります","h":"","m":"江户东京博物馆","l":50},{"k":"こころから","h":"心から","m":"在 ( [去才| 的谦逊语)","l":50},{"k":"感謝します","h":"て感謝する","m":"衷心","l":50},{"k":"しょうきん","h":"賞金","m":"紧张","l":50},{"k":"きりん","h":"","m":"奖金","l":50},{"k":"ころ","h":"頃","m":"长颈鹿","l":50},{"k":"応接します","h":"応接する","m":"声援、支持","l":50},{"k":"いただきます","h":"二大大《OO","m":"只、喝、得到(「たべます」 「のみま","l":50},{"k":"いたします","h":"","m":"说、叫( Fw去才」 的谦逊语)","l":50},{"k":"存じます","h":"存じる","m":"做(TU去才| 的谦逊语)","l":50},{"k":"拝見します","h":"拝見する","m":"知道 ( [「L 去才| 的谦逊语)","l":50},{"k":"お目にかかります","h":"","m":"看 ( [又去示| 的谦逊语)","l":50},{"k":"はじめに","h":"初めに","m":"首先","l":50},{"k":"いれます","h":"","m":"漳、泡","l":50},{"k":"コーヒーをいれます","h":"","m":"泡咖啡","l":50},{"k":"用意します","h":"用意する","m":"准备","l":50},{"k":"メールアドレス","h":"","m":"电子邮箱地址","l":50},{"k":"さらいげつ","h":"","m":"下下个月","l":50},{"k":"さらいしゅう","h":"さ来週","m":"下下个星期","l":50},{"k":"さらいねん","h":"立来年","m":"后年","l":50},{"k":"おれい","h":"お和","m":"您) 身体好吗? (「おげんきですか","l":50},{"k":"迷惑をかけます","h":"~迷悪をかける","m":"麻烦","l":50},{"k":"ミュンヘン","h":"德 MGnchen","m":"尼黒 (德国)","l":50},{"k":"生かします","h":"生かす","m":"搾、有数地利用","l":50}];
+
+// ========== State ==========
+let quiz = { questions: [], current: 0, score: 0, wrong: [], skipped: 0, mode: 'random', lesson: null, answered: false };
+
+// ========== Utility ==========
+function hiraToKata(s) {
+  return s.replace(/[\u3040-\u309F]/g, c => String.fromCharCode(c.charCodeAt(0) + 0x60));
+}
+
+function normalize(s) {
+  s = s.trim().replace(/ /g, '').replace(/\u3000/g, '');
+  // half-width → full-width
+  s = s.replace(/[0-9]/g, c => String.fromCharCode(c.charCodeAt(0) + 0xFEE0));
+  return s;
+}
+
+function checkAnswer(input, correct) {
+  const u = normalize(input);
+  const c = normalize(correct);
+  if (!u) return false;
+  if (u === c) return true;
+  if (hiraToKata(u) === hiraToKata(c)) return true;
+  return false;
+}
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// ========== LocalStorage ==========
+function getHistory() {
+  try { return JSON.parse(localStorage.getItem('vocab_history') || '[]'); } catch { return []; }
+}
+function saveHistory(h) {
+  localStorage.setItem('vocab_history', JSON.stringify(h.slice(0, 50)));
+}
+function addRecord(score, total, mode, lesson) {
+  const h = getHistory();
+  h.unshift({ score, total, mode, lesson, time: Date.now() });
+  saveHistory(h);
+}
+
+function getStats() {
+  const h = getHistory();
+  if (!h.length) return { sessions: 0, best: '--', totalQ: 0, avgAcc: '--' };
+  const sessions = h.length;
+  const best = Math.max(...h.map(r => Math.round(r.score / r.total * 100)));
+  const totalQ = h.reduce((s, r) => s + r.total, 0);
+  const avgAcc = Math.round(h.reduce((s, r) => s + r.score / r.total * 100, 0) / sessions);
+  return { sessions, best, totalQ, avgAcc };
+}
+
+// ========== Screen Management ==========
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if (id === 'homeScreen') updateHome();
+}
+
+function updateHome() {
+  const s = getStats();
+  document.getElementById('totalWords').textContent = VOCAB.length;
+  document.getElementById('totalSessions').textContent = s.sessions;
+  document.getElementById('bestScore').textContent = s.best === '--' ? '--' : s.best + '%';
+  document.getElementById('totalQuizCount').textContent = s.totalQ;
+  document.getElementById('avgAccuracy').textContent = s.avgAcc === '--' ? '--' : s.avgAcc + '%';
+  renderHistory();
+}
+
+function renderHistory() {
+  const h = getHistory().slice(0, 10);
+  const el = document.getElementById('historyList');
+  if (!h.length) { el.innerHTML = '<div class="history-empty">还没有练习记录</div>'; return; }
+  el.innerHTML = h.map(r => {
+    const pct = Math.round(r.score / r.total * 100);
+    const cls = pct >= 90 ? 'high' : pct >= 60 ? 'mid' : 'low';
+    const modeLabel = r.lesson ? `第${r.lesson}课` : (r.mode === 'easy' ? '简单' : '随机');
+    const d = new Date(r.time);
+    const time = `${d.getMonth()+1}/${d.getDate()} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+    return `<div class="history-item">
+      <span>${modeLabel} · ${time}</span>
+      <span class="score ${cls}">${r.score}/${r.total} (${pct}%)</span>
+    </div>`;
+  }).join('');
+}
+
+// ========== Lesson Picker ==========
+function showLessonPicker() {
+  const wrap = document.getElementById('lessonPickerWrap');
+  wrap.style.display = wrap.style.display === 'none' ? 'block' : 'none';
+}
+
+function buildLessonGrid() {
+  const grid = document.getElementById('lessonGrid');
+  const counts = {};
+  VOCAB.forEach(v => { counts[v.l] = (counts[v.l] || 0) + 1; });
+  let html = '';
+  // 初级1（1-25）
+  html += '<div style="grid-column:1/-1;font-size:12px;color:var(--text-light);margin-bottom:4px">初级1（第1-25课）</div>';
+  for (let i = 1; i <= 25; i++) {
+    html += `<button class="lesson-btn" onclick="startQuiz('lesson',${i})">${i}<span class="count">${counts[i] || 0}词</span></button>`;
+  }
+  // 初级2（26-50）
+  html += '<div style="grid-column:1/-1;font-size:12px;color:var(--text-light);margin:8px 0 4px">初级2（第26-50课）</div>';
+  for (let i = 26; i <= 50; i++) {
+    html += `<button class="lesson-btn" onclick="startQuiz('lesson',${i})">${i}<span class="count">${counts[i] || 0}词</span></button>`;
+  }
+  grid.innerHTML = html;
+}
+
+// ========== Quiz Logic ==========
+function startQuiz(mode, lesson) {
+  let pool;
+  if (mode === 'lesson') {
+    pool = VOCAB.filter(v => v.l === lesson);
+    if (!pool.length) { alert('该课没有词条'); return; }
+  } else {
+    pool = [...VOCAB];
+  }
+  
+  const numQ = Math.min(20, pool.length);
+  quiz = {
+    questions: shuffle(pool).slice(0, numQ),
+    current: 0,
+    score: 0,
+    wrong: [],
+    skipped: 0,
+    mode: mode,
+    lesson: lesson || null,
+    answered: false
+  };
+  
+  showScreen('quizScreen');
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = quiz.questions[quiz.current];
+  const total = quiz.questions.length;
+  const pct = ((quiz.current) / total * 100).toFixed(0);
+  
+  document.getElementById('progressText').textContent = `${quiz.current + 1} / ${total}`;
+  document.getElementById('progressFill').style.width = `${(quiz.current + 1) / total * 100}%`;
+  document.getElementById('quizScore').textContent = `✓ ${quiz.score}`;
+  document.getElementById('quizLesson').textContent = `第 ${q.l} 课`;
+  document.getElementById('quizMode').textContent = quiz.mode === 'easy' ? '简单模式' : '普通模式';
+  document.getElementById('quizMeaning').textContent = q.m;
+  
+  // Hint
+  const hintArea = document.getElementById('quizHintArea');
+  if (q.h && quiz.mode === 'easy') {
+    hintArea.innerHTML = `<div class="quiz-hint">提示（汉字）</div><div class="quiz-hint-kanji">${q.h}</div>`;
+  } else {
+    hintArea.innerHTML = '';
+  }
+  
+  // Reset input
+  const input = document.getElementById('quizInput');
+  input.value = '';
+  input.className = 'quiz-input';
+  input.disabled = false;
+  input.focus();
+  
+  document.getElementById('quizFeedback').style.display = 'none';
+  document.getElementById('submitBtn').disabled = false;
+  document.getElementById('skipBtn').disabled = false;
+  quiz.answered = false;
+}
+
+function submitAnswer() {
+  if (quiz.answered) {
+    nextQuestion();
+    return;
+  }
+  
+  const input = document.getElementById('quizInput');
+  const userAns = input.value.trim();
+  
+  if (!userAns) {
+    input.focus();
+    return;
+  }
+  
+  quiz.answered = true;
+  const q = quiz.questions[quiz.current];
+  const correct = checkAnswer(userAns, q.k);
+  
+  const feedback = document.getElementById('quizFeedback');
+  feedback.style.display = 'flex';
+  
+  if (correct) {
+    quiz.score++;
+    input.className = 'quiz-input correct';
+    feedback.className = 'quiz-feedback correct';
+    feedback.innerHTML = `<span>✓ 正确！</span><span>${q.k}${speakBtnHtml(q.k)}</span>`;
+  } else {
+    quiz.wrong.push({ ...q, userAns });
+    input.className = 'quiz-input wrong';
+    feedback.className = 'quiz-feedback wrong';
+    feedback.innerHTML = `<span>✗ 你的答案: ${userAns}</span><span style="margin-left:auto"><span class="answer">${q.k}</span>${speakBtnHtml(q.k)}</span>`;
+  }
+  
+  input.disabled = true;
+  document.getElementById('submitBtn').disabled = false;
+  document.getElementById('submitBtn').textContent = '下一题 →';
+  document.getElementById('skipBtn').disabled = true;
+  document.getElementById('quizScore').textContent = `✓ ${quiz.score}`;
+}
+
+function skipQuestion() {
+  if (quiz.answered) return;
+  const q = quiz.questions[quiz.current];
+  quiz.skipped++;
+  quiz.wrong.push({ ...q, userAns: '(跳过)' });
+  
+  const input = document.getElementById('quizInput');
+  const feedback = document.getElementById('quizFeedback');
+  quiz.answered = true;
+  input.disabled = true;
+  input.className = 'quiz-input wrong';
+  feedback.style.display = 'flex';
+  feedback.className = 'quiz-feedback wrong';
+  feedback.innerHTML = `<span>⊘ 跳过</span><span style="margin-left:auto"><span class="answer">${q.k}</span>${speakBtnHtml(q.k)}</span>`;
+  
+  document.getElementById('submitBtn').textContent = '下一题 →';
+  document.getElementById('submitBtn').disabled = false;
+  document.getElementById('skipBtn').disabled = true;
+}
+
+function nextQuestion() {
+  quiz.current++;
+  if (quiz.current >= quiz.questions.length) {
+    showResults();
+    return;
+  }
+  document.getElementById('submitBtn').textContent = '确认';
+  renderQuestion();
+}
+
+function showResults() {
+  const total = quiz.questions.length;
+  const correct = quiz.score;
+  const pct = Math.round(correct / total * 100);
+  
+  let emoji, grade, colorClass;
+  if (pct >= 90) { emoji = '🌟'; grade = '优秀！'; colorClass = 'green'; }
+  else if (pct >= 70) { emoji = '👍'; grade = '不错！'; colorClass = 'green'; }
+  else if (pct >= 50) { emoji = '💪'; grade = '继续加油！'; colorClass = 'orange'; }
+  else { emoji = '📚'; grade = '需要多复习~'; colorClass = 'red'; }
+  
+  document.getElementById('resultsEmoji').textContent = emoji;
+  document.getElementById('resultsGrade').textContent = grade;
+  document.getElementById('resultsScoreNum').textContent = `${correct}/${total}`;
+  document.getElementById('resultsScoreNum').className = `results-score ${colorClass}`;
+  document.getElementById('resultsAccuracy').textContent = `正确率 ${pct}%`;
+  document.getElementById('resultsCorrect').textContent = correct;
+  document.getElementById('resultsWrong').textContent = quiz.wrong.length - quiz.skipped;
+  document.getElementById('resultsSkipped').textContent = quiz.skipped;
+  
+  // Wrong list
+  const wrongEl = document.getElementById('wrongList');
+  const wrongItems = document.getElementById('wrongItems');
+  if (quiz.wrong.length) {
+    wrongEl.style.display = 'block';
+    wrongItems.innerHTML = quiz.wrong.map(w => `
+      <div class="wrong-item">
+        <span class="wrong-item-meaning">${w.m}</span>
+        <span class="wrong-item-yours">${w.userAns}</span>
+        <span class="wrong-item-arrow">→</span>
+        <span class="wrong-item-correct">${w.k}</span>
+        <button class="speak-btn" onclick="speak('${w.k}')" title="朗读" style="font-size:14px">🔊</button>
+      </div>
+    `).join('');
+  } else {
+    wrongEl.style.display = 'none';
+  }
+  
+  // Save
+  const modeLabel = quiz.lesson ? 'lesson' : quiz.mode;
+  addRecord(correct, total, modeLabel, quiz.lesson);
+  
+  showScreen('resultsScreen');
+}
+
+function retryQuiz() {
+  startQuiz(quiz.mode, quiz.lesson);
+}
+
+function confirmQuit() {
+  if (quiz.current > 0 && !quiz.answered) {
+    if (!confirm('确定退出练习？当前进度将不会保存。')) return;
+  }
+  showScreen('homeScreen');
+}
+
+// ========== TTS ==========
+function speak(text) {
+  if (!text) return;
+  // Try browser built-in TTS first (works well on iOS Safari / Chrome)
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'ja-JP';
+    u.rate = 0.9;
+    u.onerror = () => {};
+    // On some devices, voices load asynchronously
+    const voices = speechSynthesis.getVoices();
+    const jaVoice = voices.find(v => v.lang.startsWith('ja'));
+    if (jaVoice) u.voice = jaVoice;
+    speechSynthesis.speak(u);
+    return;
+  }
+  // Fallback: Google Translate TTS
+  const audio = new Audio();
+  audio.src = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${encodeURIComponent(text)}`;
+  audio.onerror = () => {};
+  audio.play().catch(() => {});
+}
+// Ensure voices are loaded (needed for Chrome)
+if ('speechSynthesis' in window) {
+  speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
+}
+function speakBtnHtml(text) {
+  return `<button class="speak-btn" onclick="event.stopPropagation();speak('${text}')" title="朗读">🔊</button>`;
+}
+
+// ========== Keyboard ==========
+document.addEventListener('keydown', e => {
+  const active = document.querySelector('.screen.active');
+  if (!active || active.id !== 'quizScreen') return;
+
+  if (quiz.answered) {
+    // 已答题状态：空格键进入下一题
+    if (e.key === ' ' || e.code === 'Space') {
+      e.preventDefault();
+      nextQuestion();
+    }
+  } else {
+    // 未答题状态：Enter 提交答案
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      submitAnswer();
+    }
+  }
+});
+
+// ========== Init ==========
+buildLessonGrid();
+updateHome();
+</script>
+</body>
+</html>

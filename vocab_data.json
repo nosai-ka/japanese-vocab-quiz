@@ -1,0 +1,8228 @@
+[
+  {
+    "lesson": 1,
+    "kana": "わたし",
+    "kanji": "私",
+    "meaning": "我"
+  },
+  {
+    "lesson": 1,
+    "kana": "あなた",
+    "kanji": "貴方",
+    "meaning": "你、您"
+  },
+  {
+    "lesson": 1,
+    "kana": "あのひと (あのかた)",
+    "kanji": "あの人 (あの方)",
+    "meaning": "他、那个人（「あのかた」是礼貌用法）"
+  },
+  {
+    "lesson": 1,
+    "kana": "じん",
+    "kanji": "人",
+    "meaning": "～人（表示国籍的后缀，如アメリカじん）"
+  },
+  {
+    "lesson": 1,
+    "kana": "せんせい",
+    "kanji": "先生",
+    "meaning": "老师（不用于自己的职业）"
+  },
+  {
+    "lesson": 1,
+    "kana": "きょうし",
+    "kanji": "教師",
+    "meaning": "教师"
+  },
+  {
+    "lesson": 1,
+    "kana": "がくせい",
+    "kanji": "学生",
+    "meaning": "学生"
+  },
+  {
+    "lesson": 1,
+    "kana": "かいしゃいん",
+    "kanji": "会社員",
+    "meaning": "公司职员"
+  },
+  {
+    "lesson": 1,
+    "kana": "しゃいん",
+    "kanji": "社員",
+    "meaning": "公司职员（和公司名一起用）"
+  },
+  {
+    "lesson": 1,
+    "kana": "ぎんこういん",
+    "kanji": "銀行員",
+    "meaning": "银行职员"
+  },
+  {
+    "lesson": 1,
+    "kana": "いしゃ",
+    "kanji": "医者",
+    "meaning": "医生"
+  },
+  {
+    "lesson": 1,
+    "kana": "けんきゅうしゃ",
+    "kanji": "研究者",
+    "meaning": "研究人员"
+  },
+  {
+    "lesson": 1,
+    "kana": "だいがく",
+    "kanji": "大学",
+    "meaning": "大学"
+  },
+  {
+    "lesson": 1,
+    "kana": "びょういん",
+    "kanji": "病院",
+    "meaning": "医院"
+  },
+  {
+    "lesson": 1,
+    "kana": "だれ",
+    "kanji": "誰",
+    "meaning": "谁"
+  },
+  {
+    "lesson": 1,
+    "kana": "さい",
+    "kanji": "歳",
+    "meaning": "岁"
+  },
+  {
+    "lesson": 1,
+    "kana": "なんさい",
+    "kanji": "何歳",
+    "meaning": "几岁"
+  },
+  {
+    "lesson": 1,
+    "kana": "しつれいですが",
+    "kanji": "失礼ですが",
+    "meaning": "对不起、请问"
+  },
+  {
+    "lesson": 1,
+    "kana": "かんこく",
+    "kanji": "韓国",
+    "meaning": "韩国"
+  },
+  {
+    "lesson": 1,
+    "kana": "ちゅうごく",
+    "kanji": "中国",
+    "meaning": "中国"
+  },
+  {
+    "lesson": 2,
+    "kana": "ほん",
+    "kanji": "本",
+    "meaning": "书"
+  },
+  {
+    "lesson": 2,
+    "kana": "じしょ",
+    "kanji": "辞書",
+    "meaning": "字典"
+  },
+  {
+    "lesson": 2,
+    "kana": "しんぶん",
+    "kanji": "新聞",
+    "meaning": "报纸"
+  },
+  {
+    "lesson": 2,
+    "kana": "てちょう",
+    "kanji": "手帳",
+    "meaning": "记事本"
+  },
+  {
+    "lesson": 2,
+    "kana": "めいし",
+    "kanji": "名刺",
+    "meaning": "名片"
+  },
+  {
+    "lesson": 2,
+    "kana": "えんぴつ",
+    "kanji": "鉛筆",
+    "meaning": "铅笔"
+  },
+  {
+    "lesson": 2,
+    "kana": "とけい",
+    "kanji": "時計",
+    "meaning": "钟表"
+  },
+  {
+    "lesson": 2,
+    "kana": "かさ",
+    "kanji": "傘",
+    "meaning": "伞"
+  },
+  {
+    "lesson": 2,
+    "kana": "くるま",
+    "kanji": "車",
+    "meaning": "汽车"
+  },
+  {
+    "lesson": 2,
+    "kana": "つくえ",
+    "kanji": "机",
+    "meaning": "桌子"
+  },
+  {
+    "lesson": 2,
+    "kana": "おみやげ",
+    "kanji": "お土産",
+    "meaning": "土产、礼物"
+  },
+  {
+    "lesson": 2,
+    "kana": "えいご",
+    "kanji": "英語",
+    "meaning": "英语"
+  },
+  {
+    "lesson": 2,
+    "kana": "にほんご",
+    "kanji": "日本語",
+    "meaning": "日语"
+  },
+  {
+    "lesson": 2,
+    "kana": "てご",
+    "kanji": "て語",
+    "meaning": "～语"
+  },
+  {
+    "lesson": 2,
+    "kana": "なん",
+    "kanji": "何",
+    "meaning": "什么"
+  },
+  {
+    "lesson": 3,
+    "kana": "じむしょ",
+    "kanji": "事務所",
+    "meaning": "办事处、事务所"
+  },
+  {
+    "lesson": 3,
+    "kana": "へや",
+    "kanji": "部屋",
+    "meaning": "房间"
+  },
+  {
+    "lesson": 3,
+    "kana": "トイレ (おてあらい)",
+    "kanji": "(お手洗い)",
+    "meaning": "厕所（洗手间）"
+  },
+  {
+    "lesson": 3,
+    "kana": "かいだん",
+    "kanji": "階段",
+    "meaning": "楼梯"
+  },
+  {
+    "lesson": 3,
+    "kana": "[お]くに",
+    "kanji": "[お]国",
+    "meaning": "国家、故乡"
+  },
+  {
+    "lesson": 3,
+    "kana": "くつ",
+    "kanji": "靴",
+    "meaning": "鞋"
+  },
+  {
+    "lesson": 3,
+    "kana": "うりば",
+    "kanji": "売り場",
+    "meaning": "销售柜台"
+  },
+  {
+    "lesson": 3,
+    "kana": "ーえん",
+    "kanji": "ー円",
+    "meaning": "一日元"
+  },
+  {
+    "lesson": 4,
+    "kana": "おきます",
+    "kanji": "起きます",
+    "meaning": "起床"
+  },
+  {
+    "lesson": 4,
+    "kana": "ねます",
+    "kanji": "寝ます",
+    "meaning": "睡觉"
+  },
+  {
+    "lesson": 4,
+    "kana": "はたらきます",
+    "kanji": "働きます",
+    "meaning": "工作、劳动"
+  },
+  {
+    "lesson": 4,
+    "kana": "べんきょうします",
+    "kanji": "勉強します",
+    "meaning": "学习"
+  },
+  {
+    "lesson": 4,
+    "kana": "おわります",
+    "kanji": "終わります",
+    "meaning": "结束"
+  },
+  {
+    "lesson": 4,
+    "kana": "ぎんこう",
+    "kanji": "銀行",
+    "meaning": "银行"
+  },
+  {
+    "lesson": 4,
+    "kana": "ゆうびんきょく",
+    "kanji": "郵便局",
+    "meaning": "邮局"
+  },
+  {
+    "lesson": 4,
+    "kana": "なんじ",
+    "kanji": "何時",
+    "meaning": "几点"
+  },
+  {
+    "lesson": 4,
+    "kana": "なんぷん",
+    "kanji": "何分",
+    "meaning": "几分"
+  },
+  {
+    "lesson": 4,
+    "kana": "ごご",
+    "kanji": "午後",
+    "meaning": "下午"
+  },
+  {
+    "lesson": 4,
+    "kana": "きょう",
+    "kanji": "今日",
+    "meaning": "今天"
+  },
+  {
+    "lesson": 4,
+    "kana": "やすみ",
+    "kanji": "休み",
+    "meaning": "休息、休假"
+  },
+  {
+    "lesson": 4,
+    "kana": "ひるやすみ",
+    "kanji": "昼体み",
+    "meaning": "午休"
+  },
+  {
+    "lesson": 4,
+    "kana": "かいぎ",
+    "kanji": "会議",
+    "meaning": "会议"
+  },
+  {
+    "lesson": 4,
+    "kana": "まいあさ",
+    "kanji": "毎朝",
+    "meaning": "每天早晨"
+  },
+  {
+    "lesson": 4,
+    "kana": "かようび",
+    "kanji": "火曜日",
+    "meaning": "星期二"
+  },
+  {
+    "lesson": 4,
+    "kana": "もくようび",
+    "kanji": "木曜日",
+    "meaning": "星期四"
+  },
+  {
+    "lesson": 4,
+    "kana": "どようび",
+    "kanji": "土曜日",
+    "meaning": "星期六"
+  },
+  {
+    "lesson": 5,
+    "kana": "いきます",
+    "kanji": "行きます",
+    "meaning": "去"
+  },
+  {
+    "lesson": 5,
+    "kana": "きます",
+    "kanji": "来ます",
+    "meaning": "来"
+  },
+  {
+    "lesson": 5,
+    "kana": "かえります",
+    "kanji": "帰ります",
+    "meaning": "回"
+  },
+  {
+    "lesson": 5,
+    "kana": "あるいて",
+    "kanji": "歩いて",
+    "meaning": "走路"
+  },
+  {
+    "lesson": 5,
+    "kana": "ひとりで",
+    "kanji": "一人で",
+    "meaning": "一个人、自己"
+  },
+  {
+    "lesson": 5,
+    "kana": "せんげつ",
+    "kanji": "先月",
+    "meaning": "上个月"
+  },
+  {
+    "lesson": 5,
+    "kana": "こんげつ",
+    "kanji": "今月",
+    "meaning": "这个月"
+  },
+  {
+    "lesson": 5,
+    "kana": "らいげつ",
+    "kanji": "来月",
+    "meaning": "下个月"
+  },
+  {
+    "lesson": 5,
+    "kana": "ーねん",
+    "kanji": "ー年",
+    "meaning": "一年"
+  },
+  {
+    "lesson": 5,
+    "kana": "ーがつ",
+    "kanji": "ー月",
+    "meaning": "ー月"
+  },
+  {
+    "lesson": 5,
+    "kana": "ーにち",
+    "kanji": "ー日",
+    "meaning": "一号、一天"
+  },
+  {
+    "lesson": 5,
+    "kana": "たんじょうび",
+    "kanji": "誕生日",
+    "meaning": "生日"
+  },
+  {
+    "lesson": 6,
+    "kana": "たべます",
+    "kanji": "食べます",
+    "meaning": "吃"
+  },
+  {
+    "lesson": 6,
+    "kana": "のみます",
+    "kanji": "飲みます",
+    "meaning": "喝"
+  },
+  {
+    "lesson": 6,
+    "kana": "みます",
+    "kanji": "見ます",
+    "meaning": "看"
+  },
+  {
+    "lesson": 6,
+    "kana": "ききます",
+    "kanji": "聞きます",
+    "meaning": "听"
+  },
+  {
+    "lesson": 6,
+    "kana": "よみます",
+    "kanji": "読みます",
+    "meaning": "读"
+  },
+  {
+    "lesson": 6,
+    "kana": "かきます",
+    "kanji": "書きます",
+    "meaning": "写 (「かきます」也有 \"画\" 的意思。"
+  },
+  {
+    "lesson": 6,
+    "kana": "かいます",
+    "kanji": "買います",
+    "meaning": "买"
+  },
+  {
+    "lesson": 6,
+    "kana": "とります",
+    "kanji": "撮ります",
+    "meaning": "拍摄、照 [相]"
+  },
+  {
+    "lesson": 6,
+    "kana": "あいます",
+    "kanji": "会います",
+    "meaning": "[友達にて] 。 [跟朋友] 见面"
+  },
+  {
+    "lesson": 6,
+    "kana": "ごはん",
+    "kanji": "ご飯",
+    "meaning": "米饭、饭"
+  },
+  {
+    "lesson": 6,
+    "kana": "あさごはん",
+    "kanji": "朝ご飯",
+    "meaning": "早饭"
+  },
+  {
+    "lesson": 6,
+    "kana": "ひるごはん",
+    "kanji": "昼ご飯",
+    "meaning": "午饭"
+  },
+  {
+    "lesson": 6,
+    "kana": "ばんごはん",
+    "kanji": "晩ご飯",
+    "meaning": "晚饭"
+  },
+  {
+    "lesson": 6,
+    "kana": "おちゃ",
+    "kanji": "お茶",
+    "meaning": "茶、日本茶"
+  },
+  {
+    "lesson": 6,
+    "kana": "おさけ",
+    "kanji": "お酒",
+    "meaning": "酒、日本酒"
+  },
+  {
+    "lesson": 6,
+    "kana": "しゅくだい",
+    "kanji": "宿題",
+    "meaning": "作业"
+  },
+  {
+    "lesson": 6,
+    "kana": "おはなみ",
+    "kanji": "お花見",
+    "meaning": "看花、赏花"
+  },
+  {
+    "lesson": 7,
+    "kana": "きります",
+    "kanji": "切ります",
+    "meaning": "切、剪"
+  },
+  {
+    "lesson": 7,
+    "kana": "おくります",
+    "kanji": "送ります",
+    "meaning": "寄、送"
+  },
+  {
+    "lesson": 7,
+    "kana": "かします",
+    "kanji": "貸します",
+    "meaning": "借给、借出"
+  },
+  {
+    "lesson": 7,
+    "kana": "かります",
+    "kanji": "借ります",
+    "meaning": "借入"
+  },
+  {
+    "lesson": 7,
+    "kana": "おしえます",
+    "kanji": "教えます",
+    "meaning": "教、告诉"
+  },
+  {
+    "lesson": 7,
+    "kana": "ならいます",
+    "kanji": "習います",
+    "meaning": "学习"
+  },
+  {
+    "lesson": 7,
+    "kana": "けしゴム",
+    "kanji": "消しゴム",
+    "meaning": "橡皮"
+  },
+  {
+    "lesson": 7,
+    "kana": "にもつ",
+    "kanji": "荷物",
+    "meaning": "行李、包裹"
+  },
+  {
+    "lesson": 7,
+    "kana": "おかね",
+    "kanji": "お金",
+    "meaning": "钱"
+  },
+  {
+    "lesson": 7,
+    "kana": "おとうさん",
+    "kanji": "お父さん",
+    "meaning": "(別人的) 父亲 (叫自己的父亲时也可使用)"
+  },
+  {
+    "lesson": 7,
+    "kana": "おかあさん",
+    "kanji": "お母さん",
+    "meaning": "(別人的) 母亲 (叫自己的母亲时也可使用)"
+  },
+  {
+    "lesson": 8,
+    "kana": "しずか[な]",
+    "kanji": "静か[な]",
+    "meaning": "安静"
+  },
+  {
+    "lesson": 8,
+    "kana": "ゆうめい[な]",
+    "kanji": "有名[な]",
+    "meaning": "有名"
+  },
+  {
+    "lesson": 8,
+    "kana": "しんせつ[な]",
+    "kanji": "親切[な]",
+    "meaning": "亲切 (不用于自己的亲属)"
+  },
+  {
+    "lesson": 8,
+    "kana": "げんき[な]",
+    "kanji": "元気[な]",
+    "meaning": "健康"
+  },
+  {
+    "lesson": 8,
+    "kana": "ひま[な]",
+    "kanji": "暇[な]",
+    "meaning": "有时间、有空儿"
+  },
+  {
+    "lesson": 8,
+    "kana": "べんり[な]",
+    "kanji": "便利[な]",
+    "meaning": "方便"
+  },
+  {
+    "lesson": 8,
+    "kana": "おおきい",
+    "kanji": "大きい",
+    "meaning": "大"
+  },
+  {
+    "lesson": 8,
+    "kana": "ちいさい",
+    "kanji": "小さい",
+    "meaning": "小"
+  },
+  {
+    "lesson": 8,
+    "kana": "あたらしい",
+    "kanji": "新しい",
+    "meaning": "新、新鲜"
+  },
+  {
+    "lesson": 8,
+    "kana": "ふるい",
+    "kanji": "古い",
+    "meaning": "旧"
+  },
+  {
+    "lesson": 8,
+    "kana": "わるい",
+    "kanji": "悪い",
+    "meaning": "坏"
+  },
+  {
+    "lesson": 8,
+    "kana": "あつい",
+    "kanji": "暑い",
+    "meaning": "热"
+  },
+  {
+    "lesson": 8,
+    "kana": "さむい",
+    "kanji": "寒い",
+    "meaning": "冷"
+  },
+  {
+    "lesson": 8,
+    "kana": "つめたい",
+    "kanji": "冷たい",
+    "meaning": "凉"
+  },
+  {
+    "lesson": 8,
+    "kana": "むずかしい",
+    "kanji": "難しい",
+    "meaning": "难"
+  },
+  {
+    "lesson": 8,
+    "kana": "やさしい",
+    "kanji": "易しい",
+    "meaning": "容易"
+  },
+  {
+    "lesson": 8,
+    "kana": "たかい",
+    "kanji": "高い",
+    "meaning": "貴、高"
+  },
+  {
+    "lesson": 8,
+    "kana": "やすい",
+    "kanji": "安い",
+    "meaning": "便宜"
+  },
+  {
+    "lesson": 8,
+    "kana": "ひくい\\",
+    "kanji": "低い",
+    "meaning": "低、矮"
+  },
+  {
+    "lesson": 8,
+    "kana": "いそがしい",
+    "kanji": "忙しい",
+    "meaning": "忙"
+  },
+  {
+    "lesson": 8,
+    "kana": "たのしい",
+    "kanji": "楽しい",
+    "meaning": "愉快、高兴"
+  },
+  {
+    "lesson": 8,
+    "kana": "しろい",
+    "kanji": "白い",
+    "meaning": "白色"
+  },
+  {
+    "lesson": 8,
+    "kana": "くろい",
+    "kanji": "黒い",
+    "meaning": "黑色"
+  },
+  {
+    "lesson": 8,
+    "kana": "あかい",
+    "kanji": "赤い",
+    "meaning": "红色"
+  },
+  {
+    "lesson": 8,
+    "kana": "あおい",
+    "kanji": "青い",
+    "meaning": "蓝色"
+  },
+  {
+    "lesson": 8,
+    "kana": "たべもの",
+    "kanji": "食べ物",
+    "meaning": "食物"
+  },
+  {
+    "lesson": 8,
+    "kana": "りょう",
+    "kanji": "寮",
+    "meaning": "宿舍"
+  },
+  {
+    "lesson": 8,
+    "kana": "[おぉ]しごと",
+    "kanji": "[お]仕事",
+    "meaning": "工作 (を します :工作)"
+  },
+  {
+    "lesson": 9,
+    "kana": "すき[な]",
+    "kanji": "好き[な]",
+    "meaning": "喜欢"
+  },
+  {
+    "lesson": 9,
+    "kana": "きらい[な]",
+    "kanji": "嫌い[な]",
+    "meaning": "不喜欢"
+  },
+  {
+    "lesson": 9,
+    "kana": "じょうず[な]",
+    "kanji": "上手[な]",
+    "meaning": "好、擅长"
+  },
+  {
+    "lesson": 9,
+    "kana": "へた[な]",
+    "kanji": "下手[な]",
+    "meaning": "不好、不擅长"
+  },
+  {
+    "lesson": 9,
+    "kana": "のみもの",
+    "kanji": "飲み物",
+    "meaning": "饮料"
+  },
+  {
+    "lesson": 9,
+    "kana": "ローマじ",
+    "kanji": "ローマ字",
+    "meaning": "罗马字"
+  },
+  {
+    "lesson": 9,
+    "kana": "こまかい おかね",
+    "kanji": "細かい",
+    "meaning": "お金 零钱"
+  },
+  {
+    "lesson": 9,
+    "kana": "やくそく",
+    "kanji": "約束",
+    "meaning": "约定"
+  },
+  {
+    "lesson": 9,
+    "kana": "ごしゅじん",
+    "kanji": "ご主人",
+    "meaning": "(別人的) 丈夫"
+  },
+  {
+    "lesson": 9,
+    "kana": "おくさん",
+    "kanji": "奥さん",
+    "meaning": "(別人的) 妻子"
+  },
+  {
+    "lesson": 9,
+    "kana": "つま (かない)",
+    "kanji": "妻 (家内)",
+    "meaning": "(自己的) 妻子"
+  },
+  {
+    "lesson": 9,
+    "kana": "こども",
+    "kanji": "子ども",
+    "meaning": "孩子"
+  },
+  {
+    "lesson": 9,
+    "kana": "すこし",
+    "kanji": "少し",
+    "meaning": "一些、一点儿"
+  },
+  {
+    "lesson": 9,
+    "kana": "はやく",
+    "kanji": "早く、速",
+    "meaning": "早、快"
+  },
+  {
+    "lesson": 10,
+    "kana": "おとこの こ",
+    "kanji": "男の子",
+    "meaning": "男孩儿"
+  },
+  {
+    "lesson": 10,
+    "kana": "おんなの こ",
+    "kanji": "女の子",
+    "meaning": "女孩儿"
+  },
+  {
+    "lesson": 10,
+    "kana": "まど",
+    "kanji": "窓",
+    "meaning": "窗"
+  },
+  {
+    "lesson": 10,
+    "kana": "きっさてん",
+    "kanji": "喫茶店",
+    "meaning": "咖啡馆"
+  },
+  {
+    "lesson": 10,
+    "kana": "てや",
+    "kanji": "て屋",
+    "meaning": "て店"
+  },
+  {
+    "lesson": 10,
+    "kana": "のりば",
+    "kanji": "乗り場",
+    "meaning": "一站 (指出租车站、电车站等)"
+  },
+  {
+    "lesson": 10,
+    "kana": "ちかく",
+    "kanji": "近く",
+    "meaning": "附近"
+  },
+  {
+    "lesson": 11,
+    "kana": "やすみます",
+    "kanji": "休みます",
+    "meaning": "[跟公司] 请假"
+  },
+  {
+    "lesson": 11,
+    "kana": "ひとつっ",
+    "kanji": "1 つ",
+    "meaning": "1、1 人 (数灰西時使用)"
+  },
+  {
+    "lesson": 11,
+    "kana": "ふたつ",
+    "kanji": "2 っ",
+    "meaning": "2、2條"
+  },
+  {
+    "lesson": 11,
+    "kana": "みっつ",
+    "kanji": "3 つ",
+    "meaning": "34 3个"
+  },
+  {
+    "lesson": 11,
+    "kana": "よっつ",
+    "kanji": "4 つ",
+    "meaning": "4、4个"
+  },
+  {
+    "lesson": 11,
+    "kana": "いつつ",
+    "kanji": "5 つ",
+    "meaning": "5、5 个"
+  },
+  {
+    "lesson": 11,
+    "kana": "むっつ",
+    "kanji": "6 つ",
+    "meaning": "6、6个"
+  },
+  {
+    "lesson": 11,
+    "kana": "ななつ",
+    "kanji": "7 つ",
+    "meaning": "7、7个"
+  },
+  {
+    "lesson": 11,
+    "kana": "やっつ",
+    "kanji": "8 っ",
+    "meaning": "8、8 个"
+  },
+  {
+    "lesson": 11,
+    "kana": "ここのつ",
+    "kanji": "9つっ",
+    "meaning": "9、9个"
+  },
+  {
+    "lesson": 11,
+    "kana": "とお",
+    "kanji": "10",
+    "meaning": "10、10 介"
+  },
+  {
+    "lesson": 11,
+    "kana": "ーまい",
+    "kanji": "ー枚",
+    "meaning": "一枚、一张 (数纸张、邮票等的量词)"
+  },
+  {
+    "lesson": 11,
+    "kana": "ふうとう",
+    "kanji": "封筒",
+    "meaning": "信封"
+  },
+  {
+    "lesson": 11,
+    "kana": "あに",
+    "kanji": "兄",
+    "meaning": "（自己的）哥哥"
+  },
+  {
+    "lesson": 11,
+    "kana": "おにいさん",
+    "kanji": "お兄さん",
+    "meaning": "（别人的）哥哥"
+  },
+  {
+    "lesson": 11,
+    "kana": "あね",
+    "kanji": "姉",
+    "meaning": "（自己的）姐姐"
+  },
+  {
+    "lesson": 11,
+    "kana": "おねえさん",
+    "kanji": "お姉さん",
+    "meaning": "（别人的）姐姐"
+  },
+  {
+    "lesson": 11,
+    "kana": "おとうと",
+    "kanji": "弟",
+    "meaning": "(自己的) 弟弟"
+  },
+  {
+    "lesson": 11,
+    "kana": "おとうとさん",
+    "kanji": "弟さん",
+    "meaning": "(别人的) 弟弟"
+  },
+  {
+    "lesson": 11,
+    "kana": "いもうとさん",
+    "kanji": "妹さん",
+    "meaning": "(别人的) 妹妹"
+  },
+  {
+    "lesson": 11,
+    "kana": "ーしゅうかん",
+    "kanji": "ー週間",
+    "meaning": "ー周"
+  },
+  {
+    "lesson": 11,
+    "kana": "ーかげつ",
+    "kanji": "ーか月",
+    "meaning": "一个月"
+  },
+  {
+    "lesson": 11,
+    "kana": "ぜんぶで",
+    "kanji": "全部で",
+    "meaning": "一共、合计 加"
+  },
+  {
+    "lesson": 12,
+    "kana": "かんたん[な]",
+    "kanji": "簡単[な]",
+    "meaning": "简单"
+  },
+  {
+    "lesson": 12,
+    "kana": "ちかい",
+    "kanji": "近い",
+    "meaning": "近"
+  },
+  {
+    "lesson": 12,
+    "kana": "とおい",
+    "kanji": "遠い",
+    "meaning": "远"
+  },
+  {
+    "lesson": 12,
+    "kana": "はやい",
+    "kanji": "速い、早い",
+    "meaning": "快、早"
+  },
+  {
+    "lesson": 12,
+    "kana": "おそい",
+    "kanji": "遅い",
+    "meaning": "慢"
+  },
+  {
+    "lesson": 12,
+    "kana": "おおい [ひとが^]",
+    "kanji": "多い[人が~-]",
+    "meaning": "[人] 多"
+  },
+  {
+    "lesson": 12,
+    "kana": "すくない『",
+    "kanji": "少ない",
+    "meaning": "[人] 少"
+  },
+  {
+    "lesson": 12,
+    "kana": "あたたかい",
+    "kanji": "暖かい、温かい",
+    "meaning": "暖和、温"
+  },
+  {
+    "lesson": 12,
+    "kana": "すずしい",
+    "kanji": "涼しい",
+    "meaning": "凉快"
+  },
+  {
+    "lesson": 12,
+    "kana": "あまい",
+    "kanji": "甘い",
+    "meaning": "甜"
+  },
+  {
+    "lesson": 12,
+    "kana": "おもい",
+    "kanji": "重い",
+    "meaning": "重"
+  },
+  {
+    "lesson": 12,
+    "kana": "かるい",
+    "kanji": "軽い",
+    "meaning": "轻"
+  },
+  {
+    "lesson": 12,
+    "kana": "はる",
+    "kanji": "春",
+    "meaning": "春天"
+  },
+  {
+    "lesson": 12,
+    "kana": "あめ",
+    "kanji": "雨",
+    "meaning": "雨"
+  },
+  {
+    "lesson": 12,
+    "kana": "ゆき",
+    "kanji": "雪",
+    "meaning": "雪"
+  },
+  {
+    "lesson": 12,
+    "kana": "くもり",
+    "kanji": "曇り",
+    "meaning": "阴"
+  },
+  {
+    "lesson": 12,
+    "kana": "おまつり",
+    "kanji": "お祭り",
+    "meaning": "庙会、庆典、节庆"
+  },
+  {
+    "lesson": 12,
+    "kana": "すきやき",
+    "kanji": "すき焼き",
+    "meaning": "寿喜烧（日本菜）"
+  },
+  {
+    "lesson": 12,
+    "kana": "さしみ",
+    "kanji": "刺身",
+    "meaning": "生鱼片（日本菜）"
+  },
+  {
+    "lesson": 12,
+    "kana": "おすし",
+    "kanji": "お寿司",
+    "meaning": "寿司（日本菜）"
+  },
+  {
+    "lesson": 12,
+    "kana": "てんぷら",
+    "kanji": "天ぷら",
+    "meaning": "天妇罗（日本菜）"
+  },
+  {
+    "lesson": 12,
+    "kana": "ぶたにく",
+    "kanji": "豚肉",
+    "meaning": "猪肉"
+  },
+  {
+    "lesson": 12,
+    "kana": "とりにく",
+    "kanji": "とり肉",
+    "meaning": "鸡肉"
+  },
+  {
+    "lesson": 12,
+    "kana": "いけばな",
+    "kanji": "生け花",
+    "meaning": "插花 (てを します : 播花)"
+  },
+  {
+    "lesson": 12,
+    "kana": "もみじ",
+    "kanji": "紅葉",
+    "meaning": "红叶"
+  },
+  {
+    "lesson": 12,
+    "kana": "はじめて",
+    "kanji": "初めて",
+    "meaning": "初次"
+  },
+  {
+    "lesson": 13,
+    "kana": "あそびます",
+    "kanji": "遊びます",
+    "meaning": "玩、玩耍"
+  },
+  {
+    "lesson": 13,
+    "kana": "およぎます",
+    "kanji": "泳ぎます",
+    "meaning": "游泳"
+  },
+  {
+    "lesson": 13,
+    "kana": "むかえます",
+    "kanji": "迎えます",
+    "meaning": "迎接"
+  },
+  {
+    "lesson": 13,
+    "kana": "つかれます",
+    "kanji": "疲れます",
+    "meaning": "累"
+  },
+  {
+    "lesson": 13,
+    "kana": "けっこんします",
+    "kanji": "結婚します",
+    "meaning": "结婚"
+  },
+  {
+    "lesson": 13,
+    "kana": "かいものします",
+    "kanji": "買い物します",
+    "meaning": "买东西、购物"
+  },
+  {
+    "lesson": 13,
+    "kana": "しょくじします",
+    "kanji": "食事します",
+    "meaning": "吃饭、用餐"
+  },
+  {
+    "lesson": 13,
+    "kana": "さんぽします",
+    "kanji": "散歩します",
+    "meaning": "散步"
+  },
+  {
+    "lesson": 13,
+    "kana": "たいへん[な]",
+    "kanji": "大変[な]",
+    "meaning": "很 (累人)、相当 (辛苦) (表示相当"
+  },
+  {
+    "lesson": 13,
+    "kana": "ほしい",
+    "kanji": "欲しい",
+    "meaning": "想要"
+  },
+  {
+    "lesson": 13,
+    "kana": "ひろい",
+    "kanji": "広い",
+    "meaning": "宽"
+  },
+  {
+    "lesson": 13,
+    "kana": "さびしい",
+    "kanji": "寂しい",
+    "meaning": "寂寞"
+  },
+  {
+    "lesson": 13,
+    "kana": "かわ",
+    "kanji": "川",
+    "meaning": "河流"
+  },
+  {
+    "lesson": 13,
+    "kana": "びじゅつ",
+    "kanji": "美術",
+    "meaning": "美术"
+  },
+  {
+    "lesson": 13,
+    "kana": "しゅうまつ",
+    "kanji": "週末",
+    "meaning": "周末"
+  },
+  {
+    "lesson": 13,
+    "kana": "おしょうがつ",
+    "kanji": "お正月",
+    "meaning": "新年"
+  },
+  {
+    "lesson": 13,
+    "kana": "なにか",
+    "kanji": "何か",
+    "meaning": "什么 (表示不特定的某件事情或某一"
+  },
+  {
+    "lesson": 14,
+    "kana": "けします",
+    "kanji": "消します",
+    "meaning": "关 (空调、电灯等)"
+  },
+  {
+    "lesson": 14,
+    "kana": "あけます",
+    "kanji": "開けます",
+    "meaning": "开 (〈门、窗等)"
+  },
+  {
+    "lesson": 14,
+    "kana": "しめます",
+    "kanji": "閉めます",
+    "meaning": "关 (门、窗等)"
+  },
+  {
+    "lesson": 14,
+    "kana": "いそぎます",
+    "kanji": "急ぎます",
+    "meaning": "急、急忙"
+  },
+  {
+    "lesson": 14,
+    "kana": "まちます",
+    "kanji": "待ちます",
+    "meaning": "等"
+  },
+  {
+    "lesson": 14,
+    "kana": "もちます",
+    "kanji": "持ちます",
+    "meaning": "拿"
+  },
+  {
+    "lesson": 14,
+    "kana": "とります",
+    "kanji": "取ります",
+    "meaning": "取"
+  },
+  {
+    "lesson": 14,
+    "kana": "てつだいます",
+    "kanji": "手伝います",
+    "meaning": "帮忙"
+  },
+  {
+    "lesson": 14,
+    "kana": "よびます",
+    "kanji": "呼びます",
+    "meaning": "叫"
+  },
+  {
+    "lesson": 14,
+    "kana": "はなします",
+    "kanji": "話します",
+    "meaning": "说话"
+  },
+  {
+    "lesson": 14,
+    "kana": "つかいます",
+    "kanji": "使います",
+    "meaning": "使用"
+  },
+  {
+    "lesson": 14,
+    "kana": "とめます牙",
+    "kanji": "止めます",
+    "meaning": "停、止"
+  },
+  {
+    "lesson": 14,
+    "kana": "みせます",
+    "kanji": "見せます",
+    "meaning": "显示、给～看"
+  },
+  {
+    "lesson": 14,
+    "kana": "おしえます",
+    "kanji": "教えます",
+    "meaning": "告诉（地址等）"
+  },
+  {
+    "lesson": 14,
+    "kana": "すわります",
+    "kanji": "座ります",
+    "meaning": "坐"
+  },
+  {
+    "lesson": 14,
+    "kana": "たちます",
+    "kanji": "立ちます",
+    "meaning": "站"
+  },
+  {
+    "lesson": 14,
+    "kana": "はいります",
+    "kanji": "入ります「[史茶店にて]",
+    "meaning": "进 [咖啡馆]"
+  },
+  {
+    "lesson": 14,
+    "kana": "でます",
+    "kanji": "出ます[史茶店を-]",
+    "meaning": "\"出 [咖啡馆"
+  },
+  {
+    "lesson": 14,
+    "kana": "ふります",
+    "kanji": "降ります【[雨が-]",
+    "meaning": "下 [雨]"
+  },
+  {
+    "lesson": 14,
+    "kana": "しお",
+    "kanji": "塩",
+    "meaning": "盐"
+  },
+  {
+    "lesson": 14,
+    "kana": "さとう",
+    "kanji": "砂糖",
+    "meaning": "糖"
+  },
+  {
+    "lesson": 14,
+    "kana": "よみかた",
+    "kanji": "読みか",
+    "meaning": "读法、念法"
+  },
+  {
+    "lesson": 14,
+    "kana": "てかた",
+    "kanji": "て方",
+    "meaning": "一法"
+  },
+  {
+    "lesson": 14,
+    "kana": "もう すこし",
+    "kanji": "もう",
+    "meaning": "少し 再~一点儿、还一一点儿"
+  },
+  {
+    "lesson": 15,
+    "kana": "おきます",
+    "kanji": "置きます",
+    "meaning": "放"
+  },
+  {
+    "lesson": 15,
+    "kana": "つくります",
+    "kanji": "作ります、造ります",
+    "meaning": "制作、制造"
+  },
+  {
+    "lesson": 15,
+    "kana": "うります",
+    "kanji": "売ります",
+    "meaning": "卖"
+  },
+  {
+    "lesson": 15,
+    "kana": "しります",
+    "kanji": "知ります",
+    "meaning": "知道"
+  },
+  {
+    "lesson": 15,
+    "kana": "すみます",
+    "kanji": "住みます",
+    "meaning": "住、居住"
+  },
+  {
+    "lesson": 15,
+    "kana": "けんきゅうします臣",
+    "kanji": "研究します",
+    "meaning": "研究"
+  },
+  {
+    "lesson": 15,
+    "kana": "じこくひょう",
+    "kanji": "時刻表",
+    "meaning": "时刻表"
+  },
+  {
+    "lesson": 15,
+    "kana": "はいしゃ",
+    "kanji": "歯医者",
+    "meaning": "牙医"
+  },
+  {
+    "lesson": 15,
+    "kana": "机",
+    "kanji": "ゆう",
+    "meaning": "(车窜C)"
+  },
+  {
+    "lesson": 16,
+    "kana": "のります+",
+    "kanji": "乗ります",
+    "meaning": "坐、乘 [电车"
+  },
+  {
+    "lesson": 16,
+    "kana": "おります芽",
+    "kanji": "降ります",
+    "meaning": "下 [电车"
+  },
+  {
+    "lesson": 16,
+    "kana": "のりかえます",
+    "kanji": "乗り換えます",
+    "meaning": "换乘"
+  },
+  {
+    "lesson": 16,
+    "kana": "あぁあびます",
+    "kanji": "浴びます",
+    "meaning": "浇、淋 [浴"
+  },
+  {
+    "lesson": 16,
+    "kana": "いれます牙",
+    "kanji": "入れます",
+    "meaning": "放入、插入"
+  },
+  {
+    "lesson": 16,
+    "kana": "だしますエ",
+    "kanji": "出します",
+    "meaning": "拿出、取出、提交、寄"
+  },
+  {
+    "lesson": 16,
+    "kana": "おろします",
+    "kanji": "下ろします",
+    "meaning": "取 [款"
+  },
+  {
+    "lesson": 16,
+    "kana": "はいります",
+    "kanji": "入ります",
+    "meaning": "上（大学）"
+  },
+  {
+    "lesson": 16,
+    "kana": "でます",
+    "kanji": "出ます",
+    "meaning": "（大学）毕业"
+  },
+  {
+    "lesson": 16,
+    "kana": "おします",
+    "kanji": "押します",
+    "meaning": "按、押、推"
+  },
+  {
+    "lesson": 16,
+    "kana": "のみます",
+    "kanji": "飲みます",
+    "meaning": "喝 (特指喝酒)"
+  },
+  {
+    "lesson": 16,
+    "kana": "けんがくします想",
+    "kanji": "見学します",
+    "meaning": "参观"
+  },
+  {
+    "lesson": 16,
+    "kana": "でんわします想",
+    "kanji": "電話します",
+    "meaning": "打电话"
+  },
+  {
+    "lesson": 16,
+    "kana": "わかい",
+    "kanji": "若い",
+    "meaning": "年轻"
+  },
+  {
+    "lesson": 16,
+    "kana": "ながい",
+    "kanji": "長い",
+    "meaning": "长"
+  },
+  {
+    "lesson": 16,
+    "kana": "みじかい",
+    "kanji": "短い",
+    "meaning": "短"
+  },
+  {
+    "lesson": 16,
+    "kana": "あかるい",
+    "kanji": "明るい",
+    "meaning": "明亮"
+  },
+  {
+    "lesson": 16,
+    "kana": "くらい",
+    "kanji": "暗い",
+    "meaning": "昏暗"
+  },
+  {
+    "lesson": 16,
+    "kana": "みみ",
+    "kanji": "耳",
+    "meaning": "耳朵"
+  },
+  {
+    "lesson": 16,
+    "kana": "くち",
+    "kanji": "ロ",
+    "meaning": "嘴巴"
+  },
+  {
+    "lesson": 16,
+    "kana": "あし",
+    "kanji": "足",
+    "meaning": "脚、腿"
+  },
+  {
+    "lesson": 16,
+    "kana": "せ",
+    "kanji": "背",
+    "meaning": "个子"
+  },
+  {
+    "lesson": 16,
+    "kana": "みどり",
+    "kanji": "緑",
+    "meaning": "绿色、绿树绿草"
+  },
+  {
+    "lesson": 16,
+    "kana": "おてら",
+    "kanji": "お寺",
+    "meaning": "寺庙"
+  },
+  {
+    "lesson": 16,
+    "kana": "じんじゃ",
+    "kanji": "神社",
+    "meaning": "神社"
+  },
+  {
+    "lesson": 16,
+    "kana": "ーばん",
+    "kanji": "ー番",
+    "meaning": "ー号"
+  },
+  {
+    "lesson": 16,
+    "kana": "あんしょうばんごう",
+    "kanji": "暗証番号",
+    "meaning": "密码"
+  },
+  {
+    "lesson": 16,
+    "kana": "かくにん",
+    "kanji": "確認",
+    "meaning": "确认"
+  },
+  {
+    "lesson": 17,
+    "kana": "おぼえます",
+    "kanji": "覚えます",
+    "meaning": "记住"
+  },
+  {
+    "lesson": 17,
+    "kana": "わすれます",
+    "kanji": "忘れます",
+    "meaning": "忘记"
+  },
+  {
+    "lesson": 17,
+    "kana": "はらいます",
+    "kanji": "払います",
+    "meaning": "付钱"
+  },
+  {
+    "lesson": 17,
+    "kana": "かえします",
+    "kanji": "返します",
+    "meaning": "归还、返回"
+  },
+  {
+    "lesson": 17,
+    "kana": "でかけます葉",
+    "kanji": "出かけます",
+    "meaning": "出门、外出"
+  },
+  {
+    "lesson": 17,
+    "kana": "ぬぎます",
+    "kanji": "脱ぎます",
+    "meaning": "脱 (衣服等)"
+  },
+  {
+    "lesson": 17,
+    "kana": "もっていきます",
+    "kanji": "持って行きます",
+    "meaning": "带去、拿去"
+  },
+  {
+    "lesson": 17,
+    "kana": "もってきます",
+    "kanji": "持って来ます",
+    "meaning": "带来、拿来"
+  },
+  {
+    "lesson": 17,
+    "kana": "しんぱいします",
+    "kanji": "心配します",
+    "meaning": "担心"
+  },
+  {
+    "lesson": 17,
+    "kana": "ざんぎょうします",
+    "kanji": "残業します",
+    "meaning": "加班"
+  },
+  {
+    "lesson": 17,
+    "kana": "しゅっちょうします",
+    "kanji": "出張します",
+    "meaning": "出差"
+  },
+  {
+    "lesson": 17,
+    "kana": "のみます",
+    "kanji": "飲みます",
+    "meaning": "吃 [药"
+  },
+  {
+    "lesson": 17,
+    "kana": "はいります",
+    "kanji": "入ります",
+    "meaning": "洗 [澡]"
+  },
+  {
+    "lesson": 17,
+    "kana": "たいせつ[な]",
+    "kanji": "大切[な]",
+    "meaning": "重要"
+  },
+  {
+    "lesson": 17,
+    "kana": "だいじょうぶ[な]",
+    "kanji": "大丈夫[な]",
+    "meaning": "没问题、不要紧"
+  },
+  {
+    "lesson": 17,
+    "kana": "あぶない",
+    "kanji": "危ない",
+    "meaning": "危险"
+  },
+  {
+    "lesson": 17,
+    "kana": "きんえん",
+    "kanji": "禁煙",
+    "meaning": "禁烟"
+  },
+  {
+    "lesson": 18,
+    "kana": "あらいます",
+    "kanji": "洗います",
+    "meaning": "洗"
+  },
+  {
+    "lesson": 18,
+    "kana": "ひきます",
+    "kanji": "弾きます",
+    "meaning": "弾 (钢琴等)"
+  },
+  {
+    "lesson": 18,
+    "kana": "うたいます",
+    "kanji": "歌います",
+    "meaning": "唱"
+  },
+  {
+    "lesson": 18,
+    "kana": "あつめます",
+    "kanji": "集めます",
+    "meaning": "收集、收藏"
+  },
+  {
+    "lesson": 18,
+    "kana": "すてます",
+    "kanji": "捨てます",
+    "meaning": "丢弃"
+  },
+  {
+    "lesson": 18,
+    "kana": "かえます",
+    "kanji": "換えます",
+    "meaning": "换"
+  },
+  {
+    "lesson": 18,
+    "kana": "うんてんします想",
+    "kanji": "運転します",
+    "meaning": "驾驶"
+  },
+  {
+    "lesson": 18,
+    "kana": "よやくします邊",
+    "kanji": "予約します",
+    "meaning": "预订"
+  },
+  {
+    "lesson": 18,
+    "kana": "おいのり",
+    "kanji": "お祈り",
+    "meaning": "祈愿、祈祷 (てを します : : 祝愿)"
+  },
+  {
+    "lesson": 19,
+    "kana": "のぼります",
+    "kanji": "登ります、上ります",
+    "meaning": "登、上"
+  },
+  {
+    "lesson": 19,
+    "kana": "とまります",
+    "kanji": "泊まります",
+    "meaning": "住 [酒店]"
+  },
+  {
+    "lesson": 19,
+    "kana": "そうじします相",
+    "kanji": "掃除します",
+    "meaning": "打扫"
+  },
+  {
+    "lesson": 19,
+    "kana": "せんたくします想",
+    "kanji": "洗濯します",
+    "meaning": "洗衣服"
+  },
+  {
+    "lesson": 19,
+    "kana": "ねむい",
+    "kanji": "眠い",
+    "meaning": "困"
+  },
+  {
+    "lesson": 19,
+    "kana": "つよい",
+    "kanji": "強い",
+    "meaning": "強"
+  },
+  {
+    "lesson": 19,
+    "kana": "よわい『",
+    "kanji": "5",
+    "meaning": "弱"
+  },
+  {
+    "lesson": 19,
+    "kana": "いちども",
+    "kanji": "一度も",
+    "meaning": "后接否定式, 表示一次也 (没有) 一"
+  },
+  {
+    "lesson": 20,
+    "kana": "いります",
+    "kanji": "要ります",
+    "meaning": "要 [签证]"
+  },
+  {
+    "lesson": 20,
+    "kana": "しらべます",
+    "kanji": "調べます",
+    "meaning": "查、调查"
+  },
+  {
+    "lesson": 20,
+    "kana": "しゅうりします",
+    "kanji": "修理します",
+    "meaning": "修理"
+  },
+  {
+    "lesson": 20,
+    "kana": "ぼく",
+    "kanji": "僕",
+    "meaning": "我（男性用，比「わたし」随意）"
+  },
+  {
+    "lesson": 20,
+    "kana": "きみ",
+    "kanji": "君",
+    "meaning": "你（用于同辈、部下、晚辈）"
+  },
+  {
+    "lesson": 20,
+    "kana": "きもの",
+    "kanji": "着物",
+    "meaning": "和服（日本的传统服装）"
+  },
+  {
+    "lesson": 20,
+    "kana": "はじめ",
+    "kanji": "初め",
+    "meaning": "开始"
+  },
+  {
+    "lesson": 20,
+    "kana": "おわり",
+    "kanji": "終わり",
+    "meaning": "结束"
+  },
+  {
+    "lesson": 21,
+    "kana": "おもいます",
+    "kanji": "思います",
+    "meaning": "想、觉得"
+  },
+  {
+    "lesson": 21,
+    "kana": "いいます",
+    "kanji": "言います",
+    "meaning": "说、讲"
+  },
+  {
+    "lesson": 21,
+    "kana": "かちます",
+    "kanji": "勝ちます",
+    "meaning": "赢"
+  },
+  {
+    "lesson": 21,
+    "kana": "まけます",
+    "kanji": "負けます",
+    "meaning": "输"
+  },
+  {
+    "lesson": 21,
+    "kana": "やくに たちます",
+    "kanji": "役に",
+    "meaning": "立ちます 有用、起作用"
+  },
+  {
+    "lesson": 21,
+    "kana": "うごきます",
+    "kanji": "動きます",
+    "meaning": "转动、动"
+  },
+  {
+    "lesson": 21,
+    "kana": "きを つけます",
+    "kanji": "気を",
+    "meaning": "つけます 小心、注意"
+  },
+  {
+    "lesson": 21,
+    "kana": "むだ",
+    "kanji": "無駄",
+    "meaning": "浪费"
+  },
+  {
+    "lesson": 21,
+    "kana": "ふべん",
+    "kanji": "不便",
+    "meaning": "不方便"
+  },
+  {
+    "lesson": 21,
+    "kana": "じどうしゃ",
+    "kanji": "自動車",
+    "meaning": "汽车"
+  },
+  {
+    "lesson": 21,
+    "kana": "てんさい",
+    "kanji": "天才",
+    "meaning": "天才"
+  },
+  {
+    "lesson": 21,
+    "kana": "ンでも",
+    "kanji": "飲み",
+    "meaning": "ませんか。 喝点儿一什么吗?"
+  },
+  {
+    "lesson": 22,
+    "kana": "きます",
+    "kanji": "着ます",
+    "meaning": "穿 (衬衫等上衣、外衣)"
+  },
+  {
+    "lesson": 22,
+    "kana": "うまれます",
+    "kanji": "生まれます",
+    "meaning": "出生"
+  },
+  {
+    "lesson": 22,
+    "kana": "おべんとう",
+    "kanji": "お弁当",
+    "meaning": "盒饭"
+  },
+  {
+    "lesson": 22,
+    "kana": "おさがしですか",
+    "kanji": "お探しですか",
+    "meaning": "您在找～吗"
+  },
+  {
+    "lesson": 23,
+    "kana": "ききます",
+    "kanji": "聞きます",
+    "meaning": "问 [老师]"
+  },
+  {
+    "lesson": 23,
+    "kana": "まわします",
+    "kanji": "回します",
+    "meaning": "传递、转"
+  },
+  {
+    "lesson": 23,
+    "kana": "ひきます",
+    "kanji": "引きます",
+    "meaning": "拉、搜"
+  },
+  {
+    "lesson": 23,
+    "kana": "かえます",
+    "kanji": "変えます",
+    "meaning": "改变"
+  },
+  {
+    "lesson": 23,
+    "kana": "さわります",
+    "kanji": "触ります",
+    "meaning": "摸、碰 [到门]"
+  },
+  {
+    "lesson": 23,
+    "kana": "あるきます",
+    "kanji": "歩きます",
+    "meaning": "走"
+  },
+  {
+    "lesson": 23,
+    "kana": "わたります",
+    "kanji": "渡ります",
+    "meaning": "渡过、过 [桥]"
+  },
+  {
+    "lesson": 23,
+    "kana": "まがります",
+    "kanji": "曲がります",
+    "meaning": "[往右] 拐、转弯"
+  },
+  {
+    "lesson": 23,
+    "kana": "さびしい",
+    "kanji": "寂しい",
+    "meaning": "寂寞"
+  },
+  {
+    "lesson": 23,
+    "kana": "おゆ",
+    "kanji": "お湯",
+    "meaning": "热水、开水"
+  },
+  {
+    "lesson": 23,
+    "kana": "おと",
+    "kanji": "音",
+    "meaning": "（物体发出的）声音"
+  },
+  {
+    "lesson": 23,
+    "kana": "こしょう",
+    "kanji": "故障",
+    "meaning": "故障"
+  },
+  {
+    "lesson": 23,
+    "kana": "しんごう",
+    "kanji": "信号",
+    "meaning": "红绿灯"
+  },
+  {
+    "lesson": 23,
+    "kana": "ちゅうしゃじょう",
+    "kanji": "駐車場",
+    "meaning": "停车场"
+  },
+  {
+    "lesson": 23,
+    "kana": "なんかいも",
+    "kanji": "何回も",
+    "meaning": "多次、好几次"
+  },
+  {
+    "lesson": 23,
+    "kana": "め",
+    "kanji": "目",
+    "meaning": "第 (指順序)"
+  },
+  {
+    "lesson": 24,
+    "kana": "なおします",
+    "kanji": "直します",
+    "meaning": "修理、修改"
+  },
+  {
+    "lesson": 24,
+    "kana": "つれていきます",
+    "kanji": "連れて行きます",
+    "meaning": "带着去"
+  },
+  {
+    "lesson": 24,
+    "kana": "つれてきます",
+    "kanji": "連れて来ます",
+    "meaning": "带着来"
+  },
+  {
+    "lesson": 24,
+    "kana": "おくります",
+    "kanji": "送ります",
+    "meaning": "送（人）"
+  },
+  {
+    "lesson": 24,
+    "kana": "しょうかいします",
+    "kanji": "紹介します",
+    "meaning": "介绍"
+  },
+  {
+    "lesson": 24,
+    "kana": "あんないします",
+    "kanji": "案内します",
+    "meaning": "带路、引导"
+  },
+  {
+    "lesson": 24,
+    "kana": "せつめいします",
+    "kanji": "説明します",
+    "meaning": "说明、讲解"
+  },
+  {
+    "lesson": 24,
+    "kana": "いれます",
+    "kanji": "入れます",
+    "meaning": "冲（咖啡）、放入"
+  },
+  {
+    "lesson": 24,
+    "kana": "じゅんび",
+    "kanji": "準備",
+    "meaning": "准备"
+  },
+  {
+    "lesson": 24,
+    "kana": "ひっこし",
+    "kanji": "引っ越し",
+    "meaning": "搬家"
+  },
+  {
+    "lesson": 24,
+    "kana": "おかし",
+    "kanji": "お菓子",
+    "meaning": "点心"
+  },
+  {
+    "lesson": 24,
+    "kana": "ぜんぶ",
+    "kanji": "全部",
+    "meaning": "全部"
+  },
+  {
+    "lesson": 24,
+    "kana": "じぶんで",
+    "kanji": "自分で",
+    "meaning": "自己"
+  },
+  {
+    "lesson": 24,
+    "kana": "いみ",
+    "kanji": "意味",
+    "meaning": "意思、含义"
+  },
+  {
+    "lesson": 24,
+    "kana": "ははのひ",
+    "kanji": "母の日",
+    "meaning": "母亲节"
+  },
+  {
+    "lesson": 25,
+    "kana": "かんがえます",
+    "kanji": "考えます",
+    "meaning": "考虑、想"
+  },
+  {
+    "lesson": 25,
+    "kana": "つきます",
+    "kanji": "着きます",
+    "meaning": "到、到达"
+  },
+  {
+    "lesson": 25,
+    "kana": "とります（年を〜）",
+    "kanji": "取ります",
+    "meaning": "上〔年纪〕"
+  },
+  {
+    "lesson": 25,
+    "kana": "たります",
+    "kanji": "足ります",
+    "meaning": "够"
+  },
+  {
+    "lesson": 25,
+    "kana": "いなか",
+    "kanji": "田舎",
+    "meaning": "乡下、老家"
+  },
+  {
+    "lesson": 25,
+    "kana": "おく",
+    "kanji": "億",
+    "meaning": "亿"
+  },
+  {
+    "lesson": 25,
+    "kana": "いみ",
+    "kanji": "意味",
+    "meaning": "意思"
+  },
+  {
+    "lesson": 25,
+    "kana": "れんしゅう",
+    "kanji": "練習",
+    "meaning": "练习"
+  },
+  {
+    "lesson": 25,
+    "kana": "こと",
+    "kanji": "事",
+    "meaning": "事情（〜のこと：～事）"
+  },
+  {
+    "lesson": 25,
+    "kana": "ひま",
+    "kanji": "暇",
+    "meaning": "空闲、有空"
+  },
+  {
+    "lesson": 25,
+    "kana": "てんきん",
+    "kanji": "転勤",
+    "meaning": "转任"
+  },
+  {
+    "lesson": 25,
+    "kana": "たいしかん",
+    "kanji": "大使館",
+    "meaning": "大使馆"
+  },
+  {
+    "lesson": 25,
+    "kana": "おせわになりました",
+    "kanji": "お世話になりました",
+    "meaning": "承蒙（多方）关照"
+  },
+  {
+    "lesson": 25,
+    "kana": "がんばります",
+    "kanji": "頑張ります",
+    "meaning": "加油、努力"
+  },
+  {
+    "lesson": 25,
+    "kana": "どうぞおげんきで",
+    "kanji": "どうぞお元気で",
+    "meaning": "请多保重。祝你健康。"
+  },
+  {
+    "lesson": 26,
+    "kana": "てベん",
+    "kanji": "て備",
+    "meaning": "一方言"
+  },
+  {
+    "lesson": 26,
+    "kana": "おおさかべん",
+    "kanji": "大阪弁",
+    "meaning": "大阪笑、大阪方圭"
+  },
+  {
+    "lesson": 26,
+    "kana": "エドヤストア",
+    "kanji": "",
+    "meaning": "江戸屋 (虚构的商店)"
+  },
+  {
+    "lesson": 26,
+    "kana": "遅れます",
+    "kanji": "遅れる",
+    "meaning": "晚了、没赶上"
+  },
+  {
+    "lesson": 26,
+    "kana": "見ます/診ます",
+    "kanji": "見る",
+    "meaning": "看、诊断"
+  },
+  {
+    "lesson": 26,
+    "kana": "こっかいぎじどう",
+    "kanji": "国会議事堂",
+    "meaning": "国会议事党"
+  },
+  {
+    "lesson": 26,
+    "kana": "ちょくせつ",
+    "kanji": "直接",
+    "meaning": "直接"
+  },
+  {
+    "lesson": 26,
+    "kana": "へいじつ",
+    "kanji": "平日",
+    "meaning": "平日"
+  },
+  {
+    "lesson": 26,
+    "kana": "いつでも",
+    "kanji": "",
+    "meaning": "随时"
+  },
+  {
+    "lesson": 26,
+    "kana": "どこでも",
+    "kanji": "",
+    "meaning": "在任何地方都~"
+  },
+  {
+    "lesson": 26,
+    "kana": "だれでも",
+    "kanji": "",
+    "meaning": "任何人都~"
+  },
+  {
+    "lesson": 26,
+    "kana": "なんでも",
+    "kanji": "何でも",
+    "meaning": "什么都~"
+  },
+  {
+    "lesson": 26,
+    "kana": "ごみ",
+    "kanji": "",
+    "meaning": "垃圾"
+  },
+  {
+    "lesson": 26,
+    "kana": "出します",
+    "kanji": "出す",
+    "meaning": "扎"
+  },
+  {
+    "lesson": 26,
+    "kana": "燃えるごみ",
+    "kanji": "",
+    "meaning": "可燃垃圾"
+  },
+  {
+    "lesson": 26,
+    "kana": "おきば",
+    "kanji": "置き場",
+    "meaning": "放置场所"
+  },
+  {
+    "lesson": 26,
+    "kana": "ゴミ富さ場",
+    "kanji": "",
+    "meaning": "垃圾声"
+  },
+  {
+    "lesson": 26,
+    "kana": "よこ",
+    "kanji": "横",
+    "meaning": "”旁边"
+  },
+  {
+    "lesson": 26,
+    "kana": "びん",
+    "kanji": "瓶",
+    "meaning": "措"
+  },
+  {
+    "lesson": 26,
+    "kana": "かん",
+    "kanji": "向",
+    "meaning": "” 包"
+  },
+  {
+    "lesson": 26,
+    "kana": "ガス",
+    "kanji": "",
+    "meaning": "煤气"
+  },
+  {
+    "lesson": 26,
+    "kana": "ガスがいしゃや",
+    "kanji": "gas会社",
+    "meaning": "煤气公司"
+  },
+  {
+    "lesson": 26,
+    "kana": "連絡します",
+    "kanji": "で連絡する",
+    "meaning": "联系"
+  },
+  {
+    "lesson": 26,
+    "kana": "うんどうかい",
+    "kanji": "運動会",
+    "meaning": "运动会"
+  },
+  {
+    "lesson": 26,
+    "kana": "都合が悪い",
+    "kanji": "",
+    "meaning": "时机不好、不方便"
+  },
+  {
+    "lesson": 26,
+    "kana": "フリーマーケット",
+    "kanji": "",
+    "meaning": "跳阵市场"
+  },
+  {
+    "lesson": 26,
+    "kana": "ずいぶん",
+    "kanji": "随分",
+    "meaning": "极其、相当"
+  },
+  {
+    "lesson": 26,
+    "kana": "やります",
+    "kanji": "",
+    "meaning": "做、干、搞"
+  },
+  {
+    "lesson": 26,
+    "kana": "ぼんおどり",
+    "kanji": "多政り",
+    "meaning": "<名2 重当倫会男"
+  },
+  {
+    "lesson": 26,
+    "kana": "さいふ、",
+    "kanji": "財布",
+    "meaning": "钱包"
+  },
+  {
+    "lesson": 26,
+    "kana": "気人がいい",
+    "kanji": "",
+    "meaning": "语》 舒服"
+  },
+  {
+    "lesson": 26,
+    "kana": "気分が悪い",
+    "kanji": "",
+    "meaning": "语》 不舒服"
+  },
+  {
+    "lesson": 26,
+    "kana": "間に合います",
+    "kanji": "て問に合う",
+    "meaning": "{> 直上"
+  },
+  {
+    "lesson": 26,
+    "kana": "こんど",
+    "kanji": "今度",
+    "meaning": "这次、下次"
+  },
+  {
+    "lesson": 26,
+    "kana": "拾います",
+    "kanji": "拾う",
+    "meaning": "[> 拾、投"
+  },
+  {
+    "lesson": 26,
+    "kana": "ばしょ",
+    "kanji": "场所",
+    "meaning": "场所、地点"
+  },
+  {
+    "lesson": 26,
+    "kana": "そんな",
+    "kanji": "",
+    "meaning": "体》 那样的〈离听话人较近)"
+  },
+  {
+    "lesson": 26,
+    "kana": "こんがーキ",
+    "kanji": "",
+    "meaning": "体》 这样的~"
+  },
+  {
+    "lesson": 26,
+    "kana": "あんなへ",
+    "kanji": "",
+    "meaning": "体> 那样的~ (离说话人和听话人都较"
+  },
+  {
+    "lesson": 26,
+    "kana": "ボランティア",
+    "kanji": "",
+    "meaning": "寻找"
+  },
+  {
+    "lesson": 26,
+    "kana": "うちゅう",
+    "kanji": "宇宙",
+    "meaning": "义工、志愿者"
+  },
+  {
+    "lesson": 26,
+    "kana": "ほしであきひこ",
+    "kanji": "星出彰彦",
+    "meaning": "宇宙"
+  },
+  {
+    "lesson": 26,
+    "kana": "てさま",
+    "kanji": "て様",
+    "meaning": "星出彰彦 (1968-, 日本宇航只)"
+  },
+  {
+    "lesson": 26,
+    "kana": "うちゅうせん",
+    "kanji": "宇宙船",
+    "meaning": "を辞> て先生、て女士 (「てさん」的尊"
+  },
+  {
+    "lesson": 26,
+    "kana": "こわい",
+    "kanji": "柿い",
+    "meaning": "敬语)"
+  },
+  {
+    "lesson": 26,
+    "kana": "うちゅうステーション",
+    "kanji": "宇宙station",
+    "meaning": "宇宙で船"
+  },
+  {
+    "lesson": 26,
+    "kana": "邊います",
+    "kanji": "<違う",
+    "meaning": "形> 害怕、可怕"
+  },
+  {
+    "lesson": 26,
+    "kana": "うちゅうひこうし",
+    "kanji": "宇宙飛行士",
+    "meaning": "航天站"
+  },
+  {
+    "lesson": 27,
+    "kana": "ーー はっきり",
+    "kanji": "",
+    "meaning": "看见"
+  },
+  {
+    "lesson": 27,
+    "kana": "見えます",
+    "kanji": "見える",
+    "meaning": "建好、交上 (朋友) 、做好 〈饭)"
+  },
+  {
+    "lesson": 27,
+    "kana": "出来ます",
+    "kanji": "出来る",
+    "meaning": "岛"
+  },
+  {
+    "lesson": 27,
+    "kana": "とり",
+    "kanji": "鳥",
+    "meaning": "”听见"
+  },
+  {
+    "lesson": 27,
+    "kana": "こえ",
+    "kanji": "声",
+    "meaning": "只〈后接否定形)"
+  },
+  {
+    "lesson": 27,
+    "kana": "聞こえます",
+    "kanji": "聞こえる",
+    "meaning": "公寓"
+  },
+  {
+    "lesson": 27,
+    "kana": "てしか",
+    "kanji": "",
+    "meaning": "饲养"
+  },
+  {
+    "lesson": 27,
+    "kana": "マンション",
+    "kanji": "",
+    "meaning": "养狗"
+  },
+  {
+    "lesson": 27,
+    "kana": "ペット",
+    "kanji": "",
+    "meaning": "家具"
+  },
+  {
+    "lesson": 27,
+    "kana": "師います",
+    "kanji": "飼う",
+    "meaning": "书架"
+  },
+  {
+    "lesson": 27,
+    "kana": "天を師います",
+    "kanji": "",
+    "meaning": "什么时候"
+  },
+  {
+    "lesson": 27,
+    "kana": "かぐで",
+    "kanji": "家具",
+    "meaning": "家、住宅"
+  },
+  {
+    "lesson": 27,
+    "kana": "ほんだな",
+    "kanji": "本棚",
+    "meaning": "” 建、盖"
+  },
+  {
+    "lesson": 27,
+    "kana": "ーー",
+    "kanji": "家",
+    "meaning": "烟花"
+  },
+  {
+    "lesson": 27,
+    "kana": "建てます",
+    "kanji": "建てる",
+    "meaning": "跑、奔驰"
+  },
+  {
+    "lesson": 27,
+    "kana": "すばらしい",
+    "kanji": "素晴らしい",
+    "meaning": "”担心"
+  },
+  {
+    "lesson": 27,
+    "kana": "はなび",
+    "kanji": "花火",
+    "meaning": "波浪"
+  },
+  {
+    "lesson": 27,
+    "kana": "直ります",
+    "kanji": "",
+    "meaning": "洗、洗衣"
+  },
+  {
+    "lesson": 27,
+    "kana": "しんばい",
+    "kanji": "心配",
+    "meaning": "一教室"
+  },
+  {
+    "lesson": 27,
+    "kana": "なみ",
+    "kanji": "波",
+    "meaning": "“”开、举办 (奥运会)"
+  },
+  {
+    "lesson": 27,
+    "kana": "クリーニング",
+    "kanji": "",
+    "meaning": "厨房"
+  },
+  {
+    "lesson": 27,
+    "kana": "ほかの",
+    "kanji": "",
+    "meaning": "工具"
+  },
+  {
+    "lesson": 27,
+    "kana": "きょうしつ",
+    "kanji": "~教室",
+    "meaning": "宴会厅"
+  },
+  {
+    "lesson": 27,
+    "kana": "開きます",
+    "kanji": "開く",
+    "meaning": "ー后 (指時同上)"
+  },
+  {
+    "lesson": 27,
+    "kana": "キッチン",
+    "kanji": "",
+    "meaning": "哆啦A梦 (动漫人物的名字)"
+  },
+  {
+    "lesson": 27,
+    "kana": "どうぐ",
+    "kanji": "道具",
+    "meaning": "表示复数"
+  },
+  {
+    "lesson": 27,
+    "kana": "パーティールーム",
+    "kanji": "",
+    "meaning": "孩子们"
+  },
+  {
+    "lesson": 27,
+    "kana": "かた",
+    "kanji": "方",
+    "meaning": "非常喜欢"
+  },
+  {
+    "lesson": 27,
+    "kana": "てご 〇て後",
+    "kanji": "",
+    "meaning": "主人公"
+  },
+  {
+    "lesson": 27,
+    "kana": "じぶん",
+    "kanji": "自分",
+    "meaning": "不可思议"
+  },
+  {
+    "lesson": 27,
+    "kana": "全ーたち",
+    "kanji": "",
+    "meaning": "例如"
+  },
+  {
+    "lesson": 27,
+    "kana": "子ども 大为",
+    "kanji": "",
+    "meaning": "竹晴星"
+  },
+  {
+    "lesson": 27,
+    "kana": "だいすき",
+    "kanji": "大好き",
+    "meaning": "时间电视"
+  },
+  {
+    "lesson": 27,
+    "kana": "しゅじんこう",
+    "kanji": "主人公",
+    "meaning": "戴上"
+  },
+  {
+    "lesson": 27,
+    "kana": "かたち",
+    "kanji": "形",
+    "meaning": "自由地、随意地"
+  },
+  {
+    "lesson": 27,
+    "kana": "ふしぎ 「",
+    "kanji": "不思識",
+    "meaning": "天空"
+  },
+  {
+    "lesson": 27,
+    "kana": "ポケット",
+    "kanji": "",
+    "meaning": "飞、飞翔"
+  },
+  {
+    "lesson": 27,
+    "kana": "たとえば",
+    "kanji": "例えば",
+    "meaning": "将来"
+  },
+  {
+    "lesson": 27,
+    "kana": "タケコプター",
+    "kanji": "竹copter",
+    "meaning": "任意门"
+  },
+  {
+    "lesson": 28,
+    "kana": "ガム",
+    "kanji": "",
+    "meaning": "口香糖"
+  },
+  {
+    "lesson": 28,
+    "kana": "噛みます",
+    "kanji": "噛む",
+    "meaning": "嚼、咬"
+  },
+  {
+    "lesson": 28,
+    "kana": "しばらく〈",
+    "kanji": "",
+    "meaning": "一会儿、不久"
+  },
+  {
+    "lesson": 28,
+    "kana": "えらい",
+    "kanji": "伟改",
+    "meaning": "伟大、了不起"
+  },
+  {
+    "lesson": 28,
+    "kana": "たいてい",
+    "kanji": "大抵",
+    "meaning": "大部分、大体、普通"
+  },
+  {
+    "lesson": 28,
+    "kana": "ねっしん",
+    "kanji": "热心",
+    "meaning": "热心"
+  },
+  {
+    "lesson": 28,
+    "kana": "それに",
+    "kanji": "",
+    "meaning": "而且"
+  },
+  {
+    "lesson": 28,
+    "kana": "けいけん",
+    "kanji": "経験",
+    "meaning": "经验 (一汞四中去才: 有经验; 一をしま"
+  },
+  {
+    "lesson": 28,
+    "kana": "選びます",
+    "kanji": "選ぶ",
+    "meaning": "す。 经验)"
+  },
+  {
+    "lesson": 28,
+    "kana": "じつは",
+    "kanji": "実は",
+    "meaning": "有件事想麻烦一下"
+  },
+  {
+    "lesson": 28,
+    "kana": "かいわ",
+    "kanji": "会話",
+    "meaning": "其实、实际上"
+  },
+  {
+    "lesson": 28,
+    "kana": "むすこ",
+    "kanji": "息子",
+    "meaning": "ルル子"
+  },
+  {
+    "lesson": 28,
+    "kana": "むすめさん",
+    "kanji": "娠さん",
+    "meaning": "女儿"
+  },
+  {
+    "lesson": 28,
+    "kana": "まじめ",
+    "kanji": "真面目",
+    "meaning": "认真"
+  },
+  {
+    "lesson": 28,
+    "kana": "ちから",
+    "kanji": "カカ",
+    "meaning": "力量:力气"
+  },
+  {
+    "lesson": 28,
+    "kana": "全カが強い",
+    "kanji": "",
+    "meaning": "力气大、有力气、有力量"
+  },
+  {
+    "lesson": 28,
+    "kana": "ねだん",
+    "kanji": "値段",
+    "meaning": "价钱"
+  },
+  {
+    "lesson": 28,
+    "kana": "あじ",
+    "kanji": "味",
+    "meaning": "味道(指味覚)"
+  },
+  {
+    "lesson": 28,
+    "kana": "メモします",
+    "kanji": "",
+    "meaning": "记笔记"
+  },
+  {
+    "lesson": 28,
+    "kana": "ゲーム",
+    "kanji": "",
+    "meaning": "游戏、电子游戏"
+  },
+  {
+    "lesson": 28,
+    "kana": "ばんでぐみ",
+    "kanji": "番組",
+    "meaning": "节目"
+  },
+  {
+    "lesson": 28,
+    "kana": "ド ラマ",
+    "kanji": "",
+    "meaning": "电视剧"
+  },
+  {
+    "lesson": 28,
+    "kana": "AAテレビドラマ",
+    "kanji": "",
+    "meaning": "电视剧"
+  },
+  {
+    "lesson": 28,
+    "kana": "ラジオドラマ",
+    "kanji": "",
+    "meaning": "广播剧"
+  },
+  {
+    "lesson": 28,
+    "kana": "通います",
+    "kanji": "<通う",
+    "meaning": "上 (学) 、定期往返"
+  },
+  {
+    "lesson": 28,
+    "kana": "とき",
+    "kanji": "^機",
+    "meaning": "一机 (接尾词，表示某种机械)"
+  },
+  {
+    "lesson": 28,
+    "kana": "びよういん",
+    "kanji": "美容院",
+    "meaning": "美容院"
+  },
+  {
+    "lesson": 28,
+    "kana": "だいどころ",
+    "kanji": "台所",
+    "meaning": "色"
+  },
+  {
+    "lesson": 28,
+    "kana": "かたち",
+    "kanji": "形",
+    "meaning": "品、商品"
+  },
+  {
+    "lesson": 28,
+    "kana": "いろ",
+    "kanji": "色",
+    "meaning": "好"
+  },
+  {
+    "lesson": 28,
+    "kana": "しなもの",
+    "kanji": "品物",
+    "meaning": "色"
+  },
+  {
+    "lesson": 28,
+    "kana": "ちょうどいい",
+    "kanji": "",
+    "meaning": "得好、畅销"
+  },
+  {
+    "lesson": 28,
+    "kana": "けしき",
+    "kanji": "量色",
+    "meaning": "手"
+  },
+  {
+    "lesson": 28,
+    "kana": "かしゅ",
+    "kanji": "歌手",
+    "meaning": "金"
+  },
+  {
+    "lesson": 28,
+    "kana": "にんき",
+    "kanji": "人気",
+    "meaning": "次"
+  },
+  {
+    "lesson": 28,
+    "kana": "ボーナス",
+    "kanji": "",
+    "meaning": "来"
+  },
+  {
+    "lesson": 28,
+    "kana": "きゅうりょう",
+    "kanji": "给料",
+    "meaning": "家 (接尾词，表示专门研究某一学问或"
+  },
+  {
+    "lesson": 28,
+    "kana": "しょうらい",
+    "kanji": "将来",
+    "meaning": "从事某种艺术行业的人)"
+  },
+  {
+    "lesson": 28,
+    "kana": "とか",
+    "kanji": "て家",
+    "meaning": "\\说家"
+  },
+  {
+    "lesson": 28,
+    "kana": "しょうせつ",
+    "kanji": "小説",
+    "meaning": "己"
+  },
+  {
+    "lesson": 28,
+    "kana": "じぶん",
+    "kanji": "自分",
+    "meaning": "此"
+  },
+  {
+    "lesson": 28,
+    "kana": "それで",
+    "kanji": "",
+    "meaning": "知"
+  },
+  {
+    "lesson": 28,
+    "kana": "おしらせ",
+    "kanji": "お知らせ",
+    "meaning": "加"
+  },
+  {
+    "lesson": 28,
+    "kana": "参加します",
+    "kanji": "参加する",
+    "meaning": "期"
+  },
+  {
+    "lesson": 28,
+    "kana": "ひにち",
+    "kanji": "日にち",
+    "meaning": "期六"
+  },
+  {
+    "lesson": 28,
+    "kana": "たいいく",
+    "kanji": "体育館",
+    "meaning": "费"
+  },
+  {
+    "lesson": 28,
+    "kana": "むりょよう",
+    "kanji": "無料",
+    "meaning": ")诱、邀请"
+  },
+  {
+    "lesson": 28,
+    "kana": "誘います",
+    "kanji": "読う",
+    "meaning": "动"
+  },
+  {
+    "lesson": 29,
+    "kana": "閉まります",
+    "kanji": "閉まる",
+    "meaning": "关着"
+  },
+  {
+    "lesson": 29,
+    "kana": "掛かります",
+    "kanji": "掛かる",
+    "meaning": "上着 (锁)"
+  },
+  {
+    "lesson": 29,
+    "kana": "間違えます",
+    "kanji": "間違える",
+    "meaning": "弄穫"
+  },
+  {
+    "lesson": 29,
+    "kana": "わすれもの",
+    "kanji": "忘れ物",
+    "meaning": "遗失物品"
+  },
+  {
+    "lesson": 29,
+    "kana": "いま",
+    "kanji": "今",
+    "meaning": "刚才 (指离现在很近的时间)"
+  },
+  {
+    "lesson": 29,
+    "kana": "今の電車",
+    "kanji": "",
+    "meaning": "刚发车的那趟电车"
+  },
+  {
+    "lesson": 29,
+    "kana": "このくらい",
+    "kanji": "",
+    "meaning": "这样大小的"
+  },
+  {
+    "lesson": 29,
+    "kana": "そとがわ",
+    "kanji": "外側",
+    "meaning": "外側"
+  },
+  {
+    "lesson": 29,
+    "kana": "ポケット",
+    "kanji": "",
+    "meaning": "口袋"
+  },
+  {
+    "lesson": 29,
+    "kana": "付きます",
+    "kanji": "付く",
+    "meaning": "带有"
+  },
+  {
+    "lesson": 29,
+    "kana": "ーへん",
+    "kanji": "过",
+    "meaning": "~边"
+  },
+  {
+    "lesson": 29,
+    "kana": "あみだな",
+    "kanji": "網棚",
+    "meaning": "行李各"
+  },
+  {
+    "lesson": 29,
+    "kana": "たしか",
+    "kanji": "確か",
+    "meaning": "似乎是、大概是"
+  },
+  {
+    "lesson": 29,
+    "kana": "しんじゅく",
+    "kanji": "新宿",
+    "meaning": "新宿 (东京的地名、车站名)"
+  },
+  {
+    "lesson": 29,
+    "kana": "開きます",
+    "kanji": "開く",
+    "meaning": "开着"
+  },
+  {
+    "lesson": 29,
+    "kana": "下まります",
+    "kanji": "上正まる",
+    "meaning": "停了、停着"
+  },
+  {
+    "lesson": 29,
+    "kana": "ガラス",
+    "kanji": "",
+    "meaning": "玻璃"
+  },
+  {
+    "lesson": 29,
+    "kana": "割れます",
+    "kanji": "制れる",
+    "meaning": "碎了"
+  },
+  {
+    "lesson": 29,
+    "kana": "ふくろ",
+    "kanji": "筑",
+    "meaning": "袋子"
+  },
+  {
+    "lesson": 29,
+    "kana": "折れます",
+    "kanji": "折れる",
+    "meaning": "折断"
+  },
+  {
+    "lesson": 29,
+    "kana": "げんじものがたけり",
+    "kanji": "源氏物語",
+    "meaning": "《源氏物语》 (平安时代紫式部写的小说)"
+  },
+  {
+    "lesson": 29,
+    "kana": "落とします",
+    "kanji": "落とす",
+    "meaning": "子、矶子"
+  },
+  {
+    "lesson": 29,
+    "kana": "壊れます",
+    "kanji": "壊れる",
+    "meaning": "枝"
+  },
+  {
+    "lesson": 29,
+    "kana": "[お] ちゃわん",
+    "kanji": "",
+    "meaning": "换"
+  },
+  {
+    "lesson": 29,
+    "kana": "ぇだ",
+    "kanji": "枝",
+    "meaning": "子"
+  },
+  {
+    "lesson": 29,
+    "kana": "っつきまず",
+    "kanji": "",
+    "meaning": "讲 (てをします: 进行瘦讲)"
+  },
+  {
+    "lesson": 29,
+    "kana": "汚れます",
+    "kanji": "汚れる",
+    "meaning": "信 (てをします: 回话)"
+  },
+  {
+    "lesson": 29,
+    "kana": "拭きます",
+    "kanji": "<拭く",
+    "meaning": "出所"
+  },
+  {
+    "lesson": 29,
+    "kana": "取り替えます",
+    "kanji": "取り替える",
+    "meaning": "件、材料"
+  },
+  {
+    "lesson": 29,
+    "kana": "コップ",
+    "kanji": "荷kop",
+    "meaning": "务员"
+  },
+  {
+    "lesson": 29,
+    "kana": "スビピーチ",
+    "kanji": "",
+    "meaning": "震"
+  },
+  {
+    "lesson": 29,
+    "kana": "片付けます",
+    "kanji": "月付ける",
+    "meaning": "性"
+  },
+  {
+    "lesson": 29,
+    "kana": "べんし",
+    "kanji": "返事",
+    "meaning": "便士"
+  },
+  {
+    "lesson": 29,
+    "kana": "外れます",
+    "kanji": "ご外れる",
+    "meaning": "倒下来、倒場"
+  },
+  {
+    "lesson": 29,
+    "kana": "こうばん",
+    "kanji": "交番",
+    "meaning": "面、^方"
+  },
+  {
+    "lesson": 29,
+    "kana": "しょるい",
+    "kanji": "書類",
+    "meaning": "烧"
+  },
+  {
+    "lesson": 30,
+    "kana": "上 貼ります",
+    "kanji": "中る",
+    "meaning": "中"
+  },
+  {
+    "lesson": 30,
+    "kana": "ひきだし",
+    "kanji": "引き出し",
+    "meaning": "抽层"
+  },
+  {
+    "lesson": 30,
+    "kana": "もと",
+    "kanji": "元",
+    "meaning": "以前、过去、原来"
+  },
+  {
+    "lesson": 30,
+    "kana": "もとのところ",
+    "kanji": "元の所",
+    "meaning": "原处"
+  },
+  {
+    "lesson": 30,
+    "kana": "戻します",
+    "kanji": "戻す",
+    "meaning": "原来的状态"
+  },
+  {
+    "lesson": 30,
+    "kana": "そのまま",
+    "kanji": "共の億",
+    "meaning": "开》 保持原状"
+  },
+  {
+    "lesson": 30,
+    "kana": "そのままにします",
+    "kanji": "",
+    "meaning": "还"
+  },
+  {
+    "lesson": 30,
+    "kana": "まだ",
+    "kanji": "未だ",
+    "meaning": "帆布背包 (「リュックサック」的略称)"
+  },
+  {
+    "lesson": 30,
+    "kana": "ひじょうぶくろ",
+    "kanji": "非常袋",
+    "meaning": "亚》 生活"
+  },
+  {
+    "lesson": 30,
+    "kana": "リュック",
+    "kanji": "",
+    "meaning": "手电"
+  },
+  {
+    "lesson": 30,
+    "kana": "ひじょうじ",
+    "kanji": "非常时",
+    "meaning": "全啦，一啦 (表示列挙)"
+  },
+  {
+    "lesson": 30,
+    "kana": "生活します",
+    "kanji": "生活する",
+    "meaning": "月历  -"
+  },
+  {
+    "lesson": 30,
+    "kana": "かいちゅうでんとう",
+    "kanji": "懐中電灯",
+    "meaning": "预定、计划"
+  },
+  {
+    "lesson": 30,
+    "kana": "とか、てとか",
+    "kanji": "",
+    "meaning": "挂"
+  },
+  {
+    "lesson": 30,
+    "kana": "よてい",
+    "kanji": "予定",
+    "meaning": "- 排列"
+  },
+  {
+    "lesson": 30,
+    "kana": "掛けます",
+    "kanji": "掛ける",
+    "meaning": "垃圾箱"
+  },
+  {
+    "lesson": 30,
+    "kana": "かべ",
+    "kanji": "壁",
+    "meaning": "角落"
+  },
+  {
+    "lesson": 30,
+    "kana": "並べます",
+    "kanji": "並べる",
+    "meaning": "决定"
+  },
+  {
+    "lesson": 30,
+    "kana": "ごみばこ",
+    "kanji": "Z箱",
+    "meaning": "偶人"
+  },
+  {
+    "lesson": 30,
+    "kana": "すみ",
+    "kanji": "隅",
+    "meaning": "装饰"
+  },
+  {
+    "lesson": 30,
+    "kana": "よていひょ2",
+    "kanji": "予定表",
+    "meaning": "镜子"
+  },
+  {
+    "lesson": 30,
+    "kana": "決めます",
+    "kanji": "決める",
+    "meaning": "花瓶"
+  },
+  {
+    "lesson": 30,
+    "kana": "にんぎょう",
+    "kanji": "人形",
+    "meaning": "开》 种植"
+  },
+  {
+    "lesson": 30,
+    "kana": "飾ります",
+    "kanji": "飾る",
+    "meaning": "植树"
+  },
+  {
+    "lesson": 30,
+    "kana": "かがみ",
+    "kanji": "鏡",
+    "meaning": "池境、水池"
+  },
+  {
+    "lesson": 30,
+    "kana": "かびん",
+    "kanji": "花闫",
+    "meaning": "周围"
+  },
+  {
+    "lesson": 30,
+    "kana": "まんなか",
+    "kanji": "真ん中",
+    "meaning": "课、课程"
+  },
+  {
+    "lesson": 30,
+    "kana": "植えます",
+    "kanji": "植える",
+    "meaning": "预习"
+  },
+  {
+    "lesson": 30,
+    "kana": "木を植えます",
+    "kanji": "",
+    "meaning": "复习"
+  },
+  {
+    "lesson": 30,
+    "kana": "いけ",
+    "kanji": "池",
+    "meaning": "指南、人入门书"
+  },
+  {
+    "lesson": 30,
+    "kana": "まわり",
+    "kanji": "周り",
+    "meaning": "讲义、上课"
+  },
+  {
+    "lesson": 30,
+    "kana": "じゅぎょう",
+    "kanji": "授业",
+    "meaning": "收拾 (行李) 、完成 (报告)"
+  },
+  {
+    "lesson": 30,
+    "kana": "予習 します",
+    "kanji": "予習する",
+    "meaning": "海报、招贴画"
+  },
+  {
+    "lesson": 30,
+    "kana": "復習 します",
+    "kanji": "復習する",
+    "meaning": "通知"
+  },
+  {
+    "lesson": 30,
+    "kana": "ガイドブック",
+    "kanji": "",
+    "meaning": "走廊"
+  },
+  {
+    "lesson": 30,
+    "kana": "こうぎ",
+    "kanji": "講義",
+    "meaning": "门口、入口"
+  },
+  {
+    "lesson": 30,
+    "kana": "まとめます",
+    "kanji": "",
+    "meaning": "会议"
+  },
+  {
+    "lesson": 30,
+    "kana": "ポスター",
+    "kanji": "",
+    "meaning": "圆的"
+  },
+  {
+    "lesson": 30,
+    "kana": "おしらせ",
+    "kanji": "お知らせ",
+    "meaning": "某、某條ンー"
+  },
+  {
+    "lesson": 30,
+    "kana": "ろうか",
+    "kanji": "廊下",
+    "meaning": "某天"
+  },
+  {
+    "lesson": 30,
+    "kana": "げんかん",
+    "kanji": "玄関",
+    "meaning": "做梦"
+  },
+  {
+    "lesson": 30,
+    "kana": "ミーティング",
+    "kanji": "",
+    "meaning": "高兴"
+  },
+  {
+    "lesson": 30,
+    "kana": "まるい",
+    "kanji": "丸い",
+    "meaning": "讨厌、不喜欢"
+  },
+  {
+    "lesson": 30,
+    "kana": "ある",
+    "kanji": "",
+    "meaning": "于是"
+  },
+  {
+    "lesson": 30,
+    "kana": "ある日",
+    "kanji": "",
+    "meaning": "醒来、恢复到意识清醒的状态"
+  },
+  {
+    "lesson": 30,
+    "kana": "間を見ます",
+    "kanji": "夢を見る",
+    "meaning": "醒来、睁眼"
+  },
+  {
+    "lesson": 31,
+    "kana": "だいがくいん",
+    "kanji": "大学院",
+    "meaning": "研究生院"
+  },
+  {
+    "lesson": 31,
+    "kana": "受けます",
+    "kanji": "受ける",
+    "meaning": "参加 (考试等)"
+  },
+  {
+    "lesson": 31,
+    "kana": "ほんしゃ",
+    "kanji": "本社",
+    "meaning": "总公司、本公司"
+  },
+  {
+    "lesson": 31,
+    "kana": "残ります",
+    "kanji": "残る",
+    "meaning": "留下、剰下"
+  },
+  {
+    "lesson": 31,
+    "kana": "にゅうがくしけん",
+    "kanji": "入学試験",
+    "meaning": "入学考试"
+  },
+  {
+    "lesson": 31,
+    "kana": "月に",
+    "kanji": "",
+    "meaning": "每个月、每月"
+  },
+  {
+    "lesson": 31,
+    "kana": "体趙します",
+    "kanji": "休憩する",
+    "meaning": "亚》 休息"
+  },
+  {
+    "lesson": 31,
+    "kana": "見つけます",
+    "kanji": "見つける",
+    "meaning": "找到、找出"
+  },
+  {
+    "lesson": 31,
+    "kana": "ずっと",
+    "kanji": "",
+    "meaning": "一直"
+  },
+  {
+    "lesson": 31,
+    "kana": "ての ほう",
+    "kanji": "ての 方",
+    "meaning": "~面、~-方"
+  },
+  {
+    "lesson": 31,
+    "kana": "きょうかい",
+    "kanji": "教会",
+    "meaning": "教会"
+  },
+  {
+    "lesson": 31,
+    "kana": "れんきゅう",
+    "kanji": "連休",
+    "meaning": "连续休假、长假"
+  },
+  {
+    "lesson": 31,
+    "kana": "申し込みます",
+    "kanji": "申し込む",
+    "meaning": "一申请"
+  },
+  {
+    "lesson": 31,
+    "kana": "さくぶん",
+    "kanji": "作文",
+    "meaning": "作文、号作"
+  },
+  {
+    "lesson": 31,
+    "kana": "ピカソ",
+    "kanji": "",
+    "meaning": "毕加索 (1881-1973，西班牙画家)"
+  },
+  {
+    "lesson": 31,
+    "kana": "てんらんかい",
+    "kanji": "展览会",
+    "meaning": "展览会"
+  },
+  {
+    "lesson": 31,
+    "kana": "おこさん",
+    "kanji": "お子さん",
+    "meaning": "孩子"
+  },
+  {
+    "lesson": 31,
+    "kana": "しき",
+    "kanji": "式",
+    "meaning": "婚礼"
+  },
+  {
+    "lesson": 31,
+    "kana": "けっこんしき",
+    "kanji": "結婚式",
+    "meaning": "葬礼"
+  },
+  {
+    "lesson": 31,
+    "kana": "[お] そうしき",
+    "kanji": "お葬式",
+    "meaning": "巴厘岛 (印度尼西亚的岛屿)"
+  },
+  {
+    "lesson": 31,
+    "kana": "バリ",
+    "kanji": "",
+    "meaning": "取得"
+  },
+  {
+    "lesson": 31,
+    "kana": "取ります",
+    "kanji": "取る",
+    "meaning": "取得假期"
+  },
+  {
+    "lesson": 31,
+    "kana": "休みを取ります",
+    "kanji": "",
+    "meaning": "语》 一号 (电车车辆的编号、台风的编号)"
+  },
+  {
+    "lesson": 31,
+    "kana": "のぞみ",
+    "kanji": "",
+    "meaning": "号)"
+  },
+  {
+    "lesson": 31,
+    "kana": "しんこうべ",
+    "kanji": "新神戸",
+    "meaning": "新神戸 〈兵库县的车站名)"
+  },
+  {
+    "lesson": 31,
+    "kana": "はっぴょう",
+    "kanji": "発表",
+    "meaning": "发表、公布 (てします: 受表、受布)"
+  },
+  {
+    "lesson": 31,
+    "kana": "うえのこうえん",
+    "kanji": "上野公園",
+    "meaning": "上野公园"
+  },
+  {
+    "lesson": 31,
+    "kana": "むら",
+    "kanji": "村",
+    "meaning": "村庄"
+  },
+  {
+    "lesson": 31,
+    "kana": "卒業 します",
+    "kanji": "卒業する",
+    "meaning": "毕业"
+  },
+  {
+    "lesson": 31,
+    "kana": "えいがかん",
+    "kanji": "映画館",
+    "meaning": "电影院"
+  },
+  {
+    "lesson": 31,
+    "kana": "いや",
+    "kanji": "嫌",
+    "meaning": "讨厌、不喜欢"
+  },
+  {
+    "lesson": 31,
+    "kana": "そら",
+    "kanji": "年",
+    "meaning": "天空"
+  },
+  {
+    "lesson": 31,
+    "kana": "閉じます",
+    "kanji": "閉じる",
+    "meaning": "闭上、关上"
+  },
+  {
+    "lesson": 31,
+    "kana": "とかい",
+    "kanji": "都会",
+    "meaning": "都会、城市"
+  },
+  {
+    "lesson": 31,
+    "kana": "こ どもたち",
+    "kanji": "子どもたち",
+    "meaning": "孩子们"
+  },
+  {
+    "lesson": 31,
+    "kana": "じゆうに",
+    "kanji": "自由に",
+    "meaning": "自由地、随意地"
+  },
+  {
+    "lesson": 32,
+    "kana": "= まめします",
+    "kanji": "運動する",
+    "meaning": "ヵ罰> 运动"
+  },
+  {
+    "lesson": 32,
+    "kana": "ヨーロッパ",
+    "kanji": "",
+    "meaning": "欧洲"
+  },
+  {
+    "lesson": 32,
+    "kana": "ーー じゅうぶん",
+    "kanji": "二分",
+    "meaning": "-形> 充分"
+  },
+  {
+    "lesson": 32,
+    "kana": "せんせい",
+    "kanji": "先生",
+    "meaning": "大夫、医生"
+  },
+  {
+    "lesson": 32,
+    "kana": "インフルエンザ",
+    "kanji": "",
+    "meaning": "”流感"
+  },
+  {
+    "lesson": 32,
+    "kana": "続きます",
+    "kanji": "続く",
+    "meaning": "持续"
+  },
+  {
+    "lesson": 32,
+    "kana": "エンジン",
+    "kanji": "",
+    "meaning": "发动机、马达"
+  },
+  {
+    "lesson": 32,
+    "kana": "おかしい",
+    "kanji": "可笑しい",
+    "meaning": "「形> 奇怪、可疑"
+  },
+  {
+    "lesson": 32,
+    "kana": "げんき",
+    "kanji": "元気",
+    "meaning": "322 精神、健康"
+  },
+  {
+    "lesson": 32,
+    "kana": "ストレス",
+    "kanji": "",
+    "meaning": "5 》 (精神上的) 紧张、疲劳"
+  },
+  {
+    "lesson": 32,
+    "kana": "無理をします",
+    "kanji": "無理をする",
+    "meaning": "力亚》 勉强"
+  },
+  {
+    "lesson": 32,
+    "kana": "ほし",
+    "kanji": "星",
+    "meaning": "星星"
+  },
+  {
+    "lesson": 32,
+    "kana": "せき",
+    "kanji": "咳",
+    "meaning": "咳只(てをします/ーがでます: 咳践)"
+  },
+  {
+    "lesson": 32,
+    "kana": "引きます",
+    "kanji": "<引く",
+    "meaning": "カT> 患、得 (感冒)"
+  },
+  {
+    "lesson": 32,
+    "kana": "- ゆうがた",
+    "kanji": "夕方",
+    "meaning": "黄臣、傍晩"
+  },
+  {
+    "lesson": 32,
+    "kana": "止みます",
+    "kanji": "二止鼠@",
+    "meaning": "力I > 停了"
+  },
+  {
+    "lesson": 32,
+    "kana": "たいよう",
+    "kanji": "太陽",
+    "meaning": "太阳"
+  },
+  {
+    "lesson": 32,
+    "kana": "晴れます",
+    "kanji": "晴れる",
+    "meaning": "力开》 晴"
+  },
+  {
+    "lesson": 32,
+    "kana": "愛ります",
+    "kanji": "太る",
+    "meaning": "隊"
+  },
+  {
+    "lesson": 32,
+    "kana": "空きます",
+    "kanji": "空く",
+    "meaning": "のIT〉 空、通畅"
+  },
+  {
+    "lesson": 32,
+    "kana": "そら",
+    "kanji": "空",
+    "meaning": "多 >"
+  },
+  {
+    "lesson": 32,
+    "kana": "出ます",
+    "kanji": "二出殖OD",
+    "meaning": "参加"
+  },
+  {
+    "lesson": 32,
+    "kana": "きた",
+    "kanji": "北",
+    "meaning": "北"
+  },
+  {
+    "lesson": 32,
+    "kana": "うるさい",
+    "kanji": "類い",
+    "meaning": "吵闪、烦人"
+  },
+  {
+    "lesson": 32,
+    "kana": "込みます",
+    "kanji": "込む",
+    "meaning": "拥挤"
+  },
+  {
+    "lesson": 32,
+    "kana": "すいどう",
+    "kanji": "水道",
+    "meaning": "自来水、自来水管"
+  },
+  {
+    "lesson": 32,
+    "kana": "合格します",
+    "kanji": "合格する",
+    "meaning": "合格、及格"
+  },
+  {
+    "lesson": 32,
+    "kana": "チーム",
+    "kanji": "",
+    "meaning": "队、团队"
+  },
+  {
+    "lesson": 32,
+    "kana": "あんなに",
+    "kanji": "",
+    "meaning": "那么（指与说话人、听话人都无关的事）"
+  },
+  {
+    "lesson": 32,
+    "kana": "そんなに",
+    "kanji": "",
+    "meaning": "形容程度之甚)"
+  },
+  {
+    "lesson": 32,
+    "kana": "こくさいて",
+    "kanji": "国际~",
+    "meaning": "那么〈指与听话人有关的事，形容程度之"
+  },
+  {
+    "lesson": 32,
+    "kana": "成功します",
+    "kanji": "成功する",
+    "meaning": "甚)"
+  },
+  {
+    "lesson": 32,
+    "kana": "失敗します",
+    "kanji": "失敗する",
+    "meaning": "国际~"
+  },
+  {
+    "lesson": 32,
+    "kana": "試験に失敗します",
+    "kanji": "",
+    "meaning": "成功"
+  },
+  {
+    "lesson": 32,
+    "kana": "まえ",
+    "kanji": "前",
+    "meaning": "失败"
+  },
+  {
+    "lesson": 32,
+    "kana": "ずいぶん前から",
+    "kanji": "",
+    "meaning": "考试失败"
+  },
+  {
+    "lesson": 32,
+    "kana": "こんなに",
+    "kanji": "",
+    "meaning": "以前、之前"
+  },
+  {
+    "lesson": 32,
+    "kana": "ほしうらない",
+    "kanji": "星占い",
+    "meaning": "从很早以前"
+  },
+  {
+    "lesson": 32,
+    "kana": "はたらきすぎ",
+    "kanji": "働きすぎ",
+    "meaning": "占星木、星相"
+  },
+  {
+    "lesson": 32,
+    "kana": "困ります",
+    "kanji": "て困る",
+    "meaning": "金牛座"
+  },
+  {
+    "lesson": 32,
+    "kana": "当たります",
+    "kanji": "当たる",
+    "meaning": "为难、困惑"
+  },
+  {
+    "lesson": 32,
+    "kana": "けんこう",
+    "kanji": "健康",
+    "meaning": "中(彩票)"
+  },
+  {
+    "lesson": 32,
+    "kana": "ひがし",
+    "kanji": "東",
+    "meaning": "健康"
+  },
+  {
+    "lesson": 32,
+    "kana": "こいびと",
+    "kanji": "恋人人",
+    "meaning": "恋爱"
+  },
+  {
+    "lesson": 32,
+    "kana": "ラッキーアイテム",
+    "kanji": "",
+    "meaning": "恋人"
+  },
+  {
+    "lesson": 32,
+    "kana": "いし",
+    "kanji": "",
+    "meaning": "吉祥物"
+  },
+  {
+    "lesson": 32,
+    "kana": "うらない",
+    "kanji": "占改",
+    "meaning": "石头"
+  },
+  {
+    "lesson": 33,
+    "kana": "ぁとこ",
+    "kanji": "",
+    "meaning": "已经. 不再 (与否定形一起使用)"
+  },
+  {
+    "lesson": 33,
+    "kana": "あきらめます",
+    "kanji": "諦める",
+    "meaning": "放弃"
+  },
+  {
+    "lesson": 33,
+    "kana": "マーク",
+    "kanji": "",
+    "meaning": "放弃、死心"
+  },
+  {
+    "lesson": 33,
+    "kana": "どういうて",
+    "kanji": "",
+    "meaning": "标记、标志"
+  },
+  {
+    "lesson": 33,
+    "kana": "どうい2意味",
+    "kanji": "",
+    "meaning": "怎样的一、什么样的~"
+  },
+  {
+    "lesson": 33,
+    "kana": "伝えます",
+    "kanji": "伝える",
+    "meaning": "什么意思"
+  },
+  {
+    "lesson": 33,
+    "kana": "ちゅうしゃいはん",
+    "kanji": "駐車違反",
+    "meaning": "传达、转告"
+  },
+  {
+    "lesson": 33,
+    "kana": "ばっきん",
+    "kanji": "廊金",
+    "meaning": "违章停车"
+  },
+  {
+    "lesson": 33,
+    "kana": "逃げます",
+    "kanji": "逃げる",
+    "meaning": "罚款"
+  },
+  {
+    "lesson": 33,
+    "kana": "きそ〈",
+    "kanji": "規則",
+    "meaning": "逃走"
+  },
+  {
+    "lesson": 33,
+    "kana": "守ります",
+    "kanji": "守る",
+    "meaning": "交通规则"
+  },
+  {
+    "lesson": 33,
+    "kana": "駿ぎます",
+    "kanji": "騒ぐ",
+    "meaning": "遵守"
+  },
+  {
+    "lesson": 33,
+    "kana": "リサイクルします",
+    "kanji": "",
+    "meaning": "入口"
+  },
+  {
+    "lesson": 33,
+    "kana": "ほど",
+    "kanji": "程",
+    "meaning": "再利用、資源回由"
+  },
+  {
+    "lesson": 33,
+    "kana": "しめきけり",
+    "kanji": "締め切り",
+    "meaning": "大体一、大约~"
+  },
+  {
+    "lesson": 33,
+    "kana": "戻ります",
+    "kanji": "戻る",
+    "meaning": "截止、蕉止日期"
+  },
+  {
+    "lesson": 33,
+    "kana": "ボール",
+    "kanji": "",
+    "meaning": "回来"
+  },
+  {
+    "lesson": 33,
+    "kana": "投げます",
+    "kanji": "投げる",
+    "meaning": "球"
+  },
+  {
+    "lesson": 33,
+    "kana": "ででぐち",
+    "kanji": "出口",
+    "meaning": "” 扔、投"
+  },
+  {
+    "lesson": 33,
+    "kana": "よや",
+    "kanji": "予約席",
+    "meaning": "出口"
+  },
+  {
+    "lesson": 33,
+    "kana": "ひじょうでぐち",
+    "kanji": "非常口",
+    "meaning": "预订的座位"
+  },
+  {
+    "lesson": 33,
+    "kana": "注意します",
+    "kanji": "注意する",
+    "meaning": "紧急出口"
+  },
+  {
+    "lesson": 33,
+    "kana": "じょこう",
+    "kanji": "徐行",
+    "meaning": "慢行"
+  },
+  {
+    "lesson": 33,
+    "kana": "しようきんし",
+    "kanji": "使用禁止",
+    "meaning": "禁止使用"
+  },
+  {
+    "lesson": 33,
+    "kana": "むりょう",
+    "kanji": "無料",
+    "meaning": "免费"
+  },
+  {
+    "lesson": 33,
+    "kana": "てちゅう",
+    "kanji": "中",
+    "meaning": "正在~"
+  },
+  {
+    "lesson": 33,
+    "kana": "出席します",
+    "kanji": "出席する",
+    "meaning": "危险"
+  },
+  {
+    "lesson": 33,
+    "kana": "けいさつ",
+    "kanji": "告察",
+    "meaning": "警察、警察局"
+  },
+  {
+    "lesson": 33,
+    "kana": "始まります",
+    "kanji": "始まる",
+    "meaning": "折扣"
+  },
+  {
+    "lesson": 33,
+    "kana": "わりびき",
+    "kanji": "割引",
+    "meaning": "饮料自助"
+  },
+  {
+    "lesson": 33,
+    "kana": "のみほう だい",
+    "kanji": "飲み放題",
+    "meaning": "一样、同样"
+  },
+  {
+    "lesson": 33,
+    "kana": "いくら [てても]",
+    "kanji": "",
+    "meaning": "招聘"
+  },
+  {
+    "lesson": 33,
+    "kana": "おなじ",
+    "kanji": "同じ",
+    "meaning": "”有"
+  },
+  {
+    "lesson": 33,
+    "kana": "ぼしゅう",
+    "kanji": "募集",
+    "meaning": "座位"
+  },
+  {
+    "lesson": 33,
+    "kana": "あります",
+    "kanji": "",
+    "meaning": "”离开"
+  },
+  {
+    "lesson": 33,
+    "kana": "せき",
+    "kanji": "席",
+    "meaning": "地震"
+  },
+  {
+    "lesson": 33,
+    "kana": "外します",
+    "kanji": "<一外才",
+    "meaning": "发生"
+  },
+  {
+    "lesson": 33,
+    "kana": "じしん",
+    "kanji": "地坪",
+    "meaning": "原本、原来"
+  },
+  {
+    "lesson": 33,
+    "kana": "起きます",
+    "kanji": "起きる",
+    "meaning": "悲伤"
+  },
+  {
+    "lesson": 33,
+    "kana": "助け合います",
+    "kanji": "助け合う",
+    "meaning": "更加"
+  },
+  {
+    "lesson": 33,
+    "kana": "もともと",
+    "kanji": "元々",
+    "meaning": "本来、原来"
+  },
+  {
+    "lesson": 33,
+    "kana": "かなしい",
+    "kanji": "悲しい",
+    "meaning": "寒暗、问候、致辞)"
+  },
+  {
+    "lesson": 33,
+    "kana": "もっと",
+    "kanji": "",
+    "meaning": "对方"
+  },
+  {
+    "lesson": 33,
+    "kana": "あいさつ",
+    "kanji": "挨拶",
+    "meaning": "心情、情绪"
+  },
+  {
+    "lesson": 34,
+    "kana": "座きます",
+    "kanji": "",
+    "meaning": "而"
+  },
+  {
+    "lesson": 34,
+    "kana": "組み立てます",
+    "kanji": "組み立てる",
+    "meaning": "组装"
+  },
+  {
+    "lesson": 34,
+    "kana": "せつめいしょ",
+    "kanji": "説明書",
+    "meaning": "说明书"
+  },
+  {
+    "lesson": 34,
+    "kana": "スポボーツクラブ",
+    "kanji": "",
+    "meaning": "体育俱乐部"
+  },
+  {
+    "lesson": 34,
+    "kana": "くろ",
+    "kanji": "上黒",
+    "meaning": "黑色 (名词)"
+  },
+  {
+    "lesson": 34,
+    "kana": "しろ",
+    "kanji": "折",
+    "meaning": "自色 (名品)"
+  },
+  {
+    "lesson": 34,
+    "kana": "あか",
+    "kanji": "赤",
+    "meaning": "红色 (名词)"
+  },
+  {
+    "lesson": 34,
+    "kana": "あお",
+    "kanji": "青",
+    "meaning": "蓝色 (名词)"
+  },
+  {
+    "lesson": 34,
+    "kana": "が 或者 が",
+    "kanji": "",
+    "meaning": "~或~"
+  },
+  {
+    "lesson": 34,
+    "kana": "こん",
+    "kanji": "紺",
+    "meaning": "”深蓝色 (名词)"
+  },
+  {
+    "lesson": 34,
+    "kana": "きいろ",
+    "kanji": "黄色",
+    "meaning": "”黄色(名词)"
+  },
+  {
+    "lesson": 34,
+    "kana": "ちゃいろ",
+    "kanji": "茶色",
+    "meaning": "棕色(名词)"
+  },
+  {
+    "lesson": 34,
+    "kana": "ソース",
+    "kanji": "",
+    "meaning": "沙司辣椒痪"
+  },
+  {
+    "lesson": 34,
+    "kana": "つけます",
+    "kanji": "",
+    "meaning": "商"
+  },
+  {
+    "lesson": 34,
+    "kana": "、 お条を立てます",
+    "kanji": "お茶を立てる",
+    "meaning": "動T〉 (茶道的) 泡茶、淹茶"
+  },
+  {
+    "lesson": 34,
+    "kana": "さきに",
+    "kanji": "先に",
+    "meaning": "先、首先"
+  },
+  {
+    "lesson": 34,
+    "kana": "載せます",
+    "kanji": "載せる",
+    "meaning": "载、放"
+  },
+  {
+    "lesson": 34,
+    "kana": "にがい",
+    "kanji": "苦い",
+    "meaning": "昔"
+  },
+  {
+    "lesson": 34,
+    "kana": "さっき",
+    "kanji": "",
+    "meaning": "刚才"
+  },
+  {
+    "lesson": 34,
+    "kana": "折ります",
+    "kanji": "<折る",
+    "meaning": "折弯、折断"
+  },
+  {
+    "lesson": 34,
+    "kana": "せん",
+    "kanji": "線",
+    "meaning": "线"
+  },
+  {
+    "lesson": 34,
+    "kana": "やじるし",
+    "kanji": "矢印",
+    "meaning": "箭头、箭头符号"
+  },
+  {
+    "lesson": 34,
+    "kana": "[お] しろ",
+    "kanji": "お城",
+    "meaning": "城"
+  },
+  {
+    "lesson": 34,
+    "kana": "質問します",
+    "kanji": "質問する",
+    "meaning": "提问"
+  },
+  {
+    "lesson": 34,
+    "kana": "見つか ります",
+    "kanji": "見つかる",
+    "meaning": "”找到"
+  },
+  {
+    "lesson": 34,
+    "kana": "気がつきます",
+    "kanji": "気がつく",
+    "meaning": "发现、发沉"
+  },
+  {
+    "lesson": 34,
+    "kana": "さします",
+    "kanji": "",
+    "meaning": "打 (入)"
+  },
+  {
+    "lesson": 34,
+    "kana": "ゆうべ",
+    "kanji": "タベべ",
+    "meaning": "昨晩"
+  },
+  {
+    "lesson": 34,
+    "kana": "おきゃく [さん]",
+    "kanji": "お客さん",
+    "meaning": "顾客、客户"
+  },
+  {
+    "lesson": 34,
+    "kana": "おやこどんぶり",
+    "kanji": "親子井",
+    "meaning": "鸡肉鸡蛋盖浇饭"
+  },
+  {
+    "lesson": 34,
+    "kana": "ざいりょう",
+    "kanji": "材料",
+    "meaning": "材料"
+  },
+  {
+    "lesson": 34,
+    "kana": "ンぶん",
+    "kanji": "分",
+    "meaning": "一份 (表示量)"
+  },
+  {
+    "lesson": 34,
+    "kana": "ーグラム",
+    "kanji": "",
+    "meaning": "一克"
+  },
+  {
+    "lesson": 34,
+    "kana": "ーこ",
+    "kanji": "个",
+    "meaning": "一个〈数小件物品时使用的量词)"
+  },
+  {
+    "lesson": 34,
+    "kana": "たまれねぎ",
+    "kanji": "玉ねぎ",
+    "meaning": "洋葱"
+  },
+  {
+    "lesson": 34,
+    "kana": "よんぶんのいち",
+    "kanji": "4分の1",
+    "meaning": "四分之一"
+  },
+  {
+    "lesson": 34,
+    "kana": "ちょうみりよう",
+    "kanji": "調味料",
+    "meaning": "调料"
+  },
+  {
+    "lesson": 34,
+    "kana": "しょうゆ",
+    "kanji": "醤油",
+    "meaning": "效油"
+  },
+  {
+    "lesson": 34,
+    "kana": "てきとう",
+    "kanji": "送当",
+    "meaning": "适当"
+  },
+  {
+    "lesson": 34,
+    "kana": "適当な大きさに",
+    "kanji": "",
+    "meaning": "适当的大小"
+  },
+  {
+    "lesson": 34,
+    "kana": "なべ",
+    "kanji": "鍋",
+    "meaning": "锅"
+  },
+  {
+    "lesson": 34,
+    "kana": "火にかけます",
+    "kanji": "火にかける",
+    "meaning": "放在火上"
+  },
+  {
+    "lesson": 34,
+    "kana": "者ます",
+    "kanji": "煮る",
+    "meaning": "煮、炖"
+  },
+  {
+    "lesson": 34,
+    "kana": "者えます",
+    "kanji": "煮える",
+    "meaning": "者熟"
+  },
+  {
+    "lesson": 34,
+    "kana": "経ちます",
+    "kanji": "経つ",
+    "meaning": "流逝、过去"
+  },
+  {
+    "lesson": 34,
+    "kana": "どんぶり",
+    "kanji": "井",
+    "meaning": "大碗"
+  },
+  {
+    "lesson": 35,
+    "kana": "締きます",
+    "kanji": "咲く",
+    "meaning": "开 (花)"
+  },
+  {
+    "lesson": 35,
+    "kana": "むこう",
+    "kanji": "向こう",
+    "meaning": "对面、那边"
+  },
+  {
+    "lesson": 35,
+    "kana": "しま",
+    "kanji": "島",
+    "meaning": "岛"
+  },
+  {
+    "lesson": 35,
+    "kana": "はこね",
+    "kanji": "箱根",
+    "meaning": "箱根 (位于神奈川县的疗养地、旅"
+  },
+  {
+    "lesson": 35,
+    "kana": "にっこう",
+    "kanji": "日光",
+    "meaning": "游景点)"
+  },
+  {
+    "lesson": 35,
+    "kana": "それなら",
+    "kanji": "",
+    "meaning": "日光 (位于柏木县的旅游景点)"
+  },
+  {
+    "lesson": 35,
+    "kana": "しがこうげん",
+    "kanji": "志賀高原",
+    "meaning": "草津 (位于群马县的疗养地)"
+  },
+  {
+    "lesson": 35,
+    "kana": "やこうバス",
+    "kanji": "夜行bus",
+    "meaning": "志向高原 (位于长野县一个国立公"
+  },
+  {
+    "lesson": 35,
+    "kana": "さぁ",
+    "kanji": "",
+    "meaning": "园内的高原)"
+  },
+  {
+    "lesson": 35,
+    "kana": "りょよこうしゃ",
+    "kanji": "旅行社",
+    "meaning": "夜行巴士"
+  },
+  {
+    "lesson": 35,
+    "kana": "もっと",
+    "kanji": "",
+    "meaning": "中 (表示对一些情况不太清楚)"
+  },
+  {
+    "lesson": 35,
+    "kana": "ーー スキーじょう",
+    "kanji": "ski場",
+    "meaning": "更、更加"
+  },
+  {
+    "lesson": 35,
+    "kana": "やまのぼり",
+    "kanji": "山登り",
+    "meaning": "详细"
+  },
+  {
+    "lesson": 35,
+    "kana": "みんなの学校",
+    "kanji": "",
+    "meaning": "消雪協"
+  },
+  {
+    "lesson": 35,
+    "kana": "むかし",
+    "kanji": "昔",
+    "meaning": "登山"
+  },
+  {
+    "lesson": 35,
+    "kana": "変わります",
+    "kanji": "論わる",
+    "meaning": "”过去、以前"
+  },
+  {
+    "lesson": 35,
+    "kana": "色が変わります",
+    "kanji": "",
+    "meaning": "”时子"
+  },
+  {
+    "lesson": 35,
+    "kana": "きかい",
+    "kanji": "機会",
+    "meaning": "变"
+  },
+  {
+    "lesson": 35,
+    "kana": "アフリカ",
+    "kanji": "",
+    "meaning": "变色"
+  },
+  {
+    "lesson": 35,
+    "kana": "カーテン",
+    "kanji": "",
+    "meaning": "机会"
+  },
+  {
+    "lesson": 35,
+    "kana": "ひも",
+    "kanji": "",
+    "meaning": "非洲"
+  },
+  {
+    "lesson": 35,
+    "kana": "レバー",
+    "kanji": "",
+    "meaning": "窗帘"
+  },
+  {
+    "lesson": 35,
+    "kana": "治ります/赴ります",
+    "kanji": "",
+    "meaning": "绳子"
+  },
+  {
+    "lesson": 35,
+    "kana": "かいがい",
+    "kanji": "海外",
+    "meaning": "海外"
+  },
+  {
+    "lesson": 35,
+    "kana": "困ります",
+    "kanji": "困る",
+    "meaning": "为难、困惑"
+  },
+  {
+    "lesson": 35,
+    "kana": "ただしい",
+    "kanji": "正しい",
+    "meaning": "正确"
+  },
+  {
+    "lesson": 35,
+    "kana": "まる",
+    "kanji": "丸",
+    "meaning": "圆圈"
+  },
+  {
+    "lesson": 35,
+    "kana": "付けます",
+    "kanji": "付ける",
+    "meaning": "夯"
+  },
+  {
+    "lesson": 35,
+    "kana": "きょか",
+    "kanji": "許可",
+    "meaning": "屋頂上"
+  },
+  {
+    "lesson": 35,
+    "kana": "おくにじょう",
+    "kanji": "屋上",
+    "meaning": "港口"
+  },
+  {
+    "lesson": 35,
+    "kana": "みなと",
+    "kanji": "港",
+    "meaning": "邻居、附近"
+  },
+  {
+    "lesson": 35,
+    "kana": "きんじょ",
+    "kanji": "近所",
+    "meaning": "大黑寿司 (虚构的寿司店)"
+  },
+  {
+    "lesson": 35,
+    "kana": "だいこくずし",
+    "kanji": "大黑寿司",
+    "meaning": "电饭钢"
+  },
+  {
+    "lesson": 35,
+    "kana": "すいばんき",
+    "kanji": "炊飯器",
+    "meaning": "IMC电脑教室 (虚构的电脑教室)"
+  },
+  {
+    "lesson": 35,
+    "kana": "TIMCパソコン 教室",
+    "kanji": "",
+    "meaning": "妈妈的味道 (虚构的书名)"
+  },
+  {
+    "lesson": 35,
+    "kana": "ははのあじ",
+    "kanji": "母の味",
+    "meaning": "[> 输入"
+  },
+  {
+    "lesson": 35,
+    "kana": "入力 します",
+    "kanji": "入力する",
+    "meaning": "[》 ”点击"
+  },
+  {
+    "lesson": 35,
+    "kana": "クリックします",
+    "kanji": "",
+    "meaning": "按键"
+  },
+  {
+    "lesson": 35,
+    "kana": "キー",
+    "kanji": "",
+    "meaning": "表示汉字读法的注音假名"
+  },
+  {
+    "lesson": 35,
+    "kana": "ふりがな",
+    "kanji": "振り仮名",
+    "meaning": "京都国际漫画博物馆"
+  },
+  {
+    "lesson": 35,
+    "kana": "マンガミュージアム",
+    "kanji": "",
+    "meaning": "历史"
+  },
+  {
+    "lesson": 35,
+    "kana": "れきし",
+    "kanji": "歴史",
+    "meaning": "HARU (虚构的美容院)"
+  },
+  {
+    "lesson": 35,
+    "kana": "はる",
+    "kanji": "",
+    "meaning": "佐藤牙科 (虚构的牙科医院)"
+  },
+  {
+    "lesson": 35,
+    "kana": "さとうしか",
+    "kanji": "佐藤歯科",
+    "meaning": "设备"
+  },
+  {
+    "lesson": 35,
+    "kana": "せつび",
+    "kanji": "設備",
+    "meaning": "每日豪饪课堂 (虚构的厨艺教室)"
+  },
+  {
+    "lesson": 35,
+    "kana": "まいにちクッキング",
+    "kanji": "毎日cooking",
+    "meaning": "朋廊"
+  },
+  {
+    "lesson": 35,
+    "kana": "へアサロン",
+    "kanji": "",
+    "meaning": "朱红色、红色"
+  },
+  {
+    "lesson": 35,
+    "kana": "しゅ",
+    "kanji": "朱",
+    "meaning": "交际"
+  },
+  {
+    "lesson": 35,
+    "kana": "交わります",
+    "kanji": "交わる",
+    "meaning": "谚语"
+  },
+  {
+    "lesson": 35,
+    "kana": "ことわざ",
+    "kanji": "访",
+    "meaning": "关系"
+  },
+  {
+    "lesson": 35,
+    "kana": "かんけい",
+    "kanji": "関係",
+    "meaning": "搞好关系、友好交往"
+  },
+  {
+    "lesson": 35,
+    "kana": "仲良くします",
+    "kanji": "仲良くする",
+    "meaning": "必要、需要"
+  },
+  {
+    "lesson": 36,
+    "kana": "やっと",
+    "kanji": "",
+    "meaning": "终于、总算"
+  },
+  {
+    "lesson": 36,
+    "kana": "慣れます",
+    "kanji": "慣れる",
+    "meaning": "习惯"
+  },
+  {
+    "lesson": 36,
+    "kana": "はにじめ",
+    "kanji": "初め",
+    "meaning": "开始、起初"
+  },
+  {
+    "lesson": 36,
+    "kana": "きょく",
+    "kanji": "曲",
+    "meaning": "曲子"
+  },
+  {
+    "lesson": 36,
+    "kana": "できるだけ",
+    "kanji": "",
+    "meaning": "尽可能、尽量"
+  },
+  {
+    "lesson": 36,
+    "kana": "ぜったいに",
+    "kanji": "絶対に",
+    "meaning": "绝对地"
+  },
+  {
+    "lesson": 36,
+    "kana": "おきゃくさま",
+    "kanji": "お客様",
+    "meaning": "顾客 ( 「扫兰六《立公上 的尊敬语)"
+  },
+  {
+    "lesson": 36,
+    "kana": "とくべつ",
+    "kanji": "特別",
+    "meaning": "特別"
+  },
+  {
+    "lesson": 36,
+    "kana": "していらっしゃいます",
+    "kanji": "",
+    "meaning": "正在做~ (-TLTX必去才」 的尊敬语)"
+  },
+  {
+    "lesson": 36,
+    "kana": "すいえい",
+    "kanji": "水泳",
+    "meaning": "不同、不一样、不对"
+  },
+  {
+    "lesson": 36,
+    "kana": "遅います",
+    "kanji": "<違う",
+    "meaning": "用着一啊。 (「つかっているんです"
+  },
+  {
+    "lesson": 36,
+    "kana": "チャレンジします",
+    "kanji": "",
+    "meaning": "挑战"
+  },
+  {
+    "lesson": 36,
+    "kana": "きもち",
+    "kanji": "気持ち",
+    "meaning": "上下班高峰期"
+  },
+  {
+    "lesson": 36,
+    "kana": "ラッシュ",
+    "kanji": "",
+    "meaning": "遇到"
+  },
+  {
+    "lesson": 36,
+    "kana": "道います",
+    "kanji": "~痢う",
+    "meaning": "相当"
+  },
+  {
+    "lesson": 36,
+    "kana": "かなり",
+    "kanji": "",
+    "meaning": "存钱"
+  },
+  {
+    "lesson": 36,
+    "kana": "かならず",
+    "kanji": "必ず",
+    "meaning": "腐烂"
+  },
+  {
+    "lesson": 36,
+    "kana": "ほとんど",
+    "kanji": "殆ど",
+    "meaning": "过 (时间)"
+  },
+  {
+    "lesson": 36,
+    "kana": "このごろ",
+    "kanji": "",
+    "meaning": "7点多"
+  },
+  {
+    "lesson": 36,
+    "kana": "うちゅう",
+    "kanji": "宇宙",
+    "meaning": "好、熟练"
+  },
+  {
+    "lesson": 36,
+    "kana": "過ぎます",
+    "kanji": "過ぎる",
+    "meaning": "剑道 〈日本式击剑)"
+  },
+  {
+    "lesson": 36,
+    "kana": "時を過ぎます",
+    "kanji": "",
+    "meaning": "柔道"
+  },
+  {
+    "lesson": 36,
+    "kana": "じょうずに",
+    "kanji": "上手に",
+    "meaning": "每周"
+  },
+  {
+    "lesson": 36,
+    "kana": "けんどう",
+    "kanji": "剑道",
+    "meaning": "每月"
+  },
+  {
+    "lesson": 36,
+    "kana": "じゅうどう",
+    "kanji": "柔道",
+    "meaning": "每年"
+  },
+  {
+    "lesson": 36,
+    "kana": "まいしゅう",
+    "kanji": "毎週",
+    "meaning": "交通工具"
+  },
+  {
+    "lesson": 36,
+    "kana": "まいつき",
+    "kanji": "毎月",
+    "meaning": "一世纪"
+  },
+  {
+    "lesson": 36,
+    "kana": "まいとし/まいねん",
+    "kanji": "每年",
+    "meaning": "珍奇、罕见"
+  },
+  {
+    "lesson": 36,
+    "kana": "のりもの",
+    "kanji": "乗り物",
+    "meaning": "火车"
+  },
+  {
+    "lesson": 36,
+    "kana": "ーせいき",
+    "kanji": "世紀",
+    "meaning": "汽船"
+  },
+  {
+    "lesson": 36,
+    "kana": "とお〈",
+    "kanji": "速(",
+    "meaning": "很多的~ (人)"
+  },
+  {
+    "lesson": 36,
+    "kana": "めずらしい",
+    "kanji": "珍しい",
+    "meaning": "很多人"
+  },
+  {
+    "lesson": 36,
+    "kana": "きしゃ",
+    "kanji": "汽車",
+    "meaning": "运送"
+  },
+  {
+    "lesson": 36,
+    "kana": "きせん",
+    "kanji": "汽船",
+    "meaning": "利用"
+  },
+  {
+    "lesson": 36,
+    "kana": "おおぜいの~",
+    "kanji": "大勢のて",
+    "meaning": "自由地、随意地"
+  },
+  {
+    "lesson": 37,
+    "kana": "踏みます",
+    "kanji": "踏む",
+    "meaning": "踩"
+  },
+  {
+    "lesson": 37,
+    "kana": "注意します",
+    "kanji": "注意する",
+    "meaning": "提醒、警告"
+  },
+  {
+    "lesson": 37,
+    "kana": "発見します",
+    "kanji": "発見する",
+    "meaning": "发现"
+  },
+  {
+    "lesson": 37,
+    "kana": "むき",
+    "kanji": "雄",
+    "meaning": "麦子"
+  },
+  {
+    "lesson": 37,
+    "kana": "ごめ",
+    "kanji": "米",
+    "meaning": "大米"
+  },
+  {
+    "lesson": 37,
+    "kana": "げんりょう",
+    "kanji": "原料",
+    "meaning": "原料"
+  },
+  {
+    "lesson": 37,
+    "kana": "なにご",
+    "kanji": "何語",
+    "meaning": "哪种语言"
+  },
+  {
+    "lesson": 37,
+    "kana": "ポボポルトガル",
+    "kanji": "",
+    "meaning": "葡萄牙"
+  },
+  {
+    "lesson": 37,
+    "kana": "みなさま",
+    "kanji": "人様",
+    "meaning": "各位 ( 「みなさん」的尊敬舟)"
+  },
+  {
+    "lesson": 37,
+    "kana": "ーせいき",
+    "kanji": "世紀",
+    "meaning": "一世纪"
+  },
+  {
+    "lesson": 37,
+    "kana": "焼けます",
+    "kanji": "焼ける",
+    "meaning": "起火、燃烧"
+  },
+  {
+    "lesson": 37,
+    "kana": "そのご",
+    "kanji": "その後",
+    "meaning": "” 那之后、后来"
+  },
+  {
+    "lesson": 37,
+    "kana": "=の王ラ",
+    "kanji": "",
+    "meaning": "”一之一"
+  },
+  {
+    "lesson": 37,
+    "kana": "きんいろ",
+    "kanji": "金色",
+    "meaning": "金色"
+  },
+  {
+    "lesson": 37,
+    "kana": "ほんもの",
+    "kanji": "本物",
+    "meaning": "真货、真的"
+  },
+  {
+    "lesson": 37,
+    "kana": "きん",
+    "kanji": "金",
+    "meaning": "金子"
+  },
+  {
+    "lesson": 37,
+    "kana": "ーキロ",
+    "kanji": "",
+    "meaning": "一公斤、一公里 (「キログラム」「キ"
+  },
+  {
+    "lesson": 37,
+    "kana": "うつくしい",
+    "kanji": "美しい",
+    "meaning": "ロメートル]的略称)"
+  },
+  {
+    "lesson": 37,
+    "kana": "褒めます",
+    "kanji": "衰める",
+    "meaning": "”美丽、好看"
+  },
+  {
+    "lesson": 37,
+    "kana": "閑みます",
+    "kanji": "頼む",
+    "meaning": "”表扬"
+  },
+  {
+    "lesson": 37,
+    "kana": "行います",
+    "kanji": "行う",
+    "meaning": "请求、委托"
+  },
+  {
+    "lesson": 37,
+    "kana": "壊します",
+    "kanji": "壌す",
+    "meaning": "《动工"
+  },
+  {
+    "lesson": 37,
+    "kana": "输出 します",
+    "kanji": "輸出する",
+    "meaning": "出口"
+  },
+  {
+    "lesson": 37,
+    "kana": "てじゅう",
+    "kanji": "へ中",
+    "meaning": "”全一、整个~"
+  },
+  {
+    "lesson": 37,
+    "kana": "招待します",
+    "kanji": "招待する",
+    "meaning": "“招待"
+  },
+  {
+    "lesson": 37,
+    "kana": "けいかん",
+    "kanji": "警官",
+    "meaning": "警官"
+  },
+  {
+    "lesson": 37,
+    "kana": "どろばぼう",
+    "kanji": "泥棒",
+    "meaning": "小偷"
+  },
+  {
+    "lesson": 37,
+    "kana": "汚します",
+    "kanji": "汚す            《动工",
+    "meaning": "弄肝"
+  },
+  {
+    "lesson": 37,
+    "kana": "とうだいじ",
+    "kanji": "東大寺",
+    "meaning": "奈大寺"
+  },
+  {
+    "lesson": 37,
+    "kana": "だいぶつ",
+    "kanji": "大仏",
+    "meaning": "大佛"
+  },
+  {
+    "lesson": 37,
+    "kana": "発明します",
+    "kanji": "発明する",
+    "meaning": "发明"
+  },
+  {
+    "lesson": 37,
+    "kana": "インスタントラーメン",
+    "kanji": "",
+    "meaning": "方便面"
+  },
+  {
+    "lesson": 37,
+    "kana": "オリンピック",
+    "kanji": "",
+    "meaning": "人"
+  },
+  {
+    "lesson": 37,
+    "kana": "ワールドカップ",
+    "kanji": "",
+    "meaning": "世界杯"
+  },
+  {
+    "lesson": 37,
+    "kana": "えどじだい",
+    "kanji": "江戸時代",
+    "meaning": "江户时代 (1603-1868)"
+  },
+  {
+    "lesson": 37,
+    "kana": "ロンシア",
+    "kanji": "",
+    "meaning": "俄罗斯"
+  },
+  {
+    "lesson": 37,
+    "kana": "翻訳します",
+    "kanji": "翻訳する",
+    "meaning": "笔译"
+  },
+  {
+    "lesson": 37,
+    "kana": "サウジアラビア",
+    "kanji": "",
+    "meaning": "沙特阿拉个"
+  },
+  {
+    "lesson": 37,
+    "kana": "せきゆ",
+    "kanji": "石油",
+    "meaning": "石油"
+  },
+  {
+    "lesson": 37,
+    "kana": "輸 入 します",
+    "kanji": "<输入才五O",
+    "meaning": "进口"
+  },
+  {
+    "lesson": 37,
+    "kana": "謗います",
+    "kanji": "誘う",
+    "meaning": "_ 効削、導貴"
+  },
+  {
+    "lesson": 37,
+    "kana": "デート",
+    "kanji": "",
+    "meaning": "约会"
+  },
+  {
+    "lesson": 37,
+    "kana": "とうしょうでぐう",
+    "kanji": "东照宫",
+    "meaning": "奈照宮 (位于板木县日光市的祭黄-143"
+  },
+  {
+    "lesson": 37,
+    "kana": "ねむりねこ",
+    "kanji": "虐り猫",
+    "meaning": "_ 德川家康的神社)"
+  },
+  {
+    "lesson": 37,
+    "kana": "ごうか",
+    "kanji": "豪華",
+    "meaning": "睡猫 〈(导刻的名称)"
+  },
+  {
+    "lesson": 37,
+    "kana": "ちょうこく〈",
+    "kanji": "彫刻",
+    "meaning": "”豪华"
+  },
+  {
+    "lesson": 37,
+    "kana": "いいつたえを",
+    "kanji": "言い伝え",
+    "meaning": "雕刻"
+  },
+  {
+    "lesson": 37,
+    "kana": "ひだりじんごろう",
+    "kanji": "左甚五郎",
+    "meaning": "睡、睡眠"
+  },
+  {
+    "lesson": 37,
+    "kana": "彫ります",
+    "kanji": "彫る",
+    "meaning": "左甚五郎 (1594-1651，江户时代的"
+  },
+  {
+    "lesson": 37,
+    "kana": "なかま",
+    "kanji": "仲間",
+    "meaning": "著名雕刻家)"
+  },
+  {
+    "lesson": 37,
+    "kana": "しかし",
+    "kanji": "",
+    "meaning": "雕刻"
+  },
+  {
+    "lesson": 37,
+    "kana": "そのあと",
+    "kanji": "その後",
+    "meaning": "朋友、伙伴"
+  },
+  {
+    "lesson": 37,
+    "kana": "いっしょうけんめい",
+    "kanji": "生暑命",
+    "meaning": "但是"
+  },
+  {
+    "lesson": 37,
+    "kana": "ねずみ 〈",
+    "kanji": "鼠",
+    "meaning": "” 那之后、后来"
+  },
+  {
+    "lesson": 38,
+    "kana": "参加します",
+    "kanji": "参加する",
+    "meaning": "参加"
+  },
+  {
+    "lesson": 38,
+    "kana": "育てます",
+    "kanji": "て育てる",
+    "meaning": "培育、养"
+  },
+  {
+    "lesson": 38,
+    "kana": "運びます",
+    "kanji": "運ぶ",
+    "meaning": "搬、搬运"
+  },
+  {
+    "lesson": 38,
+    "kana": "あかちゃん",
+    "kanji": "赤ちゃん",
+    "meaning": "使用)"
+  },
+  {
+    "lesson": 38,
+    "kana": "しょうがっこう",
+    "kanji": "小学校",
+    "meaning": "婴儿"
+  },
+  {
+    "lesson": 38,
+    "kana": "ちゆゅうがっこう",
+    "kanji": "中学校",
+    "meaning": "小学"
+  },
+  {
+    "lesson": 38,
+    "kana": "かいらん",
+    "kanji": "回覧",
+    "meaning": "初中"
+  },
+  {
+    "lesson": 38,
+    "kana": "けんきゅうしつ",
+    "kanji": "研究室",
+    "meaning": "传阅 (文件等)"
+  },
+  {
+    "lesson": 38,
+    "kana": "きちんと",
+    "kanji": "",
+    "meaning": "研究室"
+  },
+  {
+    "lesson": 38,
+    "kana": "整理します",
+    "kanji": "整理する",
+    "meaning": "整齐、干净"
+  },
+  {
+    "lesson": 38,
+    "kana": "ーミっ",
+    "kanji": "-民",
+    "meaning": "叫一、名为~"
+  },
+  {
+    "lesson": 38,
+    "kana": "はんこ",
+    "kanji": "判子",
+    "meaning": "方法"
+  },
+  {
+    "lesson": 38,
+    "kana": "押します",
+    "kanji": "押す",
+    "meaning": "章、印章"
+  },
+  {
+    "lesson": 38,
+    "kana": "気持ちがいい",
+    "kanji": "",
+    "meaning": "舒服"
+  },
+  {
+    "lesson": 38,
+    "kana": "気持ちが悪い",
+    "kanji": "",
+    "meaning": "不舒服"
+  },
+  {
+    "lesson": 38,
+    "kana": "おおきなー",
+    "kanji": "大きなっ",
+    "meaning": "大的"
+  },
+  {
+    "lesson": 38,
+    "kana": "えきまえ",
+    "kanji": "駅前",
+    "meaning": "车站前"
+  },
+  {
+    "lesson": 38,
+    "kana": "むら",
+    "kanji": "村",
+    "meaning": "一制造"
+  },
+  {
+    "lesson": 38,
+    "kana": "ンーせい",
+    "kanji": "製",
+    "meaning": "健康"
+  },
+  {
+    "lesson": 38,
+    "kana": "けんこう",
+    "kanji": "健康",
+    "meaning": "习惯"
+  },
+  {
+    "lesson": 38,
+    "kana": "しゅうかん",
+    "kanji": "習慣",
+    "meaning": "海岸"
+  },
+  {
+    "lesson": 38,
+    "kana": "かいがん",
+    "kanji": "海岸",
+    "meaning": "说 (簡)"
+  },
+  {
+    "lesson": 38,
+    "kana": "入院します",
+    "kanji": "入院する",
+    "meaning": "戒指"
+  },
+  {
+    "lesson": 38,
+    "kana": "かな",
+    "kanji": "仮名",
+    "meaning": "出云大社 (位于岛根县出云市的神社)"
+  },
+  {
+    "lesson": 38,
+    "kana": "ゆびわ",
+    "kanji": "指輪",
+    "meaning": "清迈 (泰国)"
+  },
+  {
+    "lesson": 38,
+    "kana": "いずもたいしゃ",
+    "kanji": "出雲大社",
+    "meaning": "前年"
+  },
+  {
+    "lesson": 38,
+    "kana": "チェンマイ",
+    "kanji": "",
+    "meaning": "上锁"
+  },
+  {
+    "lesson": 38,
+    "kana": "掛けます",
+    "kanji": "掛ける",
+    "meaning": "电源"
+  },
+  {
+    "lesson": 38,
+    "kana": "でんげん",
+    "kanji": "電源",
+    "meaning": "打开"
+  },
+  {
+    "lesson": 38,
+    "kana": "切ります",
+    "kanji": "<切る",
+    "meaning": "打开电源"
+  },
+  {
+    "lesson": 38,
+    "kana": "入れます",
+    "kanji": "入れる",
+    "meaning": "投掷原子弹而设置的纪念馆)"
+  },
+  {
+    "lesson": 38,
+    "kana": "げんばくドーム",
+    "kanji": "原爆doom",
+    "meaning": "双胞胎"
+  },
+  {
+    "lesson": 38,
+    "kana": "こうじょう",
+    "kanji": "工場",
+    "meaning": "姐妹"
+  },
+  {
+    "lesson": 38,
+    "kana": "しまい",
+    "kanji": "姉妹",
+    "meaning": "相似、相像"
+  },
+  {
+    "lesson": 38,
+    "kana": "ごねんせい",
+    "kanji": "5年生",
+    "meaning": "性格"
+  },
+  {
+    "lesson": 38,
+    "kana": "似ます",
+    "kanji": "似る",
+    "meaning": "老实、温顺"
+  },
+  {
+    "lesson": 38,
+    "kana": "せいかくく",
+    "kanji": "性格",
+    "meaning": "温柔、亲切"
+  },
+  {
+    "lesson": 38,
+    "kana": "おとなしい",
+    "kanji": "大人しい",
+    "meaning": "照顾、照料"
+  },
+  {
+    "lesson": 38,
+    "kana": "やさしい",
+    "kanji": "優しい",
+    "meaning": "时间流逝"
+  },
+  {
+    "lesson": 38,
+    "kana": "時間がたちます",
+    "kanji": "時間がたつ",
+    "meaning": "一分 (指考试的分数)"
+  },
+  {
+    "lesson": 38,
+    "kana": "だいすき",
+    "kanji": "大好き",
+    "meaning": "好强、刚强"
+  },
+  {
+    "lesson": 38,
+    "kana": "ーてん",
+    "kanji": "",
+    "meaning": "吵架、打架"
+  },
+  {
+    "lesson": 38,
+    "kana": "気が強い",
+    "kanji": "",
+    "meaning": "不可思议"
+  },
+  {
+    "lesson": 38,
+    "kana": "ふしぎ",
+    "kanji": "不思議",
+    "meaning": "方法、办法"
+  },
+  {
+    "lesson": 39,
+    "kana": "びっくりします",
+    "kanji": "",
+    "meaning": "カ邊> ”吃惊"
+  },
+  {
+    "lesson": 39,
+    "kana": "じしん",
+    "kanji": "地震",
+    "meaning": "地震"
+  },
+  {
+    "lesson": 39,
+    "kana": "倒れます",
+    "kanji": "倒れる",
+    "meaning": "カII〉> 倒、倒下来、倒場"
+  },
+  {
+    "lesson": 39,
+    "kana": "がっかりします",
+    "kanji": "",
+    "meaning": "力亚》 ”失望"
+  },
+  {
+    "lesson": 39,
+    "kana": "ハイキング",
+    "kanji": "",
+    "meaning": "近足、徒歩旅行"
+  },
+  {
+    "lesson": 39,
+    "kana": "ふく ざつ",
+    "kanji": "複雑",
+    "meaning": "-形> 复杂"
+  },
+  {
+    "lesson": 39,
+    "kana": "じゃま",
+    "kanji": "夏魔",
+    "meaning": "-形》”碍事"
+  },
+  {
+    "lesson": 39,
+    "kana": "とちゅう",
+    "kanji": "途中",
+    "meaning": "中途、途中"
+  },
+  {
+    "lesson": 39,
+    "kana": "途中で",
+    "kanji": "",
+    "meaning": "途中、路上、中途"
+  },
+  {
+    "lesson": 39,
+    "kana": "トラック",
+    "kanji": "",
+    "meaning": "卡车"
+  },
+  {
+    "lesson": 39,
+    "kana": "ぶつかります",
+    "kanji": "",
+    "meaning": "力I > 撞、碰"
+  },
+  {
+    "lesson": 39,
+    "kana": "安やします",
+    "kanji": "安ぶする",
+    "meaning": "カ罰> 安心、放心"
+  },
+  {
+    "lesson": 39,
+    "kana": "つなみ",
+    "kanji": "津波",
+    "meaning": "海路"
+  },
+  {
+    "lesson": 39,
+    "kana": "うれしい",
+    "kanji": "嬉しい",
+    "meaning": "{ 形》 高兴"
+  },
+  {
+    "lesson": 39,
+    "kana": "かなしい",
+    "kanji": "悲しい",
+    "meaning": "f 形>- 悲伤"
+  },
+  {
+    "lesson": 39,
+    "kana": "はずかしい",
+    "kanji": "取ずかしい",
+    "meaning": "f形> 害羞、不好意思"
+  },
+  {
+    "lesson": 39,
+    "kana": "かたい",
+    "kanji": "硬い",
+    "meaning": "f形> 硬、坚硬"
+  },
+  {
+    "lesson": 39,
+    "kana": "- やわらかい",
+    "kanji": "軟らかい",
+    "meaning": "f形> 软、柔软"
+  },
+  {
+    "lesson": 39,
+    "kana": "答えます",
+    "kanji": "答える",
+    "meaning": "カカIL> 答、回答"
+  },
+  {
+    "lesson": 39,
+    "kana": "通ります",
+    "kanji": "通る",
+    "meaning": "名》"
+  },
+  {
+    "lesson": 39,
+    "kana": "かじ 〈",
+    "kanji": "火事",
+    "meaning": "胖、发胖"
+  },
+  {
+    "lesson": 39,
+    "kana": "ーや",
+    "kanji": "へ屋",
+    "meaning": "痩、変痩"
+  },
+  {
+    "lesson": 39,
+    "kana": "太ります",
+    "kanji": "太る",
+    "meaning": "久世> ” 吵架、打架"
+  },
+  {
+    "lesson": 39,
+    "kana": "やせます",
+    "kanji": "",
+    "meaning": "才芋》 て費"
+  },
+  {
+    "lesson": 39,
+    "kana": "喧嘩します",
+    "kanji": "喧嘩する",
+    "meaning": "电费"
+  },
+  {
+    "lesson": 39,
+    "kana": "だい",
+    "kanji": "て代",
+    "meaning": "及、肌肝"
+  },
+  {
+    "lesson": 39,
+    "kana": "きたない",
+    "kanji": "汚い",
+    "meaning": "台风"
+  },
+  {
+    "lesson": 39,
+    "kana": "そうさ",
+    "kanji": "操作",
+    "meaning": "雷"
+  },
+  {
+    "lesson": 39,
+    "kana": "たいふう",
+    "kanji": "台風",
+    "meaning": "会场"
+  },
+  {
+    "lesson": 39,
+    "kana": "かみなり",
+    "kanji": "雷",
+    "meaning": "首相"
+  },
+  {
+    "lesson": 39,
+    "kana": "かいじょう",
+    "kanji": "会場",
+    "meaning": "他"
+  },
+  {
+    "lesson": 39,
+    "kana": "しゅしょう",
+    "kanji": "首相",
+    "meaning": "前台"
+  },
+  {
+    "lesson": 39,
+    "kana": "フロント",
+    "kanji": "",
+    "meaning": "去拜访 ( 「\\\\立去才|」 的谦逊语)"
+  },
+  {
+    "lesson": 39,
+    "kana": "ーごうしつ",
+    "kanji": "号室",
+    "meaning": "毛巾"
+  },
+  {
+    "lesson": 39,
+    "kana": "伺います",
+    "kanji": "伺う",
+    "meaning": "肥皂"
+  },
+  {
+    "lesson": 39,
+    "kana": "タオル",
+    "kanji": "",
+    "meaning": "大人、成年人"
+  },
+  {
+    "lesson": 39,
+    "kana": "せっけん",
+    "kanji": "石鹸",
+    "meaning": "但是"
+  },
+  {
+    "lesson": 39,
+    "kana": "おとな",
+    "kanji": "大人",
+    "meaning": "还、更"
+  },
+  {
+    "lesson": 39,
+    "kana": "しかし",
+    "kanji": "",
+    "meaning": "西式服装"
+  },
+  {
+    "lesson": 39,
+    "kana": "また",
+    "kanji": "又",
+    "meaning": "西化"
+  },
+  {
+    "lesson": 39,
+    "kana": "ようふく〈",
+    "kanji": "洋服",
+    "meaning": "适合、合适"
+  },
+  {
+    "lesson": 39,
+    "kana": "西洋化します",
+    "kanji": "西洋化する",
+    "meaning": "现在"
+  },
+  {
+    "lesson": 39,
+    "kana": "合います",
+    "kanji": "“合う",
+    "meaning": "成人仪式"
+  },
+  {
+    "lesson": 39,
+    "kana": "いまでは",
+    "kanji": "今では",
+    "meaning": "传统的"
+  },
+  {
+    "lesson": 40,
+    "kana": "[一] びん",
+    "kanji": "便",
+    "meaning": "一航班"
+  },
+  {
+    "lesson": 40,
+    "kana": "到着 します",
+    "kanji": "て到着する",
+    "meaning": "到达"
+  },
+  {
+    "lesson": 40,
+    "kana": "出先します",
+    "kanji": "出発する",
+    "meaning": "出发"
+  },
+  {
+    "lesson": 40,
+    "kana": "酔います",
+    "kanji": "酔う",
+    "meaning": "醇"
+  },
+  {
+    "lesson": 40,
+    "kana": "たかさ",
+    "kanji": "高さき",
+    "meaning": "高度"
+  },
+  {
+    "lesson": 40,
+    "kana": "ながさ",
+    "kanji": "長さ",
+    "meaning": "长度"
+  },
+  {
+    "lesson": 40,
+    "kana": "測ります/量ります",
+    "kanji": "測る",
+    "meaning": "测量、量、称"
+  },
+  {
+    "lesson": 40,
+    "kana": "ぼうねんかい",
+    "kanji": "忘年会",
+    "meaning": "辞旧迎新会"
+  },
+  {
+    "lesson": 40,
+    "kana": "しんねんかい",
+    "kanji": "新年会",
+    "meaning": "新年联欢会"
+  },
+  {
+    "lesson": 40,
+    "kana": "まちがい",
+    "kanji": "間違い",
+    "meaning": "错、错误"
+  },
+  {
+    "lesson": 40,
+    "kana": "ながさき",
+    "kanji": "長崎",
+    "meaning": "长崎(长崎县县政府所在地)"
+  },
+  {
+    "lesson": 40,
+    "kana": "テスト",
+    "kanji": "",
+    "meaning": "用语)"
+  },
+  {
+    "lesson": 40,
+    "kana": "ーー ところで",
+    "kanji": "",
+    "meaning": "成绩"
+  },
+  {
+    "lesson": 40,
+    "kana": "いらっしやゃやいます",
+    "kanji": "",
+    "meaning": "可是 〈转换话题时使用)"
+  },
+  {
+    "lesson": 40,
+    "kana": "ようす",
+    "kanji": "様子",
+    "meaning": "来( [ss去才| 的尊敬用语)"
+  },
+  {
+    "lesson": 40,
+    "kana": "出ます",
+    "kanji": "",
+    "meaning": "样子、情况、情形"
+  },
+  {
+    "lesson": 40,
+    "kana": "問題が出ます",
+    "kanji": "",
+    "meaning": "“出"
+  },
+  {
+    "lesson": 40,
+    "kana": "確かめます",
+    "kanji": "確かめる",
+    "meaning": "出考题"
+  },
+  {
+    "lesson": 40,
+    "kana": "きず",
+    "kanji": "傷",
+    "meaning": "“确认"
+  },
+  {
+    "lesson": 40,
+    "kana": "おもて",
+    "kanji": "表",
+    "meaning": "伤、损伤"
+  },
+  {
+    "lesson": 40,
+    "kana": "うら",
+    "kanji": "裏",
+    "meaning": "表面、正面"
+  },
+  {
+    "lesson": 40,
+    "kana": "相談します",
+    "kanji": "相談する",
+    "meaning": "反面、里面"
+  },
+  {
+    "lesson": 40,
+    "kana": "数えます",
+    "kanji": "数える",
+    "meaning": "商量、商议"
+  },
+  {
+    "lesson": 40,
+    "kana": "ーはほん",
+    "kanji": "本",
+    "meaning": "数"
+  },
+  {
+    "lesson": 40,
+    "kana": "ーこ",
+    "kanji": "個",
+    "meaning": "一根、一条 (数细长物品时的量"
+  },
+  {
+    "lesson": 40,
+    "kana": "ーはい",
+    "kanji": "本",
+    "meaning": "词)"
+  },
+  {
+    "lesson": 40,
+    "kana": "ーセンチ",
+    "kanji": "法 centi",
+    "meaning": "”一个 〈数小物品时的量词)"
+  },
+  {
+    "lesson": 40,
+    "kana": "ーミリ",
+    "kanji": "法 milli",
+    "meaning": "一杯 (数装在玻璃杯中的饮料时的"
+  },
+  {
+    "lesson": 40,
+    "kana": "ーグラム",
+    "kanji": "",
+    "meaning": "量词)"
+  },
+  {
+    "lesson": 40,
+    "kana": "うまくいきます",
+    "kanji": "",
+    "meaning": "一厘米"
+  },
+  {
+    "lesson": 40,
+    "kana": "ひつよう",
+    "kanji": "必要",
+    "meaning": "一毫米"
+  },
+  {
+    "lesson": 40,
+    "kana": "てんきよはほう",
+    "kanji": "天気予報",
+    "meaning": "ー克"
+  },
+  {
+    "lesson": 40,
+    "kana": "おもさ",
+    "kanji": "重さ",
+    "meaning": "进展顺利"
+  },
+  {
+    "lesson": 40,
+    "kana": "おおきさ",
+    "kanji": "大きさ",
+    "meaning": "必要、需要"
+  },
+  {
+    "lesson": 40,
+    "kana": "ていが",
+    "kanji": "~以下",
+    "meaning": "天气预报"
+  },
+  {
+    "lesson": 40,
+    "kana": "ズポン",
+    "kanji": "法 jupon",
+    "meaning": "二以下、低于~"
+  },
+  {
+    "lesson": 40,
+    "kana": "合います",
+    "kanji": "合う",
+    "meaning": "~以上、超过~"
+  },
+  {
+    "lesson": 40,
+    "kana": "はっぴょうかい",
+    "kanji": "発表会",
+    "meaning": "合适"
+  },
+  {
+    "lesson": 40,
+    "kana": "[お] としより",
+    "kanji": "お年寄り",
+    "meaning": "发表会"
+  },
+  {
+    "lesson": 40,
+    "kana": "- コンテスト",
+    "kanji": "",
+    "meaning": "老人"
+  },
+  {
+    "lesson": 40,
+    "kana": "マラソン",
+    "kanji": "",
+    "meaning": "比赛、竞赛"
+  },
+  {
+    "lesson": 40,
+    "kana": "たいかい",
+    "kanji": "大会",
+    "meaning": "马拉松"
+  },
+  {
+    "lesson": 40,
+    "kana": "せんだい",
+    "kanji": "仙台",
+    "meaning": "大会"
+  },
+  {
+    "lesson": 40,
+    "kana": "たなばたまつり",
+    "kanji": "七夕祭り",
+    "meaning": "仙台 (宮城具具政府所在地)"
+  },
+  {
+    "lesson": 40,
+    "kana": "とうしょうでぐう",
+    "kanji": "東照宮",
+    "meaning": "上タ"
+  },
+  {
+    "lesson": 40,
+    "kana": "じけん",
+    "kanji": "事件",
+    "meaning": "东照宫 (位于柏木县日光市的祭黄"
+  },
+  {
+    "lesson": 40,
+    "kana": "オートバイ",
+    "kanji": "和 auto+bicycle",
+    "meaning": "德川家康的神社)"
+  },
+  {
+    "lesson": 40,
+    "kana": "ばくだん",
+    "kanji": "爆弾",
+    "meaning": "事件、案件"
+  },
+  {
+    "lesson": 40,
+    "kana": "積みます",
+    "kanji": "積む",
+    "meaning": "摩托车"
+  },
+  {
+    "lesson": 40,
+    "kana": "うんてんしゅ",
+    "kanji": "运未手",
+    "meaning": "炸弹"
+  },
+  {
+    "lesson": 40,
+    "kana": "はなれた",
+    "kanji": "離れた",
+    "meaning": "堆积、装载"
+  },
+  {
+    "lesson": 40,
+    "kana": "きゅうに",
+    "kanji": "急に",
+    "meaning": "司机"
+  },
+  {
+    "lesson": 40,
+    "kana": "動かします",
+    "kanji": "動かす",
+    "meaning": "离开一段距离的一"
+  },
+  {
+    "lesson": 40,
+    "kana": "はんにん",
+    "kanji": "犯人",
+    "meaning": "开动、发动"
+  },
+  {
+    "lesson": 40,
+    "kana": "おとこ",
+    "kanji": "男",
+    "meaning": "努力、拼命"
+  },
+  {
+    "lesson": 40,
+    "kana": "に入れます",
+    "kanji": "手代入机五四",
+    "meaning": "犯人"
+  },
+  {
+    "lesson": 40,
+    "kana": "いまでも",
+    "kanji": "今でも",
+    "meaning": "男人、男子"
+  },
+  {
+    "lesson": 41,
+    "kana": "いただきます",
+    "kanji": "",
+    "meaning": "得到、收到 ( 「もらいます」的業聞租)"
+  },
+  {
+    "lesson": 41,
+    "kana": "くださいます",
+    "kanji": "",
+    "meaning": "给我 ( 「くれます」的尊敬秋)"
+  },
+  {
+    "lesson": 41,
+    "kana": "かみひこうき",
+    "kanji": "紙飛行機",
+    "meaning": "纸飞机"
+  },
+  {
+    "lesson": 41,
+    "kana": "やります",
+    "kanji": "",
+    "meaning": "给(用于给比自己年纪小、职位低的人或动"
+  },
+  {
+    "lesson": 41,
+    "kana": "おいわい",
+    "kanji": "お和祝い",
+    "meaning": "植物等某物时)"
+  },
+  {
+    "lesson": 41,
+    "kana": "えさ",
+    "kanji": "餌",
+    "meaning": "猴子"
+  },
+  {
+    "lesson": 41,
+    "kana": "このあいだ",
+    "kanji": "この間",
+    "meaning": "饵料"
+  },
+  {
+    "lesson": 41,
+    "kana": "親切にします",
+    "kanji": "親切にする",
+    "meaning": "前些天、前几天"
+  },
+  {
+    "lesson": 41,
+    "kana": "ひとこと",
+    "kanji": "言",
+    "meaning": "和气、热情"
+  },
+  {
+    "lesson": 41,
+    "kana": "ンずっ",
+    "kanji": "",
+    "meaning": "一句"
+  },
+  {
+    "lesson": 41,
+    "kana": "ふたり",
+    "kanji": "二人",
+    "meaning": "每~ (表示固定的同数量的分配)"
+  },
+  {
+    "lesson": 41,
+    "kana": "おたく〈",
+    "kanji": "お宅",
+    "meaning": "两人《可指情侣、夫妻)"
+  },
+  {
+    "lesson": 41,
+    "kana": "ーー",
+    "kanji": "了L大 (鞭下",
+    "meaning": "袜子"
+  },
+  {
+    "lesson": 41,
+    "kana": "えはがき",
+    "kanji": "絵葉書",
+    "meaning": "明信片"
+  },
+  {
+    "lesson": 41,
+    "kana": "おばさん",
+    "kanji": "",
+    "meaning": "姑姑、姨、伯母、妒妒、田妈"
+  },
+  {
+    "lesson": 41,
+    "kana": "おじC",
+    "kanji": "",
+    "meaning": "叔叔、伯父、男男"
+  },
+  {
+    "lesson": 41,
+    "kana": "おじさん",
+    "kanji": "",
+    "meaning": "叔叔、伯父、\" 男男"
+  },
+  {
+    "lesson": 41,
+    "kana": "てぶくろ",
+    "kanji": "手袋",
+    "meaning": "手奏"
+  },
+  {
+    "lesson": 41,
+    "kana": "ハンカチ",
+    "kanji": "",
+    "meaning": "手绢 (「ハンカチーフ」的略称)"
+  },
+  {
+    "lesson": 41,
+    "kana": "そば",
+    "kanji": "祖母",
+    "meaning": "祖母、外祖母"
+  },
+  {
+    "lesson": 41,
+    "kana": "そふ",
+    "kanji": "祖父",
+    "meaning": "祖父、外祖父"
+  },
+  {
+    "lesson": 41,
+    "kana": "おとしだま",
+    "kanji": "お年玉",
+    "meaning": "压岁钱"
+  },
+  {
+    "lesson": 41,
+    "kana": "ぶんぽう",
+    "kanji": "文法",
+    "meaning": "语法"
+  },
+  {
+    "lesson": 41,
+    "kana": "はつおん",
+    "kanji": "発音",
+    "meaning": "发音"
+  },
+  {
+    "lesson": 41,
+    "kana": "おもちゃ",
+    "kanji": "玩具",
+    "meaning": "玩具"
+  },
+  {
+    "lesson": 41,
+    "kana": "えほん",
+    "kanji": "絵本",
+    "meaning": "图画书、小人书"
+  },
+  {
+    "lesson": 41,
+    "kana": "さかた",
+    "kanji": "着方",
+    "meaning": "穿法"
+  },
+  {
+    "lesson": 41,
+    "kana": "おまごさん",
+    "kanji": "书也<和",
+    "meaning": "孙子、外孙"
+  },
+  {
+    "lesson": 41,
+    "kana": "きょうみ",
+    "kanji": "興味",
+    "meaning": "和于、兴趣 ( [コンピューターに] てがあぁ"
+  },
+  {
+    "lesson": 41,
+    "kana": "だんばぼう",
+    "kanji": "暖房",
+    "meaning": "ります: 对 [电脑] 感兴趣)"
+  },
+  {
+    "lesson": 41,
+    "kana": "おんど",
+    "kanji": "温度",
+    "meaning": "政"
+  },
+  {
+    "lesson": 41,
+    "kana": "上げます「",
+    "kanji": "上げる",
+    "meaning": "語、提高、改善"
+  },
+  {
+    "lesson": 41,
+    "kana": "下げまず",
+    "kanji": "下げる",
+    "meaning": "氏、降低、放低"
+  },
+  {
+    "lesson": 41,
+    "kana": "かわいい",
+    "kanji": "可愛い",
+    "meaning": "受"
+  },
+  {
+    "lesson": 41,
+    "kana": "かんりにん",
+    "kanji": "管理人",
+    "meaning": "寅等的) 管理员"
+  },
+  {
+    "lesson": 41,
+    "kana": "とさん",
+    "kanji": "",
+    "meaning": "了表示礼貌、接鍼在了下名、恥色名称之"
+  },
+  {
+    "lesson": 41,
+    "kana": "ドライバー",
+    "kanji": "",
+    "meaning": "蕉"
+  },
+  {
+    "lesson": 41,
+    "kana": "[お] みまい",
+    "kanji": "お見舞い",
+    "meaning": "岗〈病人) 、慰阿品"
+  },
+  {
+    "lesson": 41,
+    "kana": "めずらしい",
+    "kanji": "珍しい",
+    "meaning": "千、军见"
+  },
+  {
+    "lesson": 41,
+    "kana": "うらしまたろう",
+    "kanji": "浦島太郎",
+    "meaning": "岛太郎〈传说故事中主人公的名字)"
+  },
+  {
+    "lesson": 41,
+    "kana": "むかしばなし",
+    "kanji": "昔話",
+    "meaning": "児、逆事"
+  },
+  {
+    "lesson": 41,
+    "kana": "あるて",
+    "kanji": "",
+    "meaning": "~、某个~"
+  },
+  {
+    "lesson": 41,
+    "kana": "おとこ",
+    "kanji": "男",
+    "meaning": "人、男子"
+  },
+  {
+    "lesson": 41,
+    "kana": "こどもたち",
+    "kanji": "子どもたち",
+    "meaning": "子们"
+  },
+  {
+    "lesson": 41,
+    "kana": "療めます",
+    "kanji": "着める",
+    "meaning": "中"
+  },
+  {
+    "lesson": 41,
+    "kana": "かめ",
+    "kanji": "亀",
+    "meaning": "外"
+  },
+  {
+    "lesson": 41,
+    "kana": "助けます",
+    "kanji": "助ける",
+    "meaning": "殷、救助"
+  },
+  {
+    "lesson": 41,
+    "kana": "やさしい",
+    "kanji": "優しい",
+    "meaning": "采、亲切"
+  },
+  {
+    "lesson": 41,
+    "kana": "おひめさま 〈忆姬样) 加",
+    "kanji": "",
+    "meaning": "主"
+  },
+  {
+    "lesson": 41,
+    "kana": "若らします",
+    "kanji": "莫已才]",
+    "meaning": "舌、度日"
+  },
+  {
+    "lesson": 41,
+    "kana": "り〈",
+    "kanji": "陸",
+    "meaning": "地"
+  },
+  {
+    "lesson": 41,
+    "kana": "すると",
+    "kanji": "",
+    "meaning": "是"
+  },
+  {
+    "lesson": 41,
+    "kana": "けむり",
+    "kanji": "煙",
+    "meaning": "白、纯白"
+  },
+  {
+    "lesson": 42,
+    "kana": "ベートーベン",
+    "kanji": "",
+    "meaning": "贝多芬 (1770-1827，德国作曲家 )"
+  },
+  {
+    "lesson": 42,
+    "kana": "あるて",
+    "kanji": "",
+    "meaning": "本〉> 革~ー、基條て"
+  },
+  {
+    "lesson": 42,
+    "kana": "出ます",
+    "kanji": "出る",
+    "meaning": "发 (钱)"
+  },
+  {
+    "lesson": 42,
+    "kana": "たのしみ",
+    "kanji": "楽しみ",
+    "meaning": "消遗、有盼望、兴趣"
+  },
+  {
+    "lesson": 42,
+    "kana": "ローン",
+    "kanji": "",
+    "meaning": "贷款"
+  },
+  {
+    "lesson": 42,
+    "kana": "べんごし",
+    "kanji": "弁護士",
+    "meaning": "律师"
+  },
+  {
+    "lesson": 42,
+    "kana": "ほうりつ",
+    "kanji": "法律",
+    "meaning": "法律"
+  },
+  {
+    "lesson": 42,
+    "kana": "きょういく<",
+    "kanji": "教育",
+    "meaning": "教育"
+  },
+  {
+    "lesson": 42,
+    "kana": "子どもたち",
+    "kanji": "",
+    "meaning": "孩子们"
+  },
+  {
+    "lesson": 42,
+    "kana": "いっしょうけんめい",
+    "kanji": "生野命",
+    "meaning": "形> 努力、排命"
+  },
+  {
+    "lesson": 42,
+    "kana": "並びます",
+    "kanji": "並ぶ",
+    "meaning": "排列"
+  },
+  {
+    "lesson": 42,
+    "kana": "なぜ",
+    "kanji": "何故",
+    "meaning": "为什么、怎么"
+  },
+  {
+    "lesson": 42,
+    "kana": "こくれん",
+    "kanji": "国連",
+    "meaning": "联合国"
+  },
+  {
+    "lesson": 42,
+    "kana": "おんがくか",
+    "kanji": "音楽家",
+    "meaning": "音乐家"
+  },
+  {
+    "lesson": 42,
+    "kana": "ざいりょう",
+    "kanji": "材料",
+    "meaning": "材料"
+  },
+  {
+    "lesson": 42,
+    "kana": "混ぜます",
+    "kanji": "混ぜる",
+    "meaning": "搅拌、混合"
+  },
+  {
+    "lesson": 42,
+    "kana": "包みます",
+    "kanji": "包む",
+    "meaning": "包、包上"
+  },
+  {
+    "lesson": 42,
+    "kana": "計算します",
+    "kanji": "計算する",
+    "meaning": "开》 计算"
+  },
+  {
+    "lesson": 42,
+    "kana": "のしぶくろ",
+    "kanji": "DLL袋",
+    "meaning": "赠款袋 〈装赠款的专用信封)"
+  },
+  {
+    "lesson": 42,
+    "kana": "ふろしき",
+    "kanji": "風呂敷",
+    "meaning": "包裕皮"
+  },
+  {
+    "lesson": 42,
+    "kana": "そろばん",
+    "kanji": "算盘",
+    "meaning": "算盘"
+  },
+  {
+    "lesson": 42,
+    "kana": "こどもニュース",
+    "kanji": "子どもNEWS",
+    "meaning": "儿童新闻 (虚拟的新闻)"
+  },
+  {
+    "lesson": 42,
+    "kana": "じょうぶ",
+    "kanji": "丈夫",
+    "meaning": "形> ”结实"
+  },
+  {
+    "lesson": 42,
+    "kana": "どのてくらい",
+    "kanji": "",
+    "meaning": "多少"
+  },
+  {
+    "lesson": 42,
+    "kana": "もく",
+    "kanji": "目的",
+    "meaning": "目的"
+  },
+  {
+    "lesson": 42,
+    "kana": "せいしじ",
+    "kanji": "政治",
+    "meaning": "政治"
+  },
+  {
+    "lesson": 42,
+    "kana": "ぶんか",
+    "kanji": "文化",
+    "meaning": "文化"
+  },
+  {
+    "lesson": 42,
+    "kana": "しゃかい",
+    "kanji": "社会",
+    "meaning": "社会"
+  },
+  {
+    "lesson": 42,
+    "kana": "ろんぶん",
+    "kanji": "論文",
+    "meaning": "论文"
+  },
+  {
+    "lesson": 42,
+    "kana": "かんづめ",
+    "kanji": "向誌",
+    "meaning": "饶头起子"
+  },
+  {
+    "lesson": 42,
+    "kana": "かんきけ",
+    "kanji": "千切り",
+    "meaning": "盖子"
+  },
+  {
+    "lesson": 42,
+    "kana": "ふた",
+    "kanji": "盖",
+    "meaning": "瓶起子"
+  },
+  {
+    "lesson": 42,
+    "kana": "せんぬき",
+    "kanji": "栓抜き",
+    "meaning": "烧开"
+  },
+  {
+    "lesson": 42,
+    "kana": "沸かします",
+    "kanji": "沸办才",
+    "meaning": "烧开水。"
+  },
+  {
+    "lesson": 42,
+    "kana": "やかん",
+    "kanji": "莱备",
+    "meaning": "公共住宅、公寓 (「アパートメント-"
+  },
+  {
+    "lesson": 42,
+    "kana": "アパート",
+    "kanji": "",
+    "meaning": "ハウス」的略称)"
+  },
+  {
+    "lesson": 42,
+    "kana": "カップめん",
+    "kanji": "",
+    "meaning": "杯面 (放在可以拐捧的杯装容器中的方"
+  },
+  {
+    "lesson": 42,
+    "kana": "チキンラーメン",
+    "kanji": "",
+    "meaning": "便面)"
+  },
+  {
+    "lesson": 42,
+    "kana": "せかいはつ",
+    "kanji": "世界初",
+    "meaning": "鸡肉拉面 (方便面的品牌)"
+  },
+  {
+    "lesson": 42,
+    "kana": "あんどうももふく〈",
+    "kanji": "安藤百福",
+    "meaning": "世界最初"
+  },
+  {
+    "lesson": 42,
+    "kana": "とによって",
+    "kanji": "",
+    "meaning": "安藤百福（1910-2007，日本实业家、方便面发明者）"
+  },
+  {
+    "lesson": 42,
+    "kana": "どんぶり",
+    "kanji": "丼",
+    "meaning": "发明家)"
+  },
+  {
+    "lesson": 42,
+    "kana": "めん",
+    "kanji": "麺",
+    "meaning": "由一、被一"
+  },
+  {
+    "lesson": 42,
+    "kana": "広めます",
+    "kanji": "広める",
+    "meaning": "大碗"
+  },
+  {
+    "lesson": 42,
+    "kana": "しじょうちょうさ",
+    "kanji": "市場調査",
+    "meaning": "面条"
+  },
+  {
+    "lesson": 42,
+    "kana": "割ります",
+    "kanji": "割る",
+    "meaning": "扩大、推广"
+  },
+  {
+    "lesson": 42,
+    "kana": "注ぎます",
+    "kanji": "注4@",
+    "meaning": "市场调查"
+  },
+  {
+    "lesson": 43,
+    "kana": "いまにも",
+    "kanji": "今にも",
+    "meaning": "由》 马上、现在就要 (用于描写变化即"
+  },
+  {
+    "lesson": 43,
+    "kana": "取れます",
+    "kanji": "取れる",
+    "meaning": "将发生之前的状况)"
+  },
+  {
+    "lesson": 43,
+    "kana": "わぁ",
+    "kanji": "",
+    "meaning": "%> 中"
+  },
+  {
+    "lesson": 43,
+    "kana": "らく",
+    "kanji": "楽",
+    "meaning": "け形> 。 轻松"
+  },
+  {
+    "lesson": 43,
+    "kana": "落ちます",
+    "kanji": "落ちる",
+    "meaning": "めT〉 。 掉下来"
+  },
+  {
+    "lesson": 43,
+    "kana": "減ります",
+    "kanji": "減る",
+    "meaning": "防 T >"
+  },
+  {
+    "lesson": 43,
+    "kana": "まずい",
+    "kanji": "",
+    "meaning": "{形》 。 不好吃"
+  },
+  {
+    "lesson": 43,
+    "kana": "うまい",
+    "kanji": "",
+    "meaning": "f形> ”好吃"
+  },
+  {
+    "lesson": 43,
+    "kana": "やさしい",
+    "kanji": "優しい",
+    "meaning": "1形》 温柔、亲切"
+  },
+  {
+    "lesson": 43,
+    "kana": "ひも",
+    "kanji": "紐",
+    "meaning": "g》 带子、强"
+  },
+  {
+    "lesson": 43,
+    "kana": "切れます",
+    "kanji": "切れる",
+    "meaning": "。 断了"
+  },
+  {
+    "lesson": 43,
+    "kana": "下がります",
+    "kanji": "下がる",
+    "meaning": "下隆"
+  },
+  {
+    "lesson": 43,
+    "kana": "増えます",
+    "kanji": "准える",
+    "meaning": "増加"
+  },
+  {
+    "lesson": 43,
+    "kana": "ガソリン",
+    "kanji": "",
+    "meaning": "汽油"
+  },
+  {
+    "lesson": 43,
+    "kana": "無くなります",
+    "kanji": "無くなる",
+    "meaning": "“用光了、丢了"
+  },
+  {
+    "lesson": 43,
+    "kana": "つまらない",
+    "kanji": "",
+    "meaning": "没意思、微不足道、无聊"
+  },
+  {
+    "lesson": 43,
+    "kana": "へん",
+    "kanji": "変",
+    "meaning": "奇怪、不尋常"
+  },
+  {
+    "lesson": 43,
+    "kana": "変な匂い",
+    "kanji": "",
+    "meaning": "奇怪的味道"
+  },
+  {
+    "lesson": 43,
+    "kana": "パンフレット",
+    "kanji": "",
+    "meaning": "小册子"
+  },
+  {
+    "lesson": 43,
+    "kana": "ばら",
+    "kanji": "療蔽",
+    "meaning": "薔薇、政現"
+  },
+  {
+    "lesson": 43,
+    "kana": "ドライブ",
+    "kanji": "",
+    "meaning": "兜风"
+  },
+  {
+    "lesson": 43,
+    "kana": "謝ります",
+    "kanji": "謝る",
+    "meaning": "道部"
+  },
+  {
+    "lesson": 43,
+    "kana": "短り合います",
+    "kanji": "知り合う",
+    "meaning": "认识"
+  },
+  {
+    "lesson": 43,
+    "kana": "しあわせ",
+    "kanji": "幸せ",
+    "meaning": "幸福"
+  },
+  {
+    "lesson": 44,
+    "kana": "泣きます",
+    "kanji": "",
+    "meaning": "天"
+  },
+  {
+    "lesson": 44,
+    "kana": "笑います",
+    "kanji": "笑う",
+    "meaning": "笑"
+  },
+  {
+    "lesson": 44,
+    "kana": "なみだ",
+    "kanji": "涙",
+    "meaning": "眼泪"
+  },
+  {
+    "lesson": 44,
+    "kana": "くうき",
+    "kanji": "空気",
+    "meaning": "空气"
+  },
+  {
+    "lesson": 44,
+    "kana": "あんぜん",
+    "kanji": "安全",
+    "meaning": "安全"
+  },
+  {
+    "lesson": 44,
+    "kana": "きけん",
+    "kanji": "危険",
+    "meaning": "危陰"
+  },
+  {
+    "lesson": 44,
+    "kana": "カット",
+    "kanji": "",
+    "meaning": "剪发"
+  },
+  {
+    "lesson": 44,
+    "kana": "シャンプブー",
+    "kanji": "",
+    "meaning": "洗发 (てをします: 洗受)"
+  },
+  {
+    "lesson": 44,
+    "kana": "ショート",
+    "kanji": "",
+    "meaning": "短发"
+  },
+  {
+    "lesson": 44,
+    "kana": "起きます",
+    "kanji": "起きる",
+    "meaning": "对顾客说的客气话)"
+  },
+  {
+    "lesson": 44,
+    "kana": "ーー",
+    "kanji": "厚い",
+    "meaning": "厚 ."
+  },
+  {
+    "lesson": 44,
+    "kana": "乾きます",
+    "kanji": "著〈",
+    "meaning": "干了"
+  },
+  {
+    "lesson": 44,
+    "kana": "ぬれます",
+    "kanji": "",
+    "meaning": "湿了"
+  },
+  {
+    "lesson": 44,
+    "kana": "りょう",
+    "kanji": "量",
+    "meaning": "量"
+  },
+  {
+    "lesson": 44,
+    "kana": "ーばい",
+    "kanji": "倍",
+    "meaning": "ー倍"
+  },
+  {
+    "lesson": 44,
+    "kana": "眠ります",
+    "kanji": "虐る",
+    "meaning": "睡"
+  },
+  {
+    "lesson": 44,
+    "kana": "こい",
+    "kanji": "濃い",
+    "meaning": "浓、 颜色) 深"
+  },
+  {
+    "lesson": 44,
+    "kana": "ディーブイディー",
+    "kanji": "",
+    "meaning": "DVD光盘"
+  },
+  {
+    "lesson": 44,
+    "kana": "消ります",
+    "kanji": "滑る",
+    "meaning": "滑"
+  },
+  {
+    "lesson": 44,
+    "kana": "せんたくもの",
+    "kanji": "洗濯物",
+    "meaning": "洗的衣物等"
+  },
+  {
+    "lesson": 44,
+    "kana": "うすい",
+    "kanji": "薄い",
+    "meaning": "淡、 (颜色) 浅、薄"
+  },
+  {
+    "lesson": 44,
+    "kana": "ホテルひろしま",
+    "kanji": "hotel広島",
+    "meaning": "广岛宾馆(虚构的饭点)"
+  },
+  {
+    "lesson": 44,
+    "kana": "ンングル",
+    "kanji": "",
+    "meaning": "单人间"
+  },
+  {
+    "lesson": 44,
+    "kana": "ツイン",
+    "kanji": "",
+    "meaning": "双人间"
+  },
+  {
+    "lesson": 44,
+    "kana": "わしょく",
+    "kanji": "和食",
+    "meaning": "日餐"
+  },
+  {
+    "lesson": 44,
+    "kana": "ようしょく",
+    "kanji": "洋食",
+    "meaning": "西餐"
+  },
+  {
+    "lesson": 44,
+    "kana": "おかず",
+    "kanji": "",
+    "meaning": "小菜"
+  },
+  {
+    "lesson": 44,
+    "kana": "調節します",
+    "kanji": "調節する",
+    "meaning": "调节"
+  },
+  {
+    "lesson": 44,
+    "kana": "ふとい",
+    "kanji": "太い",
+    "meaning": "粗"
+  },
+  {
+    "lesson": 44,
+    "kana": "ほそい",
+    "kanji": "細い",
+    "meaning": "细"
+  },
+  {
+    "lesson": 44,
+    "kana": "嫌がります",
+    "kanji": "嫌がる",
+    "meaning": "讨厌、不受欢迎"
+  },
+  {
+    "lesson": 44,
+    "kana": "また",
+    "kanji": "又",
+    "meaning": "还、更"
+  },
+  {
+    "lesson": 44,
+    "kana": "うぅうまく",
+    "kanji": "",
+    "meaning": "一得好"
+  },
+  {
+    "lesson": 44,
+    "kana": "じゅんじ 上",
+    "kanji": "顺序",
+    "meaning": "顺序"
+  },
+  {
+    "lesson": 44,
+    "kana": "あぁんしん",
+    "kanji": "安心",
+    "meaning": "安心、放心"
+  },
+  {
+    "lesson": 44,
+    "kana": "ひょうげん",
+    "kanji": "表現",
+    "meaning": "表达、表现"
+  },
+  {
+    "lesson": 44,
+    "kana": "たとえば",
+    "kanji": "例えば",
+    "meaning": "例如"
+  },
+  {
+    "lesson": 44,
+    "kana": "別れます",
+    "kanji": "別れる",
+    "meaning": "分别、分离"
+  },
+  {
+    "lesson": 44,
+    "kana": "これら",
+    "kanji": "",
+    "meaning": "这些"
+  },
+  {
+    "lesson": 44,
+    "kana": "縁起が思い",
+    "kanji": "",
+    "meaning": "不吉利"
+  },
+  {
+    "lesson": 45,
+    "kana": "ばあい",
+    "kanji": "場合",
+    "meaning": "僵情况、一场合"
+  },
+  {
+    "lesson": 45,
+    "kana": "むりに",
+    "kanji": "無理に",
+    "meaning": "勉強地"
+  },
+  {
+    "lesson": 45,
+    "kana": "ほしょうしょ",
+    "kanji": "保証書",
+    "meaning": "保证书"
+  },
+  {
+    "lesson": 45,
+    "kana": "りょうしゅうしょ",
+    "kanji": "領収書",
+    "meaning": "收据"
+  },
+  {
+    "lesson": 45,
+    "kana": "うめ",
+    "kanji": "梅",
+    "meaning": "梅花"
+  },
+  {
+    "lesson": 45,
+    "kana": "コース",
+    "kanji": "",
+    "meaning": "路线"
+  },
+  {
+    "lesson": 45,
+    "kana": "スタート",
+    "kanji": "",
+    "meaning": "出发、开始"
+  },
+  {
+    "lesson": 45,
+    "kana": "ーい",
+    "kanji": "位",
+    "meaning": "く接辞〉"
+  },
+  {
+    "lesson": 45,
+    "kana": "優勝 します",
+    "kanji": "優勝する",
+    "meaning": "获得冠军"
+  },
+  {
+    "lesson": 45,
+    "kana": "てん",
+    "kanji": "点",
+    "meaning": "分数"
+  },
+  {
+    "lesson": 45,
+    "kana": "ひゃくじゅうきゅうばん",
+    "kanji": "119番",
+    "meaning": "119 《消防局的电话号码，紧急呼"
+  },
+  {
+    "lesson": 45,
+    "kana": "ひゃくとおばん",
+    "kanji": "110番",
+    "meaning": "救用)"
+  },
+  {
+    "lesson": 45,
+    "kana": "知らせます",
+    "kanji": "知ちせる",
+    "meaning": "110 (警察局的电话号码，紧急呼"
+  },
+  {
+    "lesson": 45,
+    "kana": "キャンセルします",
+    "kanji": "",
+    "meaning": "救用)"
+  },
+  {
+    "lesson": 45,
+    "kana": "ちゅうし",
+    "kanji": "中止",
+    "meaning": "通知"
+  },
+  {
+    "lesson": 45,
+    "kana": "キャンプ",
+    "kanji": "",
+    "meaning": "取消"
+  },
+  {
+    "lesson": 45,
+    "kana": "きゅうに",
+    "kanji": "急に",
+    "meaning": "野营"
+  },
+  {
+    "lesson": 45,
+    "kana": "信じます",
+    "kanji": "信じる",
+    "meaning": "突然"
+  },
+  {
+    "lesson": 45,
+    "kana": "楽しみにしています",
+    "kanji": "",
+    "meaning": "相信"
+  },
+  {
+    "lesson": 45,
+    "kana": "なやみ",
+    "kanji": "悩み",
+    "meaning": "期待着、盼望着"
+  },
+  {
+    "lesson": 45,
+    "kana": "めざま",
+    "kanji": "し[どけい] (目覚まし時計",
+    "meaning": "同午"
+  },
+  {
+    "lesson": 45,
+    "kana": "目が党めます",
+    "kanji": "目が覚める",
+    "meaning": "醒来"
+  },
+  {
+    "lesson": 45,
+    "kana": "だいがくせい",
+    "kanji": "大学生",
+    "meaning": "大学生"
+  },
+  {
+    "lesson": 45,
+    "kana": "かいとう",
+    "kanji": "回答",
+    "meaning": "回答 (てします: 回答)"
+  },
+  {
+    "lesson": 45,
+    "kana": "唱 ります",
+    "kanji": "鳴る",
+    "meaning": "响"
+  },
+  {
+    "lesson": 45,
+    "kana": "セットします",
+    "kanji": "",
+    "meaning": "上(闹钟)"
+  },
+  {
+    "lesson": 45,
+    "kana": "それでもぐ",
+    "kanji": "",
+    "meaning": "尽管如此"
+  },
+  {
+    "lesson": 46,
+    "kana": "こちら",
+    "kanji": "",
+    "meaning": "这边 (说话人方)"
+  },
+  {
+    "lesson": 46,
+    "kana": "げんいん",
+    "kanji": "原因",
+    "meaning": "原因"
+  },
+  {
+    "lesson": 46,
+    "kana": "たったいま",
+    "kanji": "たった今",
+    "meaning": "刚才、刚刚 《和过去时一起使用，表示"
+  },
+  {
+    "lesson": 46,
+    "kana": "てのところ",
+    "kanji": "~0O所",
+    "meaning": "完了)"
+  },
+  {
+    "lesson": 46,
+    "kana": "ガスサービスセンター",
+    "kanji": "",
+    "meaning": "下> 一那儿"
+  },
+  {
+    "lesson": 46,
+    "kana": "ぐあい",
+    "kanji": "具合",
+    "meaning": "情况、状态"
+  },
+  {
+    "lesson": 46,
+    "kana": "向かいます",
+    "kanji": "向かう",
+    "meaning": "了  朝着一去"
+  },
+  {
+    "lesson": 46,
+    "kana": "ちょうど",
+    "kanji": "",
+    "meaning": "正好、刚好"
+  },
+  {
+    "lesson": 46,
+    "kana": "出ます",
+    "kanji": "<出玖〇",
+    "meaning": "出发"
+  },
+  {
+    "lesson": 46,
+    "kana": "- 帰ってきます",
+    "kanji": "帰ってくる",
+    "meaning": "开>  回来 _"
+  },
+  {
+    "lesson": 46,
+    "kana": "届きます",
+    "kanji": "届く",
+    "meaning": "{>  送达"
+  },
+  {
+    "lesson": 46,
+    "kana": "焼きます",
+    "kanji": "焼く",
+    "meaning": "烧、烤"
+  },
+  {
+    "lesson": 46,
+    "kana": "焼けます",
+    "kanji": "焼ける",
+    "meaning": "烤好了"
+  },
+  {
+    "lesson": 46,
+    "kana": "はんとし",
+    "kanji": "半年",
+    "meaning": "半年"
+  },
+  {
+    "lesson": 46,
+    "kana": "入学します",
+    "kanji": "入学する",
+    "meaning": "邊>  入学"
+  },
+  {
+    "lesson": 46,
+    "kana": "卒業 します",
+    "kanji": "卒業する",
+    "meaning": "亚》  毕业"
+  },
+  {
+    "lesson": 46,
+    "kana": "たくはいびん",
+    "kanji": "宅配便",
+    "meaning": "快递"
+  },
+  {
+    "lesson": 46,
+    "kana": "るす",
+    "kanji": "留守",
+    "meaning": "不在"
+  },
+  {
+    "lesson": 46,
+    "kana": "流します",
+    "kanji": "渡す",
+    "meaning": "1 >  交给、递交"
+  },
+  {
+    "lesson": 46,
+    "kana": "ついています",
+    "kanji": "",
+    "meaning": "运气好"
+  },
+  {
+    "lesson": 46,
+    "kana": "ゆか",
+    "kanji": "床",
+    "meaning": "地板"
+  },
+  {
+    "lesson": 46,
+    "kana": "ベル",
+    "kanji": "",
+    "meaning": "摔倒"
+  },
+  {
+    "lesson": 46,
+    "kana": "慌てます",
+    "kanji": "慌てる",
+    "meaning": "锥"
+  },
+  {
+    "lesson": 46,
+    "kana": "じゅんばん",
+    "kanji": "顺亚",
+    "meaning": "急忙、匆匆忙忙"
+  },
+  {
+    "lesson": 46,
+    "kana": "できごと",
+    "kanji": "出来事",
+    "meaning": "順序"
+  },
+  {
+    "lesson": 47,
+    "kana": "ーによると",
+    "kanji": "",
+    "meaning": "根据~ (表示信息的出处)"
+  },
+  {
+    "lesson": 47,
+    "kana": "新聞によると",
+    "kanji": "",
+    "meaning": "据报纸"
+  },
+  {
+    "lesson": 47,
+    "kana": "ーそうだ",
+    "kanji": "",
+    "meaning": "听说~ (表示传闻)"
+  },
+  {
+    "lesson": 47,
+    "kana": "ーようだ",
+    "kanji": "",
+    "meaning": "好像一 (表示推測)"
+  },
+  {
+    "lesson": 47,
+    "kana": "きびしい",
+    "kanji": "蔵しい",
+    "meaning": "严历、严格"
+  },
+  {
+    "lesson": 47,
+    "kana": "します",
+    "kanji": "",
+    "meaning": "有 (声音、味道等)"
+  },
+  {
+    "lesson": 47,
+    "kana": "集まります",
+    "kanji": "集まる",
+    "meaning": "聚集"
+  },
+  {
+    "lesson": 47,
+    "kana": "パトカー",
+    "kanji": "",
+    "meaning": "警车 (「パトロールカー」的略称)"
+  },
+  {
+    "lesson": 47,
+    "kana": "きゆゅうきゆゅうしゃ",
+    "kanji": "救急车",
+    "meaning": "急救车"
+  },
+  {
+    "lesson": 47,
+    "kana": "婚約します",
+    "kanji": "婚約する",
+    "meaning": "订婚"
+  },
+  {
+    "lesson": 47,
+    "kana": "どうぅも",
+    "kanji": "",
+    "meaning": "有点儿、总觉得 (在讲述自己的推测时"
+  },
+  {
+    "lesson": 47,
+    "kana": "ーー",
+    "kanji": "恋人",
+    "meaning": "总觉得好像~"
+  },
+  {
+    "lesson": 47,
+    "kana": "あいて",
+    "kanji": "相手",
+    "meaning": "对方"
+  },
+  {
+    "lesson": 47,
+    "kana": "知り合います",
+    "kanji": "知り合う",
+    "meaning": "认识"
+  },
+  {
+    "lesson": 47,
+    "kana": "ひどい",
+    "kanji": "",
+    "meaning": "严重、厉害"
+  },
+  {
+    "lesson": 47,
+    "kana": "ひどい事政",
+    "kanji": "",
+    "meaning": "严重的事故"
+  },
+  {
+    "lesson": 47,
+    "kana": "じんこう",
+    "kanji": "",
+    "meaning": "人口"
+  },
+  {
+    "lesson": 47,
+    "kana": "かが<",
+    "kanji": "科学",
+    "meaning": "科学"
+  },
+  {
+    "lesson": 47,
+    "kana": "いが〈",
+    "kanji": "医学",
+    "meaning": "医学"
+  },
+  {
+    "lesson": 47,
+    "kana": "じっけん",
+    "kanji": "実験",
+    "meaning": "实验"
+  },
+  {
+    "lesson": 47,
+    "kana": "データ",
+    "kanji": "",
+    "meaning": "数据"
+  },
+  {
+    "lesson": 47,
+    "kana": "だいとうりょう",
+    "kanji": "大統領",
+    "meaning": "总统"
+  },
+  {
+    "lesson": 47,
+    "kana": "こわい",
+    "kanji": "怖疏",
+    "meaning": "害怕、可怕"
+  },
+  {
+    "lesson": 47,
+    "kana": "さんせい",
+    "kanji": "徐成",
+    "meaning": "赞成"
+  },
+  {
+    "lesson": 47,
+    "kana": "はんたい",
+    "kanji": "反対",
+    "meaning": "反对"
+  },
+  {
+    "lesson": 47,
+    "kana": "ぶんがく〈",
+    "kanji": "文学",
+    "meaning": "文学"
+  },
+  {
+    "lesson": 47,
+    "kana": "別れます",
+    "kanji": "別れる",
+    "meaning": "分手、分别"
+  },
+  {
+    "lesson": 47,
+    "kana": "におい",
+    "kanji": "匂い",
+    "meaning": "気味"
+  },
+  {
+    "lesson": 47,
+    "kana": "燃えます",
+    "kanji": "燃える",
+    "meaning": "燃烧"
+  },
+  {
+    "lesson": 47,
+    "kana": "吹きます",
+    "kanji": "吹く",
+    "meaning": "去世 ( 「L民至才| 的婉转说法)"
+  },
+  {
+    "lesson": 47,
+    "kana": "亡くなります",
+    "kanji": "亡くなる",
+    "meaning": "照顾、照料"
+  },
+  {
+    "lesson": 47,
+    "kana": "けしょう「",
+    "kanji": "化粧",
+    "meaning": "女性"
+  },
+  {
+    "lesson": 47,
+    "kana": "世話をします",
+    "kanji": "世話をする",
+    "meaning": "中"
+  },
+  {
+    "lesson": 47,
+    "kana": "だんせい",
+    "kanji": "男性",
+    "meaning": "理由"
+  },
+  {
+    "lesson": 47,
+    "kana": "ながいき",
+    "kanji": "長生き",
+    "meaning": "关系"
+  },
+  {
+    "lesson": 48,
+    "kana": "せいと",
+    "kanji": "生徒",
+    "meaning": "学生 (中小学生)"
+  },
+  {
+    "lesson": 48,
+    "kana": "じゆうに",
+    "kanji": "自由に",
+    "meaning": "自由地、随意地"
+  },
+  {
+    "lesson": 48,
+    "kana": "てかん",
+    "kanji": "て間",
+    "meaning": "用)"
+  },
+  {
+    "lesson": 48,
+    "kana": "えいぎょう",
+    "kanji": "営業",
+    "meaning": "一期间"
+  },
+  {
+    "lesson": 48,
+    "kana": "それまでに",
+    "kanji": "",
+    "meaning": "营业"
+  },
+  {
+    "lesson": 48,
+    "kana": "じゅく",
+    "kanji": "垫",
+    "meaning": "私享、补习班"
+  },
+  {
+    "lesson": 48,
+    "kana": "ファイル",
+    "kanji": "",
+    "meaning": "文件来"
+  },
+  {
+    "lesson": 48,
+    "kana": "届けます",
+    "kanji": "届ける",
+    "meaning": "照顾、照料"
+  },
+  {
+    "lesson": 48,
+    "kana": "世話をします",
+    "kanji": "世話をする",
+    "meaning": "印下来"
+  },
+  {
+    "lesson": 48,
+    "kana": "降ろします/下ろします",
+    "kanji": "",
+    "meaning": "讨厌、不喜欢"
+  },
+  {
+    "lesson": 48,
+    "kana": "いや",
+    "kanji": "嫌",
+    "meaning": "小学生"
+  },
+  {
+    "lesson": 48,
+    "kana": "録音します",
+    "kanji": "録音する",
+    "meaning": "百分过三"
+  },
+  {
+    "lesson": 48,
+    "kana": "しょうがくせい",
+    "kanji": "小学生",
+    "meaning": "习字、书法"
+  },
+  {
+    "lesson": 48,
+    "kana": "ーパーセント",
+    "kanji": "",
+    "meaning": "普通的"
+  },
+  {
+    "lesson": 49,
+    "kana": "なさいます",
+    "kanji": "",
+    "meaning": "做 (「します」的尊敬造)"
+  },
+  {
+    "lesson": 49,
+    "kana": "ご覧にながります",
+    "kanji": "",
+    "meaning": "看 ( 「みます」的尊敬午)"
+  },
+  {
+    "lesson": 49,
+    "kana": "たまに",
+    "kanji": "",
+    "meaning": "说、叫 ( [WA支才| 的尊敬语)"
+  },
+  {
+    "lesson": 49,
+    "kana": "おっしゃいます",
+    "kanji": "",
+    "meaning": "工作"
+  },
+  {
+    "lesson": 49,
+    "kana": "勤めます",
+    "kanji": "勤める",
+    "meaning": "「きます」的尊敬造)"
+  },
+  {
+    "lesson": 49,
+    "kana": "いらっしゃいます",
+    "kanji": "",
+    "meaning": "一年级一班"
+  },
+  {
+    "lesson": 49,
+    "kana": "ひまわりしょうがっこう",
+    "kanji": "",
+    "meaning": "告辞了。 ( [L 二机必L 去才| 的谦逊语)"
+  },
+  {
+    "lesson": 49,
+    "kana": "ーねん一",
+    "kanji": "年一組",
+    "meaning": "吃、喝 (「たべます」 「のみます」的尊敬午)"
+  },
+  {
+    "lesson": 49,
+    "kana": "出します",
+    "kanji": "出す",
+    "meaning": "坐"
+  },
+  {
+    "lesson": 49,
+    "kana": "ご存知です",
+    "kanji": "",
+    "meaning": "公共汽车站"
+  },
+  {
+    "lesson": 49,
+    "kana": "妊し上がります",
+    "kanji": "",
+    "meaning": "旅馆"
+  },
+  {
+    "lesson": 49,
+    "kana": "掛けます",
+    "kanji": "掛ける",
+    "meaning": "候、致辞)"
+  },
+  {
+    "lesson": 49,
+    "kana": "おくさま",
+    "kanji": "上奥様",
+    "meaning": "过、度过"
+  },
+  {
+    "lesson": 49,
+    "kana": "さま",
+    "kanji": "て様",
+    "meaning": "任何一位都 〈 (「だれでも」的尊敬邊)"
+  },
+  {
+    "lesson": 49,
+    "kana": "バスてい",
+    "kanji": "バス停",
+    "meaning": "利用"
+  },
+  {
+    "lesson": 49,
+    "kana": "りょかん",
+    "kanji": "旅馆",
+    "meaning": "山中伸弥 (1962-, 日本医学家)"
+  },
+  {
+    "lesson": 49,
+    "kana": "あいさつ",
+    "kanji": "挨拶",
+    "meaning": "经历"
+  },
+  {
+    "lesson": 49,
+    "kana": "どなたでも",
+    "kanji": "",
+    "meaning": "胞 (诱导多功能干细胞)"
+  },
+  {
+    "lesson": 49,
+    "kana": "利用します",
+    "kanji": "利用する",
+    "meaning": "制|"
+  },
+  {
+    "lesson": 49,
+    "kana": "やまなかしんや",
+    "kanji": "中四伸弥",
+    "meaning": "奖"
+  },
+  {
+    "lesson": 50,
+    "kana": "スケジュール",
+    "kanji": "",
+    "meaning": "日程"
+  },
+  {
+    "lesson": 50,
+    "kana": "伺います",
+    "kanji": "伺う",
+    "meaning": "寻找、听、访问 ( 「立立去才| 「いきま"
+  },
+  {
+    "lesson": 50,
+    "kana": "わたくし",
+    "kanji": "私",
+    "meaning": "放」 的谦逊语)"
+  },
+  {
+    "lesson": 50,
+    "kana": "参ります",
+    "kanji": "参る",
+    "meaning": "我 ( [和大L」 的谦逊语)"
+  },
+  {
+    "lesson": 50,
+    "kana": "ガイド",
+    "kanji": "",
+    "meaning": "去、来 ( 「いきます」 「立兰去才| 的谦"
+  },
+  {
+    "lesson": 50,
+    "kana": "おります",
+    "kanji": "",
+    "meaning": "江户东京博物馆"
+  },
+  {
+    "lesson": 50,
+    "kana": "こころから",
+    "kanji": "心から",
+    "meaning": "在 ( [去才| 的谦逊语)"
+  },
+  {
+    "lesson": 50,
+    "kana": "感謝します",
+    "kanji": "て感謝する",
+    "meaning": "衷心"
+  },
+  {
+    "lesson": 50,
+    "kana": "しょうきん",
+    "kanji": "賞金",
+    "meaning": "紧张"
+  },
+  {
+    "lesson": 50,
+    "kana": "きりん",
+    "kanji": "",
+    "meaning": "奖金"
+  },
+  {
+    "lesson": 50,
+    "kana": "ころ",
+    "kanji": "頃",
+    "meaning": "长颈鹿"
+  },
+  {
+    "lesson": 50,
+    "kana": "応接します",
+    "kanji": "応接する",
+    "meaning": "声援、支持"
+  },
+  {
+    "lesson": 50,
+    "kana": "いただきます",
+    "kanji": "二大大《OO",
+    "meaning": "只、喝、得到(「たべます」 「のみま"
+  },
+  {
+    "lesson": 50,
+    "kana": "いたします",
+    "kanji": "",
+    "meaning": "说、叫( Fw去才」 的谦逊语)"
+  },
+  {
+    "lesson": 50,
+    "kana": "存じます",
+    "kanji": "存じる",
+    "meaning": "做(TU去才| 的谦逊语)"
+  },
+  {
+    "lesson": 50,
+    "kana": "拝見します",
+    "kanji": "拝見する",
+    "meaning": "知道 ( [「L 去才| 的谦逊语)"
+  },
+  {
+    "lesson": 50,
+    "kana": "お目にかかります",
+    "kanji": "",
+    "meaning": "看 ( [又去示| 的谦逊语)"
+  },
+  {
+    "lesson": 50,
+    "kana": "はじめに",
+    "kanji": "初めに",
+    "meaning": "首先"
+  },
+  {
+    "lesson": 50,
+    "kana": "いれます",
+    "kanji": "",
+    "meaning": "漳、泡"
+  },
+  {
+    "lesson": 50,
+    "kana": "コーヒーをいれます",
+    "kanji": "",
+    "meaning": "泡咖啡"
+  },
+  {
+    "lesson": 50,
+    "kana": "用意します",
+    "kanji": "用意する",
+    "meaning": "准备"
+  },
+  {
+    "lesson": 50,
+    "kana": "メールアドレス",
+    "kanji": "",
+    "meaning": "电子邮箱地址"
+  },
+  {
+    "lesson": 50,
+    "kana": "さらいげつ",
+    "kanji": "",
+    "meaning": "下下个月"
+  },
+  {
+    "lesson": 50,
+    "kana": "さらいしゅう",
+    "kanji": "さ来週",
+    "meaning": "下下个星期"
+  },
+  {
+    "lesson": 50,
+    "kana": "さらいねん",
+    "kanji": "立来年",
+    "meaning": "后年"
+  },
+  {
+    "lesson": 50,
+    "kana": "おれい",
+    "kanji": "お和",
+    "meaning": "您) 身体好吗? (「おげんきですか"
+  },
+  {
+    "lesson": 50,
+    "kana": "迷惑をかけます",
+    "kanji": "~迷悪をかける",
+    "meaning": "麻烦"
+  },
+  {
+    "lesson": 50,
+    "kana": "ミュンヘン",
+    "kanji": "德 MGnchen",
+    "meaning": "尼黒 (德国)"
+  },
+  {
+    "lesson": 50,
+    "kana": "生かします",
+    "kanji": "生かす",
+    "meaning": "搾、有数地利用"
+  }
+]
