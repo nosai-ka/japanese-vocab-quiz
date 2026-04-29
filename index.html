@@ -921,13 +921,32 @@ function confirmQuit() {
   showScreen('homeScreen');
 }
 
-// ========== TTS (Google Translate) ==========
+// ========== TTS ==========
 function speak(text) {
   if (!text) return;
+  // Try browser built-in TTS first (works well on iOS Safari / Chrome)
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'ja-JP';
+    u.rate = 0.9;
+    u.onerror = () => {};
+    // On some devices, voices load asynchronously
+    const voices = speechSynthesis.getVoices();
+    const jaVoice = voices.find(v => v.lang.startsWith('ja'));
+    if (jaVoice) u.voice = jaVoice;
+    speechSynthesis.speak(u);
+    return;
+  }
+  // Fallback: Google Translate TTS
   const audio = new Audio();
   audio.src = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${encodeURIComponent(text)}`;
-  audio.onerror = () => { /* fallback: do nothing silently */ };
+  audio.onerror = () => {};
   audio.play().catch(() => {});
+}
+// Ensure voices are loaded (needed for Chrome)
+if ('speechSynthesis' in window) {
+  speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
 }
 function speakBtnHtml(text) {
   return `<button class="speak-btn" onclick="event.stopPropagation();speak('${text}')" title="朗读">🔊</button>`;
