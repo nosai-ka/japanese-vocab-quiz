@@ -928,33 +928,85 @@ function confirmQuit() {
   showScreen('homeScreen');
 }
 
-// ========== TTS ==========
-function speak(text) {
-  if (!text) return;
-  // Try browser built-in TTS first (works well on iOS Safari / Chrome)
-  if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = 'ja-JP';
-    u.rate = 0.9;
-    u.onerror = () => {};
-    // On some devices, voices load asynchronously
-    const voices = speechSynthesis.getVoices();
-    const jaVoice = voices.find(v => v.lang.startsWith('ja'));
-    if (jaVoice) u.voice = jaVoice;
-    speechSynthesis.speak(u);
-    return;
+// ========== TTS (VOICEVOX Web API) ==========
+const TTS = {
+  cache: new Map(),        // text -> mp3 url
+  pending: new Map(),      // text -> { resolve, reject }
+  speaker: 1,              // ずんだもん（あまあま）
+  baseUrl: 'https://api.tts.quest/v3/voicevox/synthesis',
+
+  async speak(text) {
+    if (!text) return;
+    // Cancel any current playback
+    this._audioEl && (this._audioEl.pause(), this._audioEl = null);
+
+    let url = this.cache.get(text);
+    if (url) { this._play(url); return; }
+
+    // Deduplicate concurrent requests for the same text
+    if (this.pending.has(text)) {
+      url = await this.pending.get(text);
+      if (url) this._play(url);
+      return;
+    }
+
+    try {
+      url = await this._synthesize(text);
+      this._play(url);
+    } catch (e) {
+      console.warn('VOICEVOX TTS failed:', e);
+      // Fallback: browser TTS
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(text);
+        u.lang = 'ja-JP'; u.rate = 0.9; u.onerror = () => {};
+        speechSynthesis.speak(u);
+      }
+    }
+  },
+
+  async _synthesize(text) {
+    const p = new Promise((resolve, reject) => this.pending.set(text, { resolve, reject }));
+    try {
+      const resp = await fetch(`${this.baseUrl}?text=${encodeURIComponent(text)}&speaker=${this.speaker}`);
+      const data = await resp.json();
+      if (!data.success) throw new Error('VOICEVOX synthesis rejected');
+
+      // Poll for audio ready
+      const audioUrl = await this._pollStatus(data.audioStatusUrl, data.mp3DownloadUrl);
+      this.cache.set(text, audioUrl);
+      return audioUrl;
+    } finally {
+      const entry = this.pending.get(text);
+      if (entry) { this.pending.delete(text); entry.resolve(this.cache.get(text) || null); }
+    }
+  },
+
+  async _pollStatus(statusUrl, fallbackUrl) {
+    for (let i = 0; i < 30; i++) {
+      try {
+        const r = await fetch(statusUrl);
+        const s = await r.json();
+        if (s.isAudioReady) return fallbackUrl;
+        if (s.isAudioError) throw new Error('VOICEVOX audio synthesis error');
+      } catch (e) {
+        if (i > 5) throw e;
+      }
+      await new Promise(r => setTimeout(r, 500));
+    }
+    throw new Error('VOICEVOX timeout');
+  },
+
+  _play(url) {
+    const audio = new Audio(url);
+    this._audioEl = audio;
+    audio.onerror = () => {};
+    audio.play().catch(() => {});
   }
-  // Fallback: Google Translate TTS
-  const audio = new Audio();
-  audio.src = `https://translate.google.com/translate_tts?ie=UTF-8&tl=ja&client=tw-ob&q=${encodeURIComponent(text)}`;
-  audio.onerror = () => {};
-  audio.play().catch(() => {});
-}
-// Ensure voices are loaded (needed for Chrome)
-if ('speechSynthesis' in window) {
-  speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices();
-}
+};
+
+function speak(text) { TTS.speak(text); }
+
 function speakBtnHtml(text) {
   return `<button class="speak-btn" onclick="event.stopPropagation();speak('${text}')" title="朗读">🔊</button>`;
 }
